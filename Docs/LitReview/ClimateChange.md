@@ -144,3 +144,17 @@
 **Findings**
 
 - Tight coupling of water availability and veg dynamics
+- Rainfall activates biological processes until water is used up, then the system returns to an inactive steady state
+- Water is primary constraint on biological activity
+- Rapid evaporation from soil constrains plant water uptake
+- Plants have evolved strategies to optimize water use and minimize transpiration
+- The "pulse - reserve" paradigm results in the episodic nature of ET in deserts
+- Coupling between energy inputs and water availability
+-- High temps can increase evaporative rates, intensify water stress, and influence ET patterns
+- Energy input is a key driver of water loss, especially after rainfall events
+- Water is temporarily available but quickly depleted
+- Summer rainfall is less effective because higher temps and greater solar radiation cause water to evaporate before it can benefit plants
+- Winter rains are more effective due to lower temps allowing for infiltration and storage
+- Vegetation creates micro climates
+- Plants adapt by storing water reserves underground which is critical for maintaining ecosystem stability
+
