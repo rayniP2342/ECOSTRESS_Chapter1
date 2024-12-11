@@ -1,6 +1,8 @@
 # ECOSTRESS Literature Review
 
-## This document summarizes findings from various papers relating to ECOSTRESS.
+This document summarizes findings from various papers relating to ECOSTRESS.
+
+# Nicholson et al 2021
 
 **Title:** *Evaluation of a CONUS-Wide ECOSTRESS DisALEXI Evapotranspiration Product*
 
