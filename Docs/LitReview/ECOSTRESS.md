@@ -2,7 +2,29 @@
 
 This document summarizes findings from various papers relating to ECOSTRESS.
 
-# Nicholson et al 2021
+## Template for New Papers
+
+```markdown
+### [Author Last Name] et al., [Year]
+
+**Title:** *[Paper Title]*
+
+**Authors:** [List of Authors]
+
+**Year:** [Year]
+
+**DOI:** [Link to DOI or URL]
+
+**Findings:** 
+- [Point 1]
+- [Point 2]
+- [Point 3]
+...
+**Additional Notes:**
+- [Optional extra information]
+
+
+# Nicholson et al, 2021
 
 **Title:** ***Evaluation of a CONUS-Wide ECOSTRESS DisALEXI Evapotranspiration Product***
 
