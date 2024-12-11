@@ -37,6 +37,7 @@
 - Little potential for increasing water supply by reducing shrub cover
 
 
+
 ### Cavanaugh et al., 2011
 
 **Citation:** *Cavanaugh, M., Kurc, S., Scott, R., 2011. Evapotranspiration partitioning in semiarid shrubland ecosystems: a two-site evaluation of soil moisture control on transpiration. In Ecohydrology.*
@@ -66,6 +67,7 @@
 - More intense precip events are favorable because water percolates to rooting depths
 
 
+
 ### Scott, 2010
 
 **Citation:** *Scott RL. 2010. Using watershed water balance to evaluate the accuracy of eddy covariance evaporation measurements for three semi arid ecosystems. Agricultural and Forest Meteorology 150: 219–225.*
@@ -85,6 +87,7 @@
 - Evaporation underestimated by 17-27%
 
 
+
 ### Huxman et al., 2005
 
 **Citation:** *Huxman TE, Wilcox BP, Breshears DD, Scott RL, Snyder KA,Small EE, Hultine K, Pockman WT, Jackson RB. 2005. Ecohydrological implications of woody plant encroachment. Ecology 86: 308–319*
@@ -99,6 +102,7 @@
 - Woody plant encroachment increases T (and thus greater ET)
 -- Leads to changes in streamflow
 - Woody plant cover reduces near-ground solar radiation (Martens et al, 2000)
+
 
 
 ### Kurc and Small, 2004
@@ -125,7 +129,6 @@
 -- Processes like plant productivity, soil respiration, and biogeochemical cycling
 - Meteorological and vegetation conditions control ET when soil moisture is not limited (Shuttleworth, 1991)
 - In wet environments ET increases linearly with root zone water content (effective saturation)
-- In semi-arid conditions, ET is limited by soil moisture most of the time (Rodriquez-Iturbe, 2000)
 - More bare soil = more rapid evporation (Dugas et al, 1996)
 - Soil heat flux is 30% greater at shrublands than grasslands
 -- More bare soil in shrublands, stronger temp gradient at surface
@@ -198,3 +201,23 @@
 - When water is available ET is primarily contrlled by atmospheric demands (solar radiation, temp, wind speed, humidity)
 - In water limited systems ET is constrained by the soil's ability to supply water to the surface and plants
 -- less impacted by atmospheric demands
+
+
+
+### Rodriguez-Iturbe, 2000
+
+**Citation:** *Rodriguez-Iturbe, I. (2000), Ecohydrology: A hydrologic perspective of climate-soil-vegetation dynamics, Water Resour. Res., 36, 3 – 9.*
+
+**DOI:** https://doi.org/10.1029/1999WR900210
+
+**Findings:**
+
+- Soil moisture is critical link between climactic and vegetation dynamics
+- In semi-arid conditions, ET is limited by soil moisture most of the time
+- When soil moisture is available ET is controlled by atmospheric demand
+- Under dry condition, soil moisture limits ET rates
+- ET exhibits significant variability based on seasonal precip patterns and spatial differences in vegeation cover and soil properties
+- ET is integral to soil moisture balance equation
+- Accurate modeling of ET is necessary for predicting vegetation dynamics and ecosystem responses to environmental changes
+
+
