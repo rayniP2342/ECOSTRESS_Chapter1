@@ -4,11 +4,7 @@
 ```markdown
 ### [Author Last Name] et al., [Year]
 
-**Title:** *[Paper Title]*
-
-**Authors:** [List of Authors]
-
-**Year:** [Year]
+**Citation:** *[Full Citation]*
 
 **DOI:** [Link to DOI or URL]
 
@@ -24,11 +20,7 @@
 
 ### Tietjen et al., 2010
 
-**Title:** *Effects of climate change on the coupled dynamics of water and vegetation in drylands. *
-
-**Authors:** Tietjen, B., Jeltsch, F., Zehe, E., Classen, N., Groengroeft, A., Schiffers, K. and Oldeland, J. 
-
-**Year:** 2010
+**Citation:** *Tietjen, B., Jeltsch, F., Zehe, E., Classen, N., Groengroeft, A., Schiffers, K. and Oldeland, J. (2010), Effects of climate change on the coupled dynamics of water and vegetation in drylands. Ecohydrol., 3: 226-237.*
 
 **DOI:** https://doi.org/10.1002/eco.70
 
@@ -54,11 +46,7 @@
 
 ### Goodrich et al., 2008
 
-**Title:** *Event to multidecadal persistence in rainfall and runoff in southeast Arizona *
-
-**Authors:** Goodrich D C, Unkrich C L, Keefer T O, Nichols M H, Stone J J, Levick L R and Scott R L
-
-**Year:** 2008
+**Citation:** *Goodrich D C, Unkrich C L, Keefer T O, Nichols M H, Stone J J, Levick L R and Scott R L 2008 Event to multidecadal persistence in rainfall and runoff in southeast Arizona Water Resour. Res. 44 W05S14*
 
 **DOI:** 
 
@@ -73,11 +61,7 @@
 
 ### Loik et al., 2004
 
-**Title:** *A multi-scale perspective of water pulses in dryland ecosystems: climatology and ecohydrology of the western USA *
-
-**Authors:** Loik M E, Breshears D D, Lauenroth WK and Belnap J 
-
-**Year:** 2004
+**Citation:** *Loik M E, Breshears D D, Lauenroth WK and Belnap J 2004 A multi-scale perspective of water pulses in dryland ecosystems: climatology and ecohydrology of the western USA Oecologia 141 269–81.*
 
 **DOI:** [Link to DOI or URL]
 
@@ -102,11 +86,7 @@
 
 ### Wilcox et al., 2003
 
-**Title:** *Water balance on rangelands *
-
-**Authors:** Wilcox BP, Breshears DD, Seyfried M 
-
-**Year:** 2003
+**Citation:** *Wilcox BP, Breshears DD, Seyfried M (2003b) Water balance on rangelands. In: Stewart BA, Howell T (eds) Encyclopedia of water science. Marcel Dekker, New York, pp 791–794.*
 
 **DOI:**
 
@@ -121,11 +101,7 @@
 
 ### Scanlon et al., 2006
 
-**Title:** *Global synthesis of groundwater recharge in semiarid and arid regions.*
-
-**Authors:** Scanlon, B.R., Keese, K.E., Flint, A.L., Flint, L.E., Gaye, C.B., Edmunds, W.M. and Simmers, I. 
-
-**Year:** 2006
+**Citation:** *Scanlon, B.R., Keese, K.E., Flint, A.L., Flint, L.E., Gaye, C.B., Edmunds, W.M. and Simmers, I. (2006), Global synthesis of groundwater recharge in semiarid and arid regions. Hydrol. Process., 20: 3335-3370.*
 
 **DOI:** https://doi.org/10.1002/hyp.6335
 
@@ -139,11 +115,7 @@
 
 ### Trenberth, 2011
 
-**Title:** *Changes in precipitation with climate change*
-
-**Authors:** Trenberth, K.
-
-**Year:** 2011
+**Citation:** *Trenberth K 2011 Changes in precipitation with climate change Clim. Res. 47 123–38.*
 
 **DOI:**
 
