@@ -70,3 +70,16 @@ This study compares ECOSTRESS products disALEXI (Two Source Energy Balance model
 - Methods for correcting and filtering eddy flux data
 - Methods used ET boundaries between 0 – 30 mm/day (removed the rest)
 
+
+### Nicholson et al., 2020
+
+**Title:** *Sensitivity and uncertainty quantification for the ECOSTRESS evapotranspiration algorithm – DisALEXI. *
+
+**Authors:** Cawse-Nicholson, K., Braverman, A., Kang, E. L., Li, M., Johnson, M., Halverson, G., Anderson, M., Hain, C., Gunson, M., & Hook, S. 
+
+**Year:** 2020
+
+**DOI:** https://doi.org/10.1016/j.jag.2020.102088
+
+**Findings:** 
+This study quantifies the uncertainty associated with the disALEXI ET product. It is important to understand the differences between validation (comparison with field data), verification (comparison with other models), and uncertainty quantification. This study defined uncertainty quantification as the variability of the output when all inputs are varied in a reasonable way. This study concluded that uncertainty of ECOSTRESS was higher than the observed in previous validation studies. The study also found that that land surface temperature (LST) obtained from ECOSTRESS was the main driver of uncertainty, followed by albedo and LAI provided by Landsat. 
