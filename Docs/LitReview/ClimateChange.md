@@ -28,7 +28,6 @@
 
 *From Intro*
 - Drylands form nearly 30% of global land surface (Stafford and Smith, 1996; Sivakumar et al 2005, Drenge, 1991)
-- Tight coupling of water availability and veg dynamics (Noy-Meir, 1973)
 - Climate change increase risk (Dore, 2005)
 - Frequency of precip events decreases but number of extreme events increases (Easterling et al, 2000)
 - High temps increase water stress thru evap (Hughes, 2003)
@@ -133,3 +132,15 @@
 - Net radiation affected by albedo (ice, clouds, aerosols)
 -- Affect solar radiation at surface and energy available for sensible and latent heat fluxes
 - Warmer climate increases risk of drought and floods
+
+
+
+### Noy-Meir, 1973
+
+**Citation:** *Noy-Meir I (1973) Desert ecosystems: environment and producers. Annu Rev Ecol Syst 4:25–52*
+
+**DOI:**
+
+**Findings**
+
+- Tight coupling of water availability and veg dynamics
