@@ -82,3 +82,19 @@
 - At grasslands E less than P - R - SM
 - Majority of evaporation occurs during daytime and when RN - G is high
 - Evaporation underestimated by 17-27%
+
+
+### Huxman et al., 2005
+
+**Citation:** *Huxman TE, Wilcox BP, Breshears DD, Scott RL, Snyder KA,Small EE, Hultine K, Pockman WT, Jackson RB. 2005. Ecohydrological implications of woody plant encroachment. Ecology 86: 308–319*
+
+**DOI:** 
+
+**Findings:**
+
+- Woody plants have potential to modify streamflow, runoff, and recharge
+- Shifts in T/ET ration can be expected with presence of woody plants
+- Larger shifts expected in semi-arid environments because increasing influence of bare ground and surface energy budgets is linked to woody plants
+- Woody plant encroachment increases T (and thus greater ET)
+-- Leads to changes in streamflow
+- Woody plant cover reduces near-ground solar radiation (Martens et al, 2000)
