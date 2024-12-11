@@ -1,5 +1,6 @@
 # Watershed/Stream Restoration and Check Dams
 
+```markdown
 ### [Author Last Name] et al., [Year]
 
 **Citation:** *[Full Citation]*
@@ -14,7 +15,7 @@
 
 **Additional Notes:**
 - [Optional extra information]
-
+```
 
 ### Norman and Niraula, 2016
 
@@ -130,4 +131,51 @@
 - Reduced vegetation's dependency on precipitation as a water source
 - OTher positive impacts include water quality, carbon sequestration, regulation of microclimates, wildfire resiliency, and drought resiliency
 
+
+
+### Lucas-Borja et al., 2021
+
+**CItation:** *Lucas-Borja, M. E., Piton, G., Yu, Y., Castillo, C., & Antonio Zema, D. (2021). Check dams worldwide: Objectives, functions, effectiveness and undesired effects. In Catena (Vol. 204). Elsevier B.V.*
+
+**DOI:** https://doi.org/10.1016/j.catena.2021.105390
+
+**Findings:**
+
+- Sucess of check dams often determined by the author
+- Soil type is an important variable for success
+- Greatest number of check dams come from arid/semi-arid climates
+- Check dam may trigger incision downstream (hungry water effect)
+- Infiltration occurs after runoff events and correlates with ponding effect
+- Feedback loop between finer sediments and increased infiltration that supports vegetation and increased stability of deposited sediments
+- Check dams typically reduce peak flow and not runoff volume
+-- Except AZ where they reduce peak flow but not runoff volume
+- Maintenance is eesential for longevity
+- Damaged structures increase erosion
+- Check dams are particularly useful in monsoon dependent river channels by storing surface runoff and increasing baseflow
+
+
+
+### Djuma et al., 2017
+
+**CItation:** *Djuma, H., Bruggeman, A., Camera, C., Eliades, M., & Kostarelos, K. (2017). The impact of a check dam on groundwater recharge and sedimentation in an ephemeral stream. Water (Switzerland), 9(10).*
+
+**DOI:** https://doi.org/10.3390/w9100813
+
+**Findings:**
+
+- Check dams recharged 2.1 times more groundwater than transient stream reach
+- Estimated 6 to 53% higher recharge
+- Wells follow similar trends as water level in check dams but do no relate to streamflow and precip (indicates groundwater recharge via check dams)
+
+
+
+### Hseih, 2022
+
+**CItation:** *Hsieh, D. F. (2022). Testing Whether Rock Dams Cause Rapid Recharge (Master's thesis, The University of Arizona).*
+
+**DOI:** 
+
+**Findings:**
+
+- Check dams do not cause rapid recharge
 
