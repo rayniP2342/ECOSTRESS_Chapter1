@@ -181,3 +181,20 @@
 - Annual ET:
 -- 510 mm at control site
 -- 464 mm at restoration site
+
+
+
+### Shuttleworth, 1991
+
+**Citation:** *Shuttleworth, W. J. (1991), Evaporation models in hydrology, in Land Surface Evaporation, edited by T. J. Schmugge and J. Andre´, pp. 93 –120, Springer-Verlag, New York.*
+
+**DOI:** https://doi.org/10.1007/978-1-4612-3032-8_5
+
+**Findings:**
+
+- Understanding evporation processes is important for effective water resource management and environmental assessment
+- Model that establish a relationship between evaporation rates and meterological factors often lack precision needed for diverse hydrological applications
+- Modeling evaporation is difficult due to the variability of environmental conditions and limited data
+- When water is available ET is primarily contrlled by atmospheric demands (solar radiation, temp, wind speed, humidity)
+- In water limited systems ET is constrained by the soil's ability to supply water to the surface and plants
+-- less impacted by atmospheric demands
