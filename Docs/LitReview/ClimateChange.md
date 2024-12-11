@@ -95,6 +95,10 @@
 - Runoff occurs within minutes of precip
 -- Associated with high intensity (NAM) or high frequency (El Nino) years
 - Seepage very small component of water budget
+- Soil texture, depth, and water-holding capacity affect how much water is available for ET
+- Accurate quantification of ET is challenging due to its complex compenents
+- Understanding ET dynamics is crucial for water management in rangelands
+- Effective management requires knowledge of factors that influence ET to develop strategies that optimize water use and sustain ecosystem health
 
 
 
