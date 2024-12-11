@@ -22,7 +22,7 @@ This document summarizes findings from various papers relating to ECOSTRESS.
 ...
 **Additional Notes:**
 - [Optional extra information]
-
+```
 
 # Nicholson et al, 2021
 
