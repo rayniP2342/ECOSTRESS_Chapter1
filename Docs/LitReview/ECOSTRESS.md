@@ -48,3 +48,22 @@ In the TSEB model soil and canopy thermal radiances are considered as a linear s
 Results showed the importance of additional filtering of ECOSTRESS images based on the view zenith (VZ) angle and aerosol optical depth (AOD). Images acquired at under VZ angles greater than 20 deg should be removed from comparison as there is an increase in misregistration between Landsat inputs and ECOSTRESS. CONUS wide comparison produce and R2 = 0.80 and an RMSE = 0.81 mm/day. 
 
 
+
+### [Liang] et al., [2022]
+
+**Title:** *[Paper Title]*
+
+**Authors:** [List of Authors]
+
+**Year:** [Year]
+
+**DOI:** [Link to DOI or URL]
+
+**Findings:** 
+- [Point 1]
+- [Point 2]
+- [Point 3]
+...
+**Additional Notes:**
+- [Optional extra information]
+
