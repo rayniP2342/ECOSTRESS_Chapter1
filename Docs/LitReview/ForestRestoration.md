@@ -18,7 +18,7 @@ Forest Restoration and Wildfires
 ```
 
 
-### [Author Last Name] et al., [Year]
+### Sankey et al., 2021
 
 **Citation:** *Sankey, T., Belmonte, A., Massey, R., & Leonard, J. (2021). Regional-scale forest restoration effects on ecosystem resiliency to drought: a synthesis of vegetation and moisture trends on Google Earth Engine. Remote Sensing in Ecology and Conservation, 7(2), 259–274.*
 
