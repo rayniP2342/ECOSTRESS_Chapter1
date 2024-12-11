@@ -49,15 +49,15 @@ Results showed the importance of additional filtering of ECOSTRESS images based 
 
 
 
-### [Liang] et al., [2022]
+### Liang et al., 2022
 
-**Title:** *[Paper Title]*
+**Title:** *Evaluation of ECOSTRESS evapotranspiration estimates over heterogeneous landscapes in the continental US.*
 
-**Authors:** [List of Authors]
+**Authors:** Liang, L., Feng, Y., Wu, J., He, X., Liang, S., Jiang, X., de Oliveira, G., Qiu, J., & Zeng, Z. 
 
-**Year:** [Year]
+**Year:** 2022
 
-**DOI:** [Link to DOI or URL]
+**DOI:** [Link to DOI] (https://doi.org/10.1016/j.jhydrol.2022.128470)
 
 **Findings:** 
 - [Point 1]
