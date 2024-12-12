@@ -57,7 +57,6 @@
 - Correlation of ET to shallow soil layers typical of semi-arid ecosystems
 -- High evaporative demand, poor infiltration (Scott et al, 2000)
 - Precip rarely percolates below 10 cm in the summer (in this region), roots below this depth are not wetted
-- Near zero ET prior to summer rains (also Kurc and Small, 2004; Scott et al, 2006)
 - When plants dormant, E will dominate ET
 - T response not seen until 3 weeks following start of summer rainfall
 - Peak T rates rarely sustain more than a day (almost always in a water limited state)
@@ -65,6 +64,10 @@
 - Amount of bare space and percent cover will affect T/ET ratio
 - Rapid evaporation of surface soil layers between small precip events
 - More intense precip events are favorable because water percolates to rooting depths
+
+**Additional Notes:**
+
+- Near zero ET prior to summer rains (also Kurc and Small, 2004; Scott et al, 2006)
 
 
 
@@ -121,15 +124,10 @@
 - Surface soil is the primary reservoir for water storage and source of ET during monsoon season
 - Direct evaporation is a large component of ET
 - Predicting ET based on root zone averaged soil moisture not appropriate in semi-arid environments
-- ET is roughly equal to precip on timescales longer than seasonal (Sala et al, 1992; Philipes, 1994; Reynolds et al, 2000)
 - Variability of ET on short timescales is critical for the coupled cycling of water, energy, and carbon
-- ET effects:
--- The amount of precip partitioned into runoff and recharge (Philips, 1994; Laio et al, 2001)
--- How land-atmosphere interactions influences weather and climate
--- Processes like plant productivity, soil respiration, and biogeochemical cycling
-- Meteorological and vegetation conditions control ET when soil moisture is not limited (Shuttleworth, 1991)
+- ET effects how land-atmosphere interactions influences weather and climate
+- ET effects Processes like plant productivity, soil respiration, and biogeochemical cycling
 - In wet environments ET increases linearly with root zone water content (effective saturation)
-- More bare soil = more rapid evporation (Dugas et al, 1996)
 - Soil heat flux is 30% greater at shrublands than grasslands
 -- More bare soil in shrublands, stronger temp gradient at surface
 -- More outgoing longwave radiation and more albedo
@@ -144,7 +142,11 @@
 - ET returns nearly all rainfall to atm in sever days
 - Water content fluctuation is the fundamental constrain on soil moisture storage and ET in semi-arid grasslands and shrub lands during monsoon season
 
-
+**Additional Notes:**
+- ET is roughly equal to precip on timescales longer than seasonal (Sala et al, 1992; Philipes, 1994; Reynolds et al, 2000)
+- ET effects the amount of precip partitioned into runoff and recharge (Philips, 1994; Laio et al, 2001)
+- Meteorological and vegetation conditions control ET when soil moisture is not limited (Shuttleworth, 1991)
+- More bare soil = more rapid evporation (Dugas et al, 1996)
   
 ### Brandes and Wilcox, 2000
 
@@ -179,11 +181,14 @@
 **Findings:**
 
 - ET is the largest outgoing flux of annual precip for forest
-- ET is 85% of precip in ponderosa forests (Dore et al, 2012)
 - Difficult to measure ET across large areas
 - Annual ET:
 -- 510 mm at control site
 -- 464 mm at restoration site
+
+  **Additional Notes:**
+
+  - ET is 85% of precip in ponderosa forests (Dore et al, 2012)
 
 
 
@@ -199,8 +204,7 @@
 - Model that establish a relationship between evaporation rates and meterological factors often lack precision needed for diverse hydrological applications
 - Modeling evaporation is difficult due to the variability of environmental conditions and limited data
 - When water is available ET is primarily contrlled by atmospheric demands (solar radiation, temp, wind speed, humidity)
-- In water limited systems ET is constrained by the soil's ability to supply water to the surface and plants
--- less impacted by atmospheric demands
+- In water limited systems ET is constrained by the soil's ability to supply water to the surface and plants, so it is less impacted by atmospheric demands
 
 
 
