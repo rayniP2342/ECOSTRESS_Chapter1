@@ -176,15 +176,15 @@
 
 **Citation:** *Ha, W., Kolb, T. E., Springer, A. E., Dore, S., O'Donnell, F. C., Martinez Morales, R., ... & Koch, G. W. (2015). Evapotranspiration comparisons between eddy covariance measurements and meteorological and remote‐sensing‐based models in disturbed ponderosa pine forests. Ecohydrology, 8(7), 1335-1350..*
 
-**DOI:**
+**DOI:**  DOI: 10.1002/eco.1586
 
 **Findings:**
 
 - ET is the largest outgoing flux of annual precip for forest
 - Difficult to measure ET across large areas
-- Annual ET:
--- 510 mm at control site
--- 464 mm at restoration site
+- Annual ET: 510 mm at control site, 464 mm at restoration site
+- MODIS under predicted ET at all sites
+  
 
 **Additional Notes:**
 
