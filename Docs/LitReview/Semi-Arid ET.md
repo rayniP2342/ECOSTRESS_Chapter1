@@ -186,9 +186,9 @@
 -- 510 mm at control site
 -- 464 mm at restoration site
 
-  **Additional Notes:**
+**Additional Notes:**
 
-  - ET is 85% of precip in ponderosa forests (Dore et al, 2012)
+- ET is 85% of precip in ponderosa forests (Dore et al, 2012)
 
 
 
