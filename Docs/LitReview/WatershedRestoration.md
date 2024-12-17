@@ -42,8 +42,11 @@
 **Findings:**
 
 - Check dams are effective restoration structures across different time scales
+- Structures promote aggradation
+- Structures have short and long term benefits
 - Old structures stabilized the channel due to sediment and vegetation establishment and the stream reached relative equilibrium
 - Streams with new structures are still actively evolving by decreasing flow velocity (16%) and increasing depth of water (12%)
+- TLS is an effective method for quantifying geomorphic changes
 
 
 
