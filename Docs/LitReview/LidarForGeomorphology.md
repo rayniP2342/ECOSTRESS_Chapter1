@@ -65,5 +65,29 @@
 
 
 
+### Chiverrel et al., 2008
 
+**Citation:** *Chiverrell, R., Thomas, G., Foster, G., 2008. Sediment–landform assemblages and digital elevation data: testing an improved methodology for the assessment of sand and gravel aggregate resources in north-western Britain. Eng. Geol. 99 (1–2), 40–50.*
+
+**DOI:** :10.1016/j.enggeo.2008.02.005
+
+**Findings:**
+
+- The use of high resolution DEM is important for identifying geomorphic features
+- The integration of sediment–landform assemblage analysis with digital elevation data provides a robust framework for the assessment of sand and gravel resources
+
+
+
+### Tarolli, 2011
+
+**Citation:** *Tarolli, P., 2011. Application of LiDAR technology for rivers analysis. Italian J. Eng. Geol. Environ. 33–44.*
+
+**DOI:** 10.4408/IJEGE.2011-01.S-03
+
+**Findings:**
+
+- LiDAR provides detailed topographic data, enabling precise mapping of river channels, floodplains, and surrounding landscapes
+- The accuracy of LiDAR-derived Digital Elevation Models (DEMs) improves hydraulic models, leading to better flood risk assessments and management strategies
+- LiDAR data facilitates the identification of geomorphic features such as terraces, banks, and bedforms, aiding in understanding river dynamics and sediment transport processes
+- The technology assists in distinguishing between ground surfaces and vegetation, allowing for the analysis of riparian zones and their ecological health
 
