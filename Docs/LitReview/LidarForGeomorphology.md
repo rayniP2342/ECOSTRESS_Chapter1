@@ -61,8 +61,15 @@
 - TLS provides a tool for monitoring temporal changes in gully topography
 - TLS effectively detected both erosional and depositional processes within the gully
 - TLS can inform effective management practices
+- Variable propogation error detected twice the amount of erosion than a constant propogation error (Ucrit)
+- TLS derived DEMs can be accurately registered over time
+- Careful consideration of sensor specifications and sampling configurations are needed to ensure repeatable and accurate TLS derived DEMs
 
+**Additional Notes:**
 
+- TLS are well suited to mapping fine scale fluvial and gully environments (Bremer and Sass, 2012; Kociuba et al., 2014)
+- TLS can capture large areas (e.g. Hofle et al., 2013)
+- Understanding sources of error for TLS is important for monitoring subtle changes in gully morphology because error propogate between dates and increase uncertainty (Brasington et al., 2003)
 
 
 ### Chiverrel et al., 2008
