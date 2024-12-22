@@ -77,7 +77,7 @@
 
 **Citation:** *Chiverrell, R., Thomas, G., Foster, G., 2008. Sediment–landform assemblages and digital elevation data: testing an improved methodology for the assessment of sand and gravel aggregate resources in north-western Britain. Eng. Geol. 99 (1–2), 40–50.*
 
-**DOI:** :10.1016/j.enggeo.2008.02.005
+**DOI:** https://10.1016/j.enggeo.2008.02.005
 
 **Findings:**
 
