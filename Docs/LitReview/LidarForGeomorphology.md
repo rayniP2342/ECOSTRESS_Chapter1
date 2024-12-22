@@ -174,3 +174,19 @@
 - Both TLS and SfM produced comparable estimates for site scale sediment budgets
 - Finest obtainable resolution is not always necessary for accurately quantifying geomorphic change, but the choice of resolution should be optimized to capture the spatial scale of the processes driving landscape change
 - In landscapes near sediment equilibrium finer resolutions should be used to avoid amplifying sediment imbalances and misinterpreting site trends
+
+
+
+### Brasington et al., 2012
+
+**Citation:** *Brasington, J., Vericat, D. and Rychkov, I., 2012. Modeling river bed morphology, roughness, and surface sedimentology using high resolution terrestrial laser scanning. Water Resources Research, 48(11).*
+
+**DOI:** https://doi.org/10.1029/2012WR012223
+
+**Findings:**
+- TLS can capture fine scale details of river bed morphology, including grain size and surface roughness
+- The authors developed ToPCAT, a computational tool designed to process large TLS datasets efficiently
+- The study successfully modeled riverbed morphology, roughness, and surface sedimentology at multiple scales
+- The integration of TLS data with tools like ToPCAT offers a significant advancement in fluvial geomorphology, providing detailed insights into riverbed structures that are essential for understanding sediment transport, habitat complexity, and hydraulic modeling
+- This methodology provides a robust framework for detailed fluvial analysis, contributing to improved river management and restoration efforts
+
