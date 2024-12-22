@@ -51,6 +51,7 @@
 
 
 ### Goodwin et al., 2016
+
 **Citation:** *Goodwin, N.R., Armston, J., Stiller, I., Muir, J., 2016. Assessing the repeatability of terrestrial laser scanning for monitoring gully topography: a case study from Aratula, Queensland, Australia. Geomorphology 262:24–36.*
 
 **DOI:** https://doi.org/10.1016/j.geomorph.2016.03.007
@@ -98,3 +99,58 @@
 - LiDAR data facilitates the identification of geomorphic features such as terraces, banks, and bedforms, aiding in understanding river dynamics and sediment transport processes
 - The technology assists in distinguishing between ground surfaces and vegetation, allowing for the analysis of riparian zones and their ecological health
 
+
+
+### Flener et al., 2013
+
+**Citation:** *Flener, C., Vaaja, M., Jaakkola, A., Krooks, A., Kaartinen, H., Kukko, A., Kasvi, E., Hyyppä, H., Hyyppä, J. and Alho, P., 2013. Seamless mapping of river channels at high resolution using mobile LiDAR and UAV-photography. Remote sensing, 5(12), pp.6382-6407.*
+
+**DOI:** doi:10.3390/rs5126382
+
+**Findings:**
+
+- This study combines terrestrial mobile lidar scanning and high resolution UAV based photography to create bathymetric models of the river bed
+- Different methods yield a range of accuracies
+- Wet and dry areas modelled at high resolution with combination of UAV photography
+- TLS data collection is spatially limited due to static nature
+- Vertical accuracy of 10 cm
+
+
+
+**Additional Notes:**
+
+- High quality topographic and bathymetric data is required to study fluvial processes and river dynamics (Best, 2005)
+- Accuracy of DEMs is critical for fluvial geomorphological mapping and hydrodynamic modeling (Alho et al, 2009; Cobby et al, 2001; Bates, 2004)
+- Lidar demonstrated to be usable in forested environments (Hyyppa et al, 2008)
+- Different kinds of laser scanning methods and applications to fluvial research detailed in Hohenthal et al 2001
+
+
+
+
+### Alho et al., 2011
+
+**Citation:** *Alho, P., Vaaja, M., Kukko, A., Kasvi, E., Kurkela, M., Hyyppä, J., Hyyppä, H. and Kaartinen, H., 2011. Mobile laser scanning in fluvial geomorphology: Mapping and change detection of point bars. Zeitschrift fur Geomorphologie-Supplementband, 55(2), p.31.*
+
+**DOI:** 10.1127/0372-8854/2011/0055S2-0044
+
+**Findings:**
+
+- Field surveys yield very coarse resolution DTMs (also time consuming)
+- TLS limited by spatial coverage
+- MLS offers higher point density and higher accuracy than ALS
+- Possible to select local areas for higher point density with MLS
+- MLS method allowed for 3D mapping of fluvial landforms on sub-decimeter scale
+- Multi-temporal data enables both change detection and volume calculations of riverine environment 
+-MLS enable faster survey approach compared to TLS
+- Positioning accuracy of GPS-IMU is the most critical part of error budget
+- Positioning accuracy can be controlled with reference targets for tying mobile scans to reference coordinate system
+- MLS allows for evenly distributed complete data coverage
+- Lidar provides 3D for environmental studies such as river dynamics and hydraulic modeling
+
+
+*Additional Notes:**
+
+- DTM accuracy crucial for fluvial mapping and hydraulic modeling (Cobby et al, 2001; Bates 2004; Alho et al 2009a, b)
+- New MLS approach for field mapping in riverine environment (Alho et al 2009a)
+- Old methods include erosional pins and cross-sections (lots of sources)
+- Mobile mapping is a multi-sensor setup that consists of various sensors for navigation and data acquisition on a rigid integration platform to remotely measure the position and dimensions of an object (El-Sheimy 2005)
