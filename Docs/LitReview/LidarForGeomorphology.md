@@ -90,14 +90,17 @@
 
 **Citation:** *Tarolli, P., 2011. Application of LiDAR technology for rivers analysis. Italian J. Eng. Geol. Environ. 33–44.*
 
-**DOI:** 10.4408/IJEGE.2011-01.S-03
+**DOI:** https://doi.org/10.4408/IJEGE.2011-01.S-03
 
 **Findings:**
 
 - LiDAR provides detailed topographic data, enabling precise mapping of river channels, floodplains, and surrounding landscapes
+- LiDAR provides detailed Digital Terrain Models (DTMs) with high vertical and horizontal accuracy, enabling precise mapping of riverine landscapes
+- LiDAR's capability to filter out vegetation and man-made structures from raw data allows for the creation of bare-earth DTMs, essential for accurate hydrological and geomorphological analyses
 - The accuracy of LiDAR-derived Digital Elevation Models (DEMs) improves hydraulic models, leading to better flood risk assessments and management strategies
 - LiDAR data facilitates the identification of geomorphic features such as terraces, banks, and bedforms, aiding in understanding river dynamics and sediment transport processes
 - The technology assists in distinguishing between ground surfaces and vegetation, allowing for the analysis of riparian zones and their ecological health
+- LiDAR surveys cover large areas more efficiently and cost-effectively compared to traditional ground-based surveys, reducing the time and resources required for data collection
 
 
 
@@ -148,9 +151,26 @@
 - Lidar provides 3D for environmental studies such as river dynamics and hydraulic modeling
 
 
-*Additional Notes:**
+**Additional Notes:**
 
 - DTM accuracy crucial for fluvial mapping and hydraulic modeling (Cobby et al, 2001; Bates 2004; Alho et al 2009a, b)
 - New MLS approach for field mapping in riverine environment (Alho et al 2009a)
 - Old methods include erosional pins and cross-sections (lots of sources)
 - Mobile mapping is a multi-sensor setup that consists of various sensors for navigation and data acquisition on a rigid integration platform to remotely measure the position and dimensions of an object (El-Sheimy 2005)
+
+
+
+
+### Kasprak et al, 2019
+
+**Citation:** *Kasprak, A., Bransky, N.D., Sankey, J.B., Caster, J. and Sankey, T.T., 2019. The effects of topographic surveying technique and data resolution on the detection and interpretation of geomorphic change. Geomorphology, 333, pp.1-15.*
+
+**DOI:** https://doi.org/10.1016/j.geomorph.2019.02.020
+
+**Findings:**
+- The magnitude of geomorphic change is dampened by coarser resolution DTM
+- Coarser resolution analysis attributes more change to dominant geomorphoc processes
+- Sediment imbalance magnitudes are exaggerated at coarser resolutions
+- Both TLS and SfM produced comparable estimates for site scale sediment budgets
+- Finest obtainable resolution is not always necessary for accurately quantifying geomorphic change, but the choice of resolution should be optimized to capture the spatial scale of the processes driving landscape change
+- In landscapes near sediment equilibrium finer resolutions should be used to avoid amplifying sediment imbalances and misinterpreting site trends
