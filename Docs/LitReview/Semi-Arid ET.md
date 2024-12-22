@@ -225,3 +225,28 @@
 - Accurate modeling of ET is necessary for predicting vegetation dynamics and ecosystem responses to environmental changes
 
 
+
+### Chao et al., 2021
+
+**Citation:** *Chao, L., Zhang, K., Wang, J., Feng, J. and Zhang, M., 2021. A comprehensive evaluation of five evapotranspiration datasets based on ground and grace satellite observations: Implications for improvement of evapotranspiration retrieval algorithm. Remote Sensing, 13(12), p.2414.*
+
+**DOI:** https://doi.org/10.3390/rs13122414
+
+**Findings:**
+-
+
+
+
+
+### Garcia et al., 2013
+
+**Citation:** *García, M., Sandholt, I., Ceccato, P., Ridler, M., Mougin, E., Kergoat, L., Morillas, L., Timouk, F., Fensholt, R. and Domingo, F., 2013. Actual evapotranspiration in drylands derived from in-situ and satellite data: Assessing biophysical constraints. Remote Sensing of Environment, 131, pp.103-118.*
+
+**DOI:** https://doi.org/10.1016/j.rse.2012.12.016
+
+**Findings:**
+-
+
+
+
+
