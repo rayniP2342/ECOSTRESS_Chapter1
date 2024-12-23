@@ -233,7 +233,32 @@
 **DOI:** https://doi.org/10.3390/rs13122414
 
 **Findings:**
--
+- This study evaluates 5 global ET products by comparing them with reconstructed ET based on ground and GRACE observations for 592 CONUS watersheds
+- This study also identifies advantages/disadvantages of the 5 ET algorithms 
+- Five models = P-LSH, PML, MODIS, MTE, and GLEAM (MTE best, MODSI worst)
+- All R-values were equal to or higher than 0.85
+- Combination of machine learning and physical process algorithms improve the accuracy of ET 
+- All models showed little spatial variability of ET for winter season because ET values are low across CONUS
+- Low temperatures and withered vegetation lead to poor results for remote sensing retrieval
+- MODIS underestimated ET overall
+- Correlation to benchmark dataset varies based on total annual ET
+- Choice of benchmark dataset is important and determine reliability of the comparison result 
+- Most models performed better at the annual and seasonal scale
+- Selection of the drive dataset can impact accuracy of ET algorithm 
+- Soil evaporation is an important part of ET and its accuracy directly affects the reliability of ET products
+- PML and MTE were effective in arid regions due to their consideration of the constraints of precipitation and soil moisture on soil evaporation
+
+**Additional Notes**
+
+- Accurate estimates of ET is crucial for understanding hydrological and ecological processes (Allen et al, 2005; Trenberth et al, 2009), agricultural drought detection and mitigation, planning of water resources (Teuling et al, 2009), and predicting extreme weather events (Orth et al, 2018)
+- In situ monitoring of ET includes a variety of methods (Oberg, 2006), like eddy covariance towers
+- In situ provides point or local scale observations, but cannot provide data a regional or global scales (Rana et al, 2001; Wang et al, 2010)
+- READ Runhoff et al 2013 about MODIS ET assessment
+- READ Chirouze et al 2014 about four remote-sensing based energy balance models
+- Regression relationships between ET and remote sensing parameters are not formulated on the basis of underlying physical mechanisms (Wang et al, 2007)
+- Single layer (big leaf model) vs two-layer energy balance models 
+- NDVI and LAI represent vegetation characteristics without water stress (Cleugh et al) 
+
 
 
 
@@ -245,7 +270,11 @@
 **DOI:** https://doi.org/10.1016/j.rse.2012.12.016
 
 **Findings:**
--
+- During senescent phase, model was more sensitive to accuracy in Kpar and Krn (involved in energy partitioning into soil and vegetation)
+- Under Mediterranean conditions most of the uncertainty was related to the partition of energy between soil and vegetation
+- Daily PT-JPL model performed well when using field measured soil water content
+- Soil moisture constraint should be calibrated differently in each site
+- Strong coupling between ET and carbon assimilation fluxes in dryland regions
 
 
 
