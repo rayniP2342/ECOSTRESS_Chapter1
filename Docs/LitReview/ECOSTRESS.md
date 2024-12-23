@@ -54,21 +54,19 @@ Results showed the importance of additional filtering of ECOSTRESS images based 
 
 ### Liang et al., 2022
 
-**Title:** *Evaluation of ECOSTRESS evapotranspiration estimates over heterogeneous landscapes in the continental US.*
-
-**Authors:** Liang, L., Feng, Y., Wu, J., He, X., Liang, S., Jiang, X., de Oliveira, G., Qiu, J., & Zeng, Z. 
-
-**Year:** 2022
+**Citation:** *Liang, L., Feng, Y., Wu, J., He, X., Liang, S., Jiang, X., de Oliveira, G., Qiu, J. and Zeng, Z., 2022. Evaluation of ECOSTRESS evapotranspiration estimates over heterogeneous landscapes in the continental US. Journal of Hydrology, 613, p.128470.*
 
 **DOI:** https://doi.org/10.1016/j.jhydrol.2022.128470
 
 **Findings:** 
-This study compares ECOSTRESS products disALEXI (Two Source Energy Balance model) and PT-JPL (Priestley-Taylor model) to eddy flux towers across various geographic regions and biome types. In general, disALEXI performed better and was able to capture values closer to in-situ ground measurements. However, PT-JPL was able to better capture differences among heterogeneous landscapes. Overall, geographic region and local climate had a greater influence on ET than biome types. ECOSTRESS products also tended to overestimate early morning ET while also observing peak ET values an hour later than in situ observations. Both products had poor R2 values for daily ET estimates (0.11 and 0.45 for PT-JPL and disALEXI respectively), however disALEXI preformed better in Arizona and Colorado. Additionally, both products were able to capture seasonal variability of ET that followed the in situ trends. When quality flags were applied to disALEXI data – only selecting quality bits equal to zero, as well as removing high VZ and AOD pixels – the R2 dramatically increased (from 0.53 to 0.8), but the number of data pairs was significantly reduced (from 409 to 90). In general the quality of ECOSTRESS products was determined by geographic region and local climate, rather than vegetation type. The authors claim that ECOSTRESS is a good product for measuring field scale response in homogeneous landscapes (ie crop response to water stress) but less sufficient at mapping ET across heterogeneous, complex landscapes.
+This study compares ECOSTRESS products disALEXI (Two Source Energy Balance model) and PT-JPL (Priestley-Taylor model) to eddy flux towers across various geographic regions and biome types. In general, disALEXI performed better and was able to capture values closer to in-situ ground measurements. However, PT-JPL was able to better capture differences among heterogeneous landscapes. Overall, geographic region and local climate had a greater influence on ET than biome types. ECOSTRESS products also tended to overestimate early morning ET while also observing peak ET values an hour later than in situ observations. Both products had poor R2 values for daily ET estimates (0.11 and 0.45 for PT-JPL and disALEXI respectively), however disALEXI preformed better in Arizona and Colorado. Additionally, both products were able to capture seasonal variability of ET that followed the in situ trends. When quality flags were applied to disALEXI data – only selecting quality bits equal to zero, as well as removing high VZ and AOD pixels – the R2 dramatically increased (from 0.53 to 0.8), but the number of data pairs was significantly reduced (from 409 to 90). The R squared value was much less than the Fischer study, which could be due to over representation in WI and higher number of data pairs. In general the quality of ECOSTRESS products was determined by geographic region and local climate, rather than vegetation type. The authors claim that ECOSTRESS is a good product for measuring field scale response in homogeneous landscapes (ie crop response to water stress) but less sufficient at mapping ET across heterogeneous, complex landscapes.
 
  **Additional Notes:**
 - Previous work validating ECOSTRESS 
 - Methods for correcting and filtering eddy flux data
 - Methods used ET boundaries between 0 – 30 mm/day (removed the rest)
+- Kohli et at 2020 foudnsite specific differences in ET product partly being to spatial heterogeniety near the site
+
 
 
 ### Nicholson et al., 2020
@@ -83,3 +81,51 @@ This study compares ECOSTRESS products disALEXI (Two Source Energy Balance model
 
 **Findings:** 
 This study quantifies the uncertainty associated with the disALEXI ET product. It is important to understand the differences between validation (comparison with field data), verification (comparison with other models), and uncertainty quantification. This study defined uncertainty quantification as the variability of the output when all inputs are varied in a reasonable way. This study concluded that uncertainty of ECOSTRESS was higher than the observed in previous validation studies. The study also found that that land surface temperature (LST) obtained from ECOSTRESS was the main driver of uncertainty, followed by albedo and LAI provided by Landsat. 
+
+
+
+### Anderson et al, 2021
+
+**Citation:** *Martha C. Anderson, Yang Yang, Jie Xue, Kyle R. Knipper, Yun Yang, Feng Gao, Chris R. Hain, William P. Kustas, Kerry Cawse-Nicholson, Glynn Hulley, Joshua B. Fisher, Joseph G. Alfieri, Tilden P. Meyers, John Prueger, Dennis D. Baldocchi, Camilo Rey-Sanchez, 2021. Interoperability of ECOSTRESS and Landsat for mapping evapotranspiration time series at sub-field scales, Remote Sensing of Environment, Volume 252, 2021, 112189, ISSN 0034-4257.*
+
+**DOI:** https://doi.org/10.1016/j.rse.2020.112189.
+
+**Findings:** 
+
+- Images should be filtered by < 20 degree viewing angle
+- Used imaged between the hours of 9 am and 5 pm (constrains on image aquisition time)
+- ECOSTRESS only slightly improve ET measurements, but significanlty improved at specific sites when it was able to capture peak growth stage
+- Early morning image aquisition produced 'excessively' uniform ET maps
+
+
+### Hu et al, 2023
+
+**Citation:** *Hu, T., Mallick, K., Hitzelberger, P., Didry, Y., Boulet, G., Szantoi, Z., Koetz, B., Alonso, I., Pascolini‐Campbell, M., Halverson, G. and Cawse‐Nicholson, K., 2023. Evaluating European ECOSTRESS hub evapotranspiration products across a range of soil‐atmospheric aridity and biomes over Europe. Water Resources Research, 59(8), p.e2022WR034132.*
+
+**DOI:** https://doi.org/10.1016/j.rse.2022.113296.
+
+**Findings:**
+
+- PT-JPL overestimated Et in shrub lands and savanas due to constraints from land surface temperature in the model
+- There is an increase in ET bias with progressive surface drying
+- SEBS model showed large over estimation under drying conditions
+- SEBS could not capture low ET over shrubland and savanna
+- All models over estimated ET in sparsely vegetated regions
+- ET bias increases with VPD, which corresponds to dry conditions
+- ET bias was effected by overpass time
+
+**Additional Notes:**
+- Coupling between the land surface and atmosphere are strong in water limited systems, ET is mainly driven by stomatal conductance (Mallick et al., 2016, 2022).
+
+
+
+### Hulley et al, 2021
+
+**Citation:** *Hulley, G. C., Göttsche, F. M., Rivera, G., Hook, S. J., Freepartner, R. J., Martin, M. A., ... & Johnson, W. R. (2021). Validation and quality assessment of the ECOSTRESS level-2 land surface temperature and emissivity product. IEEE Transactions on Geoscience and Remote Sensing, 60, 1-23.*
+
+**DOI:** https://doi.org/10.1016/j.rse.2022.113296.
+
+**Findings:** 
+
+- The ECOSTRESS LST product demonstrated a high level of accuracy when compared to in situ measurements
+- With proper calibration and validation, the ECOSTRESS LST data could provide reliable temperature readings across diverse land cover types

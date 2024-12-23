@@ -26,21 +26,20 @@
 
 **Findings:** 
 
-*From Intro*
-- Drylands form nearly 30% of global land surface (Stafford and Smith, 1996; Sivakumar et al 2005, Drenge, 1991)
-- Climate change increase risk (Dore, 2005)
-- Frequency of precip events decreases but number of extreme events increases (Easterling et al, 2000)
-- High temps increase water stress thru evap (Hughes, 2003)
-  
-*From Main Body*
 - Reduced MAP leads to decrease in soil moisture, mostly top soil layer suffers
 - More extreme events impact lower soil layer
 - Decreased precip and increased temps leads to reduced water availability
 - Extreme events increases precip pulse depths (reduces evap from top soil layer, leads to plant water uptake)
---   Unless higher hydraulic K and steep slopes, then more runoff
+- Unless higher hydraulic K and steep slopes, then more runoff
 - Understanding coupled dynamics of water and vegetation is important to assess climate change threats
 - Different veg types respond differently to altered precip, temp, and CO2
 
+**Additional Notes:**
+
+- Drylands form nearly 30% of global land surface (Stafford and Smith, 1996; Sivakumar et al 2005, Drenge, 1991)
+- Climate change increase risk (Dore, 2005)
+- Frequency of precip events decreases but number of extreme events increases (Easterling et al, 2000)
+- High temps increase water stress thru evap (Hughes, 2003)
 
 
 ### Goodrich et al., 2008
@@ -56,6 +55,9 @@
 - Large interannual variability directly comparable to runoff variability
 - Long term decrease in runoff from ephemeral tributaries may be primary cause of decreasing summer flows in San Pedro (due to changes in high-intensity rainfall)
 
+**Additional Notes:**
+
+- Limited water supplies in semi-arid regions (Thomas and Pool, 200
 
 
 ### Loik et al., 2004
@@ -74,13 +76,16 @@
 - Interception - varies by plant type and precip amount, but typically returned to atmosphere via evaporation within a day
 - Infiltration and runoff determine net input to soil
 - Infiltration occurs over days to weeks
--- Roots cause hydaulic redistribution (some layers wetter than others) (Caldwell et al 1998, Ryel et al 2003)
 - Soil water depleted by evaporation and plant uptake/transpiration
--- Soil evap occurs at < 15cm depth, but varies based on available energy (Ben-Asher et al, 1983)
-- Soils with higher sand content have higher infiltration and evaporation rates (Dingman, 1994)
 - Small precip events = less T and more E
 - Additive effect of multiple events
 - Snow events act like large rain events because larger proportion of water is partitioned to plant-available water
+
+**Additional Notes:**
+
+- Roots cause hydaulic redistribution (some layers wetter than others) (Caldwell et al 1998, Ryel et al 2003)
+- Soil evap occurs at < 15cm depth, but varies based on available energy (Ben-Asher et al, 1983)
+- Soils with higher sand content have higher infiltration and evaporation rates (Dingman, 1994)
 
 
 ### Wilcox et al., 2003
@@ -125,7 +130,6 @@
 **Findings:**
 
 - 7% change in water-capacity of atmosphere with 1 degree C change in temperature (C-C effect)
-- Greenhouse effect increasing temp and surface evaporation (Yu and Weller, 2007)
 - C-C effect increases moisture over the oceans and mid latitude regions, but little change to total precip
 -- Leads to more intense but less frequent rains
 - Wet areas get wetter, dry areas get drier
@@ -136,6 +140,10 @@
 - Net radiation affected by albedo (ice, clouds, aerosols)
 -- Affect solar radiation at surface and energy available for sensible and latent heat fluxes
 - Warmer climate increases risk of drought and floods
+
+**Additional Notes:**
+
+- Greenhouse effect increasing temp and surface evaporation (Yu and Weller, 2007)
 
 
 

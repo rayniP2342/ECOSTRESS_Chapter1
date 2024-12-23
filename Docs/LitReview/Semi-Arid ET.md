@@ -57,7 +57,6 @@
 - Correlation of ET to shallow soil layers typical of semi-arid ecosystems
 -- High evaporative demand, poor infiltration (Scott et al, 2000)
 - Precip rarely percolates below 10 cm in the summer (in this region), roots below this depth are not wetted
-- Near zero ET prior to summer rains (also Kurc and Small, 2004; Scott et al, 2006)
 - When plants dormant, E will dominate ET
 - T response not seen until 3 weeks following start of summer rainfall
 - Peak T rates rarely sustain more than a day (almost always in a water limited state)
@@ -65,6 +64,10 @@
 - Amount of bare space and percent cover will affect T/ET ratio
 - Rapid evaporation of surface soil layers between small precip events
 - More intense precip events are favorable because water percolates to rooting depths
+
+**Additional Notes:**
+
+- Near zero ET prior to summer rains (also Kurc and Small, 2004; Scott et al, 2006)
 
 
 
@@ -109,7 +112,7 @@
 
 **Citation:** *Kurc SA, Small EE. 2004. Dynamics of evapotranspiration in semiarid grassland and shrubland ecosystems during the summer monsoon season, central New Mexico. Water Resources Research 40: W09305.*
 
-**DOI:** DOI:10Ð1029/2004WR003068
+**DOI:** 10Ð1029/2004WR003068
 
 **Findings:**
 
@@ -121,15 +124,10 @@
 - Surface soil is the primary reservoir for water storage and source of ET during monsoon season
 - Direct evaporation is a large component of ET
 - Predicting ET based on root zone averaged soil moisture not appropriate in semi-arid environments
-- ET is roughly equal to precip on timescales longer than seasonal (Sala et al, 1992; Philipes, 1994; Reynolds et al, 2000)
 - Variability of ET on short timescales is critical for the coupled cycling of water, energy, and carbon
-- ET effects:
--- The amount of precip partitioned into runoff and recharge (Philips, 1994; Laio et al, 2001)
--- How land-atmosphere interactions influences weather and climate
--- Processes like plant productivity, soil respiration, and biogeochemical cycling
-- Meteorological and vegetation conditions control ET when soil moisture is not limited (Shuttleworth, 1991)
+- ET effects how land-atmosphere interactions influences weather and climate
+- ET effects Processes like plant productivity, soil respiration, and biogeochemical cycling
 - In wet environments ET increases linearly with root zone water content (effective saturation)
-- More bare soil = more rapid evporation (Dugas et al, 1996)
 - Soil heat flux is 30% greater at shrublands than grasslands
 -- More bare soil in shrublands, stronger temp gradient at surface
 -- More outgoing longwave radiation and more albedo
@@ -144,7 +142,11 @@
 - ET returns nearly all rainfall to atm in sever days
 - Water content fluctuation is the fundamental constrain on soil moisture storage and ET in semi-arid grasslands and shrub lands during monsoon season
 
-
+**Additional Notes:**
+- ET is roughly equal to precip on timescales longer than seasonal (Sala et al, 1992; Philipes, 1994; Reynolds et al, 2000)
+- ET effects the amount of precip partitioned into runoff and recharge (Philips, 1994; Laio et al, 2001)
+- Meteorological and vegetation conditions control ET when soil moisture is not limited (Shuttleworth, 1991)
+- More bare soil = more rapid evporation (Dugas et al, 1996)
   
 ### Brandes and Wilcox, 2000
 
@@ -174,16 +176,19 @@
 
 **Citation:** *Ha, W., Kolb, T. E., Springer, A. E., Dore, S., O'Donnell, F. C., Martinez Morales, R., ... & Koch, G. W. (2015). Evapotranspiration comparisons between eddy covariance measurements and meteorological and remote‐sensing‐based models in disturbed ponderosa pine forests. Ecohydrology, 8(7), 1335-1350..*
 
-**DOI:**
+**DOI:** 10.1002/eco.1586
 
 **Findings:**
 
 - ET is the largest outgoing flux of annual precip for forest
-- ET is 85% of precip in ponderosa forests (Dore et al, 2012)
 - Difficult to measure ET across large areas
-- Annual ET:
--- 510 mm at control site
--- 464 mm at restoration site
+- Annual ET: 510 mm at control site, 464 mm at restoration site
+- MODIS under predicted ET at all sites
+  
+
+**Additional Notes:**
+
+- ET is 85% of precip in ponderosa forests (Dore et al, 2012)
 
 
 
@@ -199,8 +204,7 @@
 - Model that establish a relationship between evaporation rates and meterological factors often lack precision needed for diverse hydrological applications
 - Modeling evaporation is difficult due to the variability of environmental conditions and limited data
 - When water is available ET is primarily contrlled by atmospheric demands (solar radiation, temp, wind speed, humidity)
-- In water limited systems ET is constrained by the soil's ability to supply water to the surface and plants
--- less impacted by atmospheric demands
+- In water limited systems ET is constrained by the soil's ability to supply water to the surface and plants, so it is less impacted by atmospheric demands
 
 
 
@@ -219,5 +223,59 @@
 - ET exhibits significant variability based on seasonal precip patterns and spatial differences in vegeation cover and soil properties
 - ET is integral to soil moisture balance equation
 - Accurate modeling of ET is necessary for predicting vegetation dynamics and ecosystem responses to environmental changes
+
+
+
+### Chao et al., 2021
+
+**Citation:** *Chao, L., Zhang, K., Wang, J., Feng, J. and Zhang, M., 2021. A comprehensive evaluation of five evapotranspiration datasets based on ground and grace satellite observations: Implications for improvement of evapotranspiration retrieval algorithm. Remote Sensing, 13(12), p.2414.*
+
+**DOI:** https://doi.org/10.3390/rs13122414
+
+**Findings:**
+- This study evaluates 5 global ET products by comparing them with reconstructed ET based on ground and GRACE observations for 592 CONUS watersheds
+- This study also identifies advantages/disadvantages of the 5 ET algorithms 
+- Five models = P-LSH, PML, MODIS, MTE, and GLEAM (MTE best, MODSI worst)
+- All R-values were equal to or higher than 0.85
+- Combination of machine learning and physical process algorithms improve the accuracy of ET 
+- All models showed little spatial variability of ET for winter season because ET values are low across CONUS
+- Low temperatures and withered vegetation lead to poor results for remote sensing retrieval
+- MODIS underestimated ET overall
+- Correlation to benchmark dataset varies based on total annual ET
+- Choice of benchmark dataset is important and determine reliability of the comparison result 
+- Most models performed better at the annual and seasonal scale
+- Selection of the drive dataset can impact accuracy of ET algorithm 
+- Soil evaporation is an important part of ET and its accuracy directly affects the reliability of ET products
+- PML and MTE were effective in arid regions due to their consideration of the constraints of precipitation and soil moisture on soil evaporation
+
+**Additional Notes**
+
+- Accurate estimates of ET is crucial for understanding hydrological and ecological processes (Allen et al, 2005; Trenberth et al, 2009), agricultural drought detection and mitigation, planning of water resources (Teuling et al, 2009), and predicting extreme weather events (Orth et al, 2018)
+- In situ monitoring of ET includes a variety of methods (Oberg, 2006), like eddy covariance towers
+- In situ provides point or local scale observations, but cannot provide data a regional or global scales (Rana et al, 2001; Wang et al, 2010)
+- READ Runhoff et al 2013 about MODIS ET assessment
+- READ Chirouze et al 2014 about four remote-sensing based energy balance models
+- Regression relationships between ET and remote sensing parameters are not formulated on the basis of underlying physical mechanisms (Wang et al, 2007)
+- Single layer (big leaf model) vs two-layer energy balance models 
+- NDVI and LAI represent vegetation characteristics without water stress (Cleugh et al) 
+
+
+
+
+
+### Garcia et al., 2013
+
+**Citation:** *García, M., Sandholt, I., Ceccato, P., Ridler, M., Mougin, E., Kergoat, L., Morillas, L., Timouk, F., Fensholt, R. and Domingo, F., 2013. Actual evapotranspiration in drylands derived from in-situ and satellite data: Assessing biophysical constraints. Remote Sensing of Environment, 131, pp.103-118.*
+
+**DOI:** https://doi.org/10.1016/j.rse.2012.12.016
+
+**Findings:**
+- During senescent phase, model was more sensitive to accuracy in Kpar and Krn (involved in energy partitioning into soil and vegetation)
+- Under Mediterranean conditions most of the uncertainty was related to the partition of energy between soil and vegetation
+- Daily PT-JPL model performed well when using field measured soil water content
+- Soil moisture constraint should be calibrated differently in each site
+- Strong coupling between ET and carbon assimilation fluxes in dryland regions
+
+
 
 
