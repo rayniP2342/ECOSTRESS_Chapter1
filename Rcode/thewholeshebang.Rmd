@@ -12,6 +12,8 @@ library(MuMIn)
 ```
 
 
+
+
 # AmeriFlux Processing Using Volk Package
 ```{r}
 ```
@@ -23,6 +25,8 @@ library(MuMIn)
 
 ```{r}
 ```
+
+
 
 
 # Combine ECOSTRESS data
@@ -78,10 +82,12 @@ write.csv(ecodat, "K:/Rayni_Lewis/Projects/ECOSTRESS/Data/ECOSTRESS/250m_new/ECO
 
 
 
+
+
 # Create histograms of image acquisitions
 
 ```{r}
-ecodat <- read.csv("K:/Rayni_Lewis/Projects/ECOSTRESS/Data/ECOSTRESS/250m_new/ECOet_currentsites_120224.csv")
+ecodat <- read.csv("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Data/ECOSTRESS_ET.csv")
 
 # Ensure date columns are in correct format
 ecodat$Timestamp <- as.POSIXct(ecodat$Date, format = "%Y-%m-%d %H:%M")
@@ -128,9 +134,11 @@ hist_grid
 
 Save historgram plots of observation times:
 ```{r}
-ggsave("PlotandFigures/FINALFIGURES/obshist_comb.jpg", hist_comb, width = 12, height = 8)
-ggsave("PlotandFigures/FINALFIGURES/obshist_grid.jpg", hist_grid, width = 12, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/obshist_comb.jpg", hist_comb, width = 12, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/obshist_grid.jpg", hist_grid, width = 12, height = 8)
 ```
+
+
 
 
 
@@ -138,8 +146,8 @@ ggsave("PlotandFigures/FINALFIGURES/obshist_grid.jpg", hist_grid, width = 12, he
 Load data, ensure date column is in correct format and merge AmeriFlux and ECOSTRESS data:
 ```{r}
 # Load ECOSTRESS and AmeriFLux data
-afdat <- read.csv("K:/Rayni_Lewis/Projects/ECOSTRESS/Data/ameriflux/AFcurrentsites_ETcorr_ComboMethod.csv")
-ecodat <- read.csv("K:/Rayni_Lewis/Projects/ECOSTRESS/Data/ECOSTRESS/250m_new/ECOet_currentsites_120224.csv")
+afdat <- read.csv("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Data/AmeriFluxET_combomethod.csv")
+ecodat <- read.csv("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Data/ECOSTRESS_ET.csv")
 
 # Ensure date columns are in correct format
 ecodat$Date <- as.Date(ecodat$Date)
@@ -148,6 +156,8 @@ afdat$Date <- as.Date(afdat$Date)
 # Merge AmeriFlux and ECOSTRESS dataframes 
 alldat <- merge(afdat, ecodat, by = c("Site", "Date"))
 ```
+
+
 
 
 # Daily Analysis 
@@ -180,12 +190,13 @@ timeseries_plot
 ```
 Save timeseries plot:
 ```{r}
-ggsave("PlotandFigures/FINALFIGURES/daily_timeseries.jpg", timeseries_plot, width = 12, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/daily_timeseries.jpg", timeseries_plot, width = 12, height = 8)
 ```
 
 
 
 ***Daily Regressions***
+
 ## Conduct daily regression models between ECOSTRESS and AmeriFlux
 **Daily Regressions**
 ### Conduct a linear regression model for all sites combined:
@@ -231,8 +242,10 @@ Save daily combined regression plot:
 ggsave("PlotandFigures/FINALFIGURES/daily_reg_combined.jpg", daily_reg_comb, width = 8, height = 8)
 ```
 
-##Conduct mulitple linear regression with temperature
-### Conduct a linear regression model for all sites combined:
+
+## Conduct linear regression with temperature
+
+### Conduct a multiple linear regression model for all sites combined:
 ```{r}
 # Perform linear regression where ET_corr (AmeriFlux) is the predictor and Mean (ECOSTRESS) is the response
 daily_reg <- lm(ET_corr ~ Mean + Temp, data = alldat)
@@ -277,6 +290,7 @@ ggsave("PlotandFigures/FINALFIGURES/daily_reg_combined.jpg", daily_reg_comb, wid
 
 
 **Site Specific Daily Regression**
+
 ### Conduct a linear regression model for each individual site:
 ```{r}
 # Function to perform linear regression and create a plot for each site
@@ -316,6 +330,7 @@ ggsave("PlotandFigures/FINALFIGURES/daily_reg_separate.jpg", daily_reg_grid, wid
 
 
 **NLCD Classification Regression**
+
 ### Conduct a linear regression model for each NLCD land cover type:
 
 Define NLCD classifications:
@@ -358,6 +373,55 @@ ggsave("PlotandFigures/FINALFIGURES/nlcd_reg.jpg", nlcd_grid, width = 8, height 
 
 
 ***Seasonal Analysis***
+
+
+### Conduct a linear regression model for all sites combined for specific time frame
+```{r}
+ecodat <- read.csv("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Data/ECOSTRESS_ET.csv")
+
+# Ensure date columns are in correct format
+ecodat$Time <- as.POSIXct(ecodat$Date, format = '%H:%M:%S')
+ecodat$Date <- as.Date(ecodat$Date)
+
+# Perform linear regression where ET_corr (AmeriFlux) is the predictor and Mean (ECOSTRESS) is the response
+daily_reg <- lm(ET_corr ~ Mean, data = alldat)
+(daily_summary <- summary(daily_reg))
+
+# Extract summary statistics
+rsquar <- daily_summary$r.squared
+rmse <- sqrt(mean(daily_summary$residuals^2))
+pval <- daily_summary$coefficients["Mean", "Pr(>|t|)"]
+
+# Create the scatter plot with regression line
+# Save as 800x800
+daily_reg_comb <- ggplot(data = alldat, aes(x = Mean, y = ET_corr)) + 
+  geom_point(shape = 17) +
+  geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash", linewidth = 1) +
+  labs(title = "",
+       x = "ECOSTRESS (mm/day)",
+       y = "AmeriFlux (mm/day)") +
+  xlim(0,8) +
+  ylim(0,8) +
+  theme_minimal() + 
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    panel.grid.major = element_line(color = "grey", size = 0.25),
+    panel.grid.minor = element_line(color = "grey", size = 0.25),
+    axis.title.x = element_text(size = 15),
+    axis.title.y = element_text(size = 15)
+  ) +
+  annotate("rect", xmin = 6.4, xmax = 8, ymin = 6.5, ymax = 7.6, fill = "white", color = "black") +
+  annotate("text", x = 7.15, y = 7.2,
+           label = paste("\n R² =", round(rsquar, 2), 
+                         "\n p =", signif(pval, digits = 2),
+                         "\n RMSE = ", round(rmse, 3)),
+           hjust = 0.5, vjust = 0.5, size = 4.5, color = "black")
+
+daily_reg_comb
+```
+
+
+
 
 # Seasonal Analysis
 This section of code will conduct a linear regression for seasonal ET values and conduct a paired t-test between individual sites to asses for differences in mean seasonal ET values.
@@ -590,6 +654,8 @@ ggsave("PlotandFigures/FINALFIGURES/seasonal_reg_separate.jpg", seasonal_grid, w
 ```
 
 
+
+
 # Annual Analysis
 This section of code conducts paired T-Tests and regression models for annual data.
 
@@ -810,6 +876,8 @@ ggsave("PlotandFigures/FINALFIGURES/annual_reg_combined.jpg", annual_comb, width
 ```
 
 
+
+
 # OpenET Analysis
 ##Timeseries
 This section of code compares ECOSTRESS data to OpenET via linear regression and timeseries.
@@ -971,6 +1039,8 @@ Save regression plot
 ```{r}
 ggsave("PlotandFigures/FINALFIGURES/openet_regression.jpg", width = 8, height = 9)
 ```
+
+
 
 
 

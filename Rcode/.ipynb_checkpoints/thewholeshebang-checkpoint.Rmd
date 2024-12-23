@@ -1,0 +1,1258 @@
+This R Markdown file does it all... from initial AmeriFlux and ECOSTRESS pre-processing to regression models, to bar charts, to adjusting ECOSTRESS values. This is the only script you need.
+
+# Load all packages
+```{r, echo = FALSE}
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(lubridate)
+library(tidyr)
+library(gridExtra)
+library(MuMIn)
+```
+
+
+# AmeriFlux Processing Using Volk Package
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+# Combine ECOSTRESS data
+
+This section of code should load all of the ECOSTRESS statistics files that have been extracted from TIFF files. It will add the dates to the band names and combine all of the sites to one csv file.
+```{r}
+# Import ECOSTRESS text files
+
+ecoCMW <- read.table("K:/Rayni_Lewis/Projects/ECOSTRESS/Data/ECOSTRESS/250m_new/ECO_CMW_250mbuff_p95filt_stats.txt", header = TRUE)
+ecoMtB <- read.table("K:/Rayni_Lewis/Projects/ECOSTRESS/Data/ECOSTRESS/250m_new/ECO_MtB_250mbuff_p95filt_stats.txt", header = TRUE)
+ecoSRG <- read.table("K:/Rayni_Lewis/Projects/ECOSTRESS/Data/ECOSTRESS/250m_new/ECO_SRG_250mbuff_p95filt_stats.txt", header = TRUE)
+ecoSRM <- read.table("K:/Rayni_Lewis/Projects/ECOSTRESS/Data/ECOSTRESS/250m_new/ECO_SRM_250mbuff_p95filt_stats.txt", header = TRUE)
+ecoWhs <- read.table("K:/Rayni_Lewis/Projects/ECOSTRESS/Data/ECOSTRESS/250m_new/ECO_Whs_250mbuff_p95filt_stats.txt", header = TRUE)
+ecoWkg <- read.table("K:/Rayni_Lewis/Projects/ECOSTRESS/Data/ECOSTRESS/250m_new/ECO_Wkg_250mbuff_p95filt_stats.txt", header = TRUE)
+
+# Import date text file
+doy <- read.table("K:/Rayni_Lewis/Projects/ECOSTRESS/Data/ECOSTRESS/ECOdateandtime120224.txt", header = TRUE)
+doy$Date <- as.POSIXct(paste(doy$Day, doy$Time), format = "%Y-%m-%d %H:%M", tz = "MST")
+
+# Add date and time to ECOSTRESS files
+ecoCMW$Date <- as.POSIXct(paste(doy$Date, doy$Hour), format = "%Y-%m-%d %H:%M", tz = "MST")
+ecoMtB$Date <- as.POSIXct(paste(doy$Date, doy$Hour), format = "%Y-%m-%d %H:%M", tz = "MST")
+ecoSRG$Date <- as.POSIXct(paste(doy$Date, doy$Hour), format = "%Y-%m-%d %H:%M", tz = "MST")
+ecoSRM$Date <- as.POSIXct(paste(doy$Date, doy$Hour), format = "%Y-%m-%d %H:%M", tz = "MST")
+ecoWhs$Date <- as.POSIXct(paste(doy$Date, doy$Hour), format = "%Y-%m-%d %H:%M", tz = "MST")
+ecoWkg$Date <- as.POSIXct(paste(doy$Date, doy$Hour), format = "%Y-%m-%d %H:%M", tz = "MST")
+
+# Add a 'site' column to each dataframe and combine them
+ecoCMW <- ecoCMW %>% mutate(Site = "US-CMW")
+ecoMtB <- ecoMtB %>% mutate(Site = "US-MtB")
+ecoSRG <- ecoSRG %>% mutate(Site = "US-SRG")
+ecoSRM <- ecoSRM %>% mutate(Site = "US-SRM")
+ecoWhs <- ecoWhs %>% mutate(Site = "US-Whs")
+ecoWkg <- ecoWkg %>% mutate(Site = "US-Wkg")
+
+# Add a 'NLCD' column to each dataframe and combine them
+ecoCMW <- ecoCMW %>% mutate(NLCD = "Mixed")
+ecoMtB <- ecoMtB %>% mutate(NLCD = "Evergreen")
+ecoSRG <- ecoSRG %>% mutate(NLCD = "Herbaceous")
+ecoSRM <- ecoSRM %>% mutate(NLCD = "Shrub/Scrub")
+ecoWhs <- ecoWhs %>% mutate(NLCD = "Shrub/Scrub")
+ecoWkg <- ecoWkg %>% mutate(NLCD = "Shrub/Scrub")
+
+# Combine all dataframes into one
+ecodat <- bind_rows(ecoCMW, ecoMtB, ecoSRG, ecoSRM, ecoWhs, ecoWkg)
+
+# Remove rows where Mean is 0.0
+ecodat <- ecodat %>%
+  filter(Mean != 0.0)
+
+write.csv(ecodat, "K:/Rayni_Lewis/Projects/ECOSTRESS/Data/ECOSTRESS/250m_new/ECOet_currentsites_120224.csv", row.names = FALSE)
+```
+
+
+
+# Create histograms of image acquisitions
+
+```{r}
+ecodat <- read.csv("K:/Rayni_Lewis/Projects/ECOSTRESS/Data/ECOSTRESS/250m_new/ECOet_currentsites_120224.csv")
+
+# Ensure date columns are in correct format
+ecodat$Timestamp <- as.POSIXct(ecodat$Date, format = "%Y-%m-%d %H:%M")
+
+#Extract the hour from the 'Timestamp' column
+ecodat$Hour <- hour(ecodat$Timestamp)
+ecodat$Day <- day(ecodat$Timestamp)
+
+#Create a histogram of the number of observations by hour
+hist_comb <- ggplot(ecodat, aes(x = Hour)) +
+  geom_histogram(binwidth = 1, fill = "darkgreen", color = "black") +
+  labs(title = "ECOSTRESS Observations by Hour of the Day",
+       x = "Hour of the Day",
+       y = "Number of Observations") +
+  scale_x_continuous(breaks = seq(0, 23, by = 1)) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
+    axis.title.x = element_text(size = 12),
+    axis.title.y = element_text(size = 12)
+  )
+
+
+#Plot each site individually
+hist_grid <- ggplot(ecodat, aes(x = Hour)) +
+  geom_histogram(binwidth = 1, fill = "darkgreen", color = "black") +
+  labs(title = "ECOSTRESS Observations by Hour of the Day",
+       x = "Hour of the Day",
+       y = "ECOSTRESS Observations") +
+  scale_x_continuous(breaks = seq(0, 23, by = 1)) +
+  ylim(0,13) +
+  facet_wrap(~ Site, scales = "free_y") +  # Separate histograms by site
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
+    axis.title.x = element_text(size = 12),
+    axis.title.y = element_text(size = 12),
+    strip.text = element_text(size = 10, face = "bold")
+  )
+
+hist_comb
+hist_grid
+```
+
+Save historgram plots of observation times:
+```{r}
+ggsave("PlotandFigures/FINALFIGURES/obshist_comb.jpg", hist_comb, width = 12, height = 8)
+ggsave("PlotandFigures/FINALFIGURES/obshist_grid.jpg", hist_grid, width = 12, height = 8)
+```
+
+
+
+# Load all data
+Load data, ensure date column is in correct format and merge AmeriFlux and ECOSTRESS data:
+```{r}
+# Load ECOSTRESS and AmeriFLux data
+afdat <- read.csv("K:/Rayni_Lewis/Projects/ECOSTRESS/Data/ameriflux/AFcurrentsites_ETcorr_ComboMethod.csv")
+ecodat <- read.csv("K:/Rayni_Lewis/Projects/ECOSTRESS/Data/ECOSTRESS/250m_new/ECOet_currentsites_120224.csv")
+
+# Ensure date columns are in correct format
+ecodat$Date <- as.Date(ecodat$Date)
+afdat$Date <- as.Date(afdat$Date)
+
+# Merge AmeriFlux and ECOSTRESS dataframes 
+alldat <- merge(afdat, ecodat, by = c("Site", "Date"))
+```
+
+
+# Daily Analysis 
+This section of code will do all of the daily analysis between ECOSTRESS and AmeriFlux. It will plot daily time series, conduct a linear regression for all sites combined, and conduct a linear regression for each individual site.
+
+## Plot a timeseries of ECOSTRESS and AmeriFlux data:
+```{r}
+# Function to create timeseries plot for each site
+plot_timeseries <- function(afdat, ecodat, site_name) {
+  afdat %>% filter(Site == site_name) %>%
+    mutate(Date = as.Date(Date)) -> af_site_data
+  ecodat %>% filter(Site == site_name) %>%
+    mutate(Date = as.Date(Date)) -> eco_site_data
+  
+  ggplot() +
+    geom_line(data = af_site_data, aes(x = Date, y = ET_corr, color = "AmeriFlux"), linewidth = 1) +
+    geom_point(data = eco_site_data, aes(x = Date, y = Mean, color = "ECOSTRESS"), size = 1, shape = 17) +
+    labs(title = site_name, x = "", y = "ET (mm)") +
+    scale_color_manual(values = c("AmeriFlux" = "darkgrey", "ECOSTRESS" = "darkgreen")) +
+    theme_minimal() +
+    theme(legend.position = "none", plot.title = element_text(hjust = 0.5, size = 10)) +
+    coord_cartesian(xlim = as.Date(c("2019-01-01", "2023-12-31")), ylim = c(0, 8))
+}
+
+# Generate and save gridded plots
+sites <- unique(afdat$Site)
+plot_list <- lapply(sites, plot_timeseries, afdat = afdat, ecodat = ecodat)
+timeseries_plot <- grid.arrange(grobs = plot_list, ncol = 2)
+timeseries_plot
+```
+Save timeseries plot:
+```{r}
+ggsave("PlotandFigures/FINALFIGURES/daily_timeseries.jpg", timeseries_plot, width = 12, height = 8)
+```
+
+
+
+***Daily Regressions***
+## Conduct daily regression models between ECOSTRESS and AmeriFlux
+**Daily Regressions**
+### Conduct a linear regression model for all sites combined:
+```{r}
+# Perform linear regression where ET_corr (AmeriFlux) is the predictor and Mean (ECOSTRESS) is the response
+daily_reg <- lm(ET_corr ~ Mean, data = alldat)
+(daily_summary <- summary(daily_reg))
+
+# Extract summary statistics
+rsquar <- daily_summary$r.squared
+rmse <- sqrt(mean(daily_summary$residuals^2))
+pval <- daily_summary$coefficients["Mean", "Pr(>|t|)"]
+
+# Create the scatter plot with regression line
+# Save as 800x800
+daily_reg_comb <- ggplot(data = alldat, aes(x = Mean, y = ET_corr)) + 
+  geom_point(shape = 17) +
+  geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash", linewidth = 1) +
+  labs(title = "",
+       x = "ECOSTRESS (mm/day)",
+       y = "AmeriFlux (mm/day)") +
+  xlim(0,8) +
+  ylim(0,8) +
+  theme_minimal() + 
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    panel.grid.major = element_line(color = "grey", size = 0.25),
+    panel.grid.minor = element_line(color = "grey", size = 0.25),
+    axis.title.x = element_text(size = 15),
+    axis.title.y = element_text(size = 15)
+  ) +
+  annotate("rect", xmin = 6.4, xmax = 8, ymin = 6.5, ymax = 7.6, fill = "white", color = "black") +
+  annotate("text", x = 7.15, y = 7.2,
+           label = paste("\n R² =", round(rsquar, 2), 
+                         "\n p =", signif(pval, digits = 2),
+                         "\n RMSE = ", round(rmse, 3)),
+           hjust = 0.5, vjust = 0.5, size = 4.5, color = "black")
+
+daily_reg_comb
+```
+Save daily combined regression plot:
+```{r}
+ggsave("PlotandFigures/FINALFIGURES/daily_reg_combined.jpg", daily_reg_comb, width = 8, height = 8)
+```
+
+##Conduct mulitple linear regression with temperature
+### Conduct a linear regression model for all sites combined:
+```{r}
+# Perform linear regression where ET_corr (AmeriFlux) is the predictor and Mean (ECOSTRESS) is the response
+daily_reg <- lm(ET_corr ~ Mean + Temp, data = alldat)
+(daily_summary <- summary(daily_reg))
+
+# Extract summary statistics
+rsquar <- daily_summary$r.squared
+rmse <- sqrt(mean(daily_summary$residuals^2))
+pval <- daily_summary$coefficients["Mean", "Pr(>|t|)"]
+
+# Create the scatter plot with regression line
+# Save as 800x800
+multi_reg_comb <- ggplot(data = alldat, aes(x = Mean, y = ET_corr)) + 
+  geom_point(shape = 17) +
+  geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash", linewidth = 1) +
+  labs(title = "",
+       x = "ECOSTRESS (mm/day)",
+       y = "AmeriFlux (mm/day)") +
+  xlim(0,8) +
+  ylim(0,8) +
+  theme_minimal() + 
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    panel.grid.major = element_line(color = "grey", size = 0.25),
+    panel.grid.minor = element_line(color = "grey", size = 0.25),
+    axis.title.x = element_text(size = 15),
+    axis.title.y = element_text(size = 15)
+  ) +
+  annotate("rect", xmin = 6.4, xmax = 8, ymin = 6.5, ymax = 7.6, fill = "white", color = "black") +
+  annotate("text", x = 7.15, y = 7.2,
+           label = paste("\n R² =", round(rsquar, 2), 
+                         "\n p =", signif(pval, digits = 2),
+                         "\n RMSE = ", round(rmse, 3)),
+           hjust = 0.5, vjust = 0.5, size = 4.5, color = "black")
+
+multi_reg_comb
+```
+Save daily combined regression plot:
+```{r}
+ggsave("PlotandFigures/FINALFIGURES/daily_reg_combined.jpg", daily_reg_comb, width = 8, height = 8)
+```
+
+
+**Site Specific Daily Regression**
+### Conduct a linear regression model for each individual site:
+```{r}
+# Function to perform linear regression and create a plot for each site
+plot_regression <- function(data, site_name) {
+  site_data <- data %>% filter(Site == site_name)
+  model <- lm(ET_corr ~ Mean, data = site_data)
+  r_squared <- summary(model)$r.squared
+  p_value <- coef(summary(model))["Mean", "Pr(>|t|)"]
+  rmse <- sqrt(mean(model$residuals^2))
+  
+  ggplot(site_data, aes(x = Mean, y = ET_corr)) +
+    geom_point(shape = 17) +
+    geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash", linewidth = 0.75) +
+    labs(title = site_name, x = "ECOSTRESS ET (mm/day)", y = "AmeriFlux ET (mm/day)") +
+    annotate('rect', xmin = 5.65, xmax = 7.75, ymin = 5.5, ymax = 8, color = 'black', fill = 'white') +
+    annotate("text", x = 6.7, y = 6.7,
+             label = sprintf("R² = %.2f\np = %.2g\nRMSE = %.2f", r_squared, p_value, rmse),
+             hjust = 0.5, vjust = 0.5, size = 3.5, color = "black") +
+    coord_cartesian(xlim = c(0, 8), ylim = c(0, 8)) +
+    theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5, size = 10, face = "bold"))
+}
+
+# Create regression plots for all sites
+sites <- unique(alldat$Site)
+plot_list <- lapply(sites, plot_regression, data = alldat)
+
+# Arrange and save the grid of plots
+daily_reg_grid <- grid.arrange(grobs = plot_list, ncol = 2)
+```
+
+Save the daily regression plots for individual sites:
+```{r}
+ggsave("PlotandFigures/FINALFIGURES/daily_reg_separate.jpg", daily_reg_grid, width = 9, height = 9)
+```
+
+
+
+**NLCD Classification Regression**
+### Conduct a linear regression model for each NLCD land cover type:
+
+Define NLCD classifications:
+```{r}
+# Function to perform linear regression and create a plot for each NLCD type
+plot_regression <- function(data, nlcd_value) {
+  nlcd_data <- data %>% filter(NLCD == nlcd_value)
+  model <- lm(ET_corr ~ Mean, data = nlcd_data)
+  r_squared <- summary(model)$r.squared
+  p_value <- coef(summary(model))["Mean", "Pr(>|t|)"]
+  rmse <- sqrt(mean(model$residuals^2))
+  
+  ggplot(nlcd_data, aes(x = Mean, y = ET_corr)) +
+    geom_point(shape = 17) +
+    geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash", linewidth = 0.75) +
+    labs(title = nlcd_value, x = "ECOSTRESS ET (mm/day)", y = "AmeriFlux ET (mm/day)") +
+    annotate('rect', xmin = 5.6, xmax = 7.8, ymin = 5.9, ymax = 7.55, color = 'black', fill = 'white') +
+    annotate("text", x = 6.7, y = 6.7,
+             label = sprintf("R² = %.2f\np = %.2g\nRMSE = %.2f", r_squared, p_value, rmse),
+             hjust = 0.5, vjust = 0.5, size = 3.5, color = "black") +
+    coord_cartesian(xlim = c(0, 8), ylim = c(0, 8)) +
+    theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5, size = 10, face = "bold"))
+}
+
+# Generate regression plots for all unique NLCD values
+nlcd_values <- unique(alldat$NLCD)
+plot_list <- lapply(nlcd_values, plot_regression, data = alldat)
+
+# Arrange and save the grid of plots
+nlcd_grid <- grid.arrange(grobs = plot_list, ncol = 2)
+```
+
+Save NLCD Plot:
+```{r}
+ggsave("PlotandFigures/FINALFIGURES/nlcd_reg.jpg", nlcd_grid, width = 8, height = 8)
+```
+
+
+
+
+***Seasonal Analysis***
+
+# Seasonal Analysis
+This section of code will conduct a linear regression for seasonal ET values and conduct a paired t-test between individual sites to asses for differences in mean seasonal ET values.
+
+## Seasonal T-Tests
+
+Conduct T-Tests:
+```{r}
+# Extract year and month
+alldat$year <- format(as.Date(alldat$Date), "%Y")
+alldat$month <- format(as.Date(alldat$Date), "%m")
+
+# Define the seasons
+alldat$season <- case_when(
+  alldat$month %in% c("01", "02", "03") ~ "Winter",
+  alldat$month %in% c("04", "05", "06") ~ "Spring",
+  alldat$month %in% c("07", "08", "09") ~ "Summer",
+  alldat$month %in% c("10", "11", "12") ~ "Fall"
+)
+
+t_test_seasonal <- function(data, site, season){
+  #Filter data for specific site and season
+  data_filtered <- data %>%
+    filter(Site == !!site, season == !!season) %>%
+    select(ET_corr, Mean) %>%
+    na.omit()
+  #Debugging print statements
+  print(paste("Filtering for Site:", site, "Season:", season))
+  print(data_filtered)
+  #Check if there are enough data points to perform t-test
+  if (nrow(data_filtered) > 1){
+    t_test_result <- t.test(data_filtered$ET_corr, data_filtered$Mean, paired = TRUE)
+    return(data.frame(
+      Site = site,
+      season = season,
+      p_value = t_test_result$p.value,
+      mean_AmeriFlux = mean(data_filtered$ET_corr),
+      mean_ECOSTRESS = mean(data_filtered$Mean),
+      sd_AmeriFlux = sd(data_filtered$ET_corr),
+      sd_ECOSTRESS = sd(data_filtered$Mean)
+    ))
+  } else {
+    return(data.frame(
+      Site = site,
+      season = season,
+      p_value = NA,
+      mean_AmeriFlux = NA,
+      mean_ECOSTRESS = NA,
+      sd_AmeriFlux = NA,
+      sd_ECOSTRESS = NA
+      ))
+  }
+}
+
+# Make list of unique sites and seasons
+sites <- unique(alldat$Site)
+seasons <- unique(alldat$season)
+
+seasonal_results <- data.frame()
+
+for (site in sites) {
+  for (season in seasons) {
+    test_results <- t_test_seasonal(alldat, site, season)
+    seasonal_results <- bind_rows(seasonal_results, test_results)
+  }
+}
+
+print(seasonal_results)
+```
+
+Clean data and plot bar charts:
+```{r}
+afresults <- subset(seasonal_results, select = c("Site", "season", "p_value", "mean_AmeriFlux", "sd_AmeriFlux"))
+ecoresults <- subset(seasonal_results, select = c("Site", "season", "p_value", "mean_ECOSTRESS", "sd_ECOSTRESS"))
+
+# Add a 'source' column to each dataframe and combine them
+afresults <- afresults %>% mutate(source = "AmeriFlux")
+ecoresults <- ecoresults %>% mutate(source = "ECOSTRESS")
+
+# Rename columns for easier reference
+afresults <- afresults %>%
+  rename(Seasonal_ET = mean_AmeriFlux, Std = sd_AmeriFlux)
+ecoresults <- ecoresults %>%
+  rename(Seasonal_ET = mean_ECOSTRESS, Std = sd_ECOSTRESS)
+
+seasonal_data <- rbind(afresults, ecoresults)
+
+# Ensure the seasons are in the correct order
+seasonal_data$season <- factor(seasonal_data$season, levels = c("Winter", "Spring", "Summer", "Fall"))
+
+# Ungroup the data frame before using mutate
+seasonal_data <- seasonal_data %>%
+  mutate(significant = ifelse(p_value < 0.05, "*", ""))
+
+# Ensure there are no negative values for ymin and ymax
+seasonal_data <- seasonal_data %>%
+  mutate(
+    ymin = pmax(0, Seasonal_ET - Std),
+    ymax = Seasonal_ET + Std
+  )
+
+# Create the bar plot for each site pair for 4 seasons
+# Save as 1000x800
+seasonal_bar <- ggplot(seasonal_data, aes(x = Site, y = Seasonal_ET, fill = source)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.8)) +
+  geom_errorbar(aes(ymin = ymin, ymax = ymax),
+                position = position_dodge(width = 0.8), width = 0.15, color = "black") +
+  geom_text(aes(label = significant, y = Seasonal_ET + Std + 0.05), 
+            position = position_dodge(width = 0.8), vjust = 0, color = "red", size = 5) +
+  facet_wrap(~season, scales = "free") +
+  labs(title = "",
+       x = "",
+       y = "ET (mm/day)",
+       fill = "") +
+  scale_fill_manual(values = c("AmeriFlux" = "darkgrey", "ECOSTRESS" = "darkgreen")) +
+  ylim(0,8) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 15, face = "bold"),
+    legend.position = "bottom",
+    axis.text.x = element_text(angle = 30, hjust = 1, face = "bold"),
+    panel.border = element_rect(color = "black", fill = NA, size = 0.5),
+    strip.text = element_text(size = 10, face = "bold")
+    )
+
+seasonal_bar
+```
+Save seasonal bar chart:
+```{r}
+ggsave("PlotandFigures/FINALFIGURES/seasonal_bar.jpg", seasonal_bar, width = 12, height = 8)
+```
+
+
+## Seasonal Regression
+
+Perform linear regression for each site individually:
+```{r}
+# Function to perform linear regression and plot
+plot_regression <- function(data, season_name) {
+  # Filter data for the season
+  seasonal_data <- data %>% filter(season == season_name)
+  
+  # Perform linear regression
+  model <- lm(mean_AmeriFlux ~ mean_ECOSTRESS, data = seasonal_data)
+  model_summary <- summary(model)
+  
+  # Extract R-squared and p-value
+  r_squared <- model_summary$r.squared
+  p_value <- coef(summary(model))["mean_ECOSTRESS", "Pr(>|t|)"]
+  rmse <- sqrt(mean(model$residuals^2))
+  
+  # Create the plot
+  p <- ggplot(seasonal_data, aes(x = mean_ECOSTRESS, y = mean_AmeriFlux)) +
+    geom_point(shape = 15) +
+    geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash") +
+    labs(title = paste(season_name),
+         x = "ECOSTRESS ET (mm/day)",
+         y = "AmeriFlux ET (mm/day)") +
+    annotate("rect", xmin = 5.7, xmax = 8, ymin = 6.4, ymax = 8, fill = "white", color = "black") +
+    annotate("text", x = 6.8, y = 7.15, 
+             label = paste(" R² =", round(r_squared, 2), 
+                           "\n", "p =", format.pval(p_value, digits = 2),
+                           "\n", "RMSE =", round(rmse, 2)),
+             hjust = 0.5, vjust = 0.5, size = 3.5, color = "black") +
+    xlim(0, 8) +
+    ylim(0, 8) +
+    theme_minimal() +
+    theme(
+      plot.title = element_text(hjust = 0.5, size = 12, face = "bold"),
+      axis.title.x = element_text(size = 10),                   
+      axis.title.y = element_text(size = 10), 
+      panel.grid.major = element_line(color = "gray", size = 0.25),
+      panel.grid.minor = element_line(color = "gray", size = 0.25)
+    )
+  
+  return(p)
+}
+
+# Perform linear regression and create plots for each season
+plot_winter <- plot_regression(seasonal_results, "Winter")
+plot_spring <- plot_regression(seasonal_results, "Spring")
+plot_summer <- plot_regression(seasonal_results, "Summer")
+plot_fall <- plot_regression(seasonal_results, "Fall")
+
+# Arrange the plots in a grid format
+# Save as 800x800
+seasonal_grid <- grid.arrange(plot_winter, plot_spring, plot_summer, plot_fall, ncol = 2)
+
+seasonal_grid
+```
+
+Perform linear regression for all sites together:
+```{r}
+lm_seasonal <- lm(mean_AmeriFlux ~ mean_ECOSTRESS, data = seasonal_results)
+seasonal_summary <- summary(lm_seasonal)
+r_squar <- seasonal_summary$r.squared
+rmse <- sqrt(mean(lm_seasonal$residuals^2))
+p_val <- summary(lm_seasonal)$coefficients["mean_ECOSTRESS", "Pr(>|t|)"]
+
+
+seasonal_reg_comb <- ggplot(data = seasonal_results, aes( x = mean_ECOSTRESS, y = mean_AmeriFlux)) +
+  geom_point(shape = 15) +
+  geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash") + 
+  labs(title = "",
+       x = "ECOSTRESS (mm/day)",
+       y = "AmeriFlux (mm/day)") + 
+  xlim(0,8) +
+  ylim(0,8) +
+  annotate("rect", xmin = 6, xmax = 7.75, ymin = 7, ymax = 8, fill = "white", color = "black") +
+  annotate("text", x = 6.1, y = 7.5, 
+           label = paste(" R² =", round(r_squar, 2), 
+                         "\n", "p =", format.pval(p_val, digits = 2),
+                         "\n", "RMSE = ", round(rmse, 2)),
+           hjust = 0, vjust = 0.5, size = 4.5, color = "black") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    panel.grid.major = element_line(color = "grey", size = 0.25),
+    panel.grid.minor = element_line(color = "grey", size = 0.25),
+    axis.title.x = element_text(size = 12),
+    axis.title.y = element_text(size = 12)
+  )
+  
+seasonal_reg_comb
+```
+Save seasonal regression plots:
+```{r}
+ggsave("PlotandFigures/FINALFIGURES/seasonal_reg_combined.jpg", seasonal_reg_comb, width = 8, height = 8)
+ggsave("PlotandFigures/FINALFIGURES/seasonal_reg_separate.jpg", seasonal_grid, width = 8, height = 8)
+```
+
+
+# Annual Analysis
+This section of code conducts paired T-Tests and regression models for annual data.
+
+## Annual Paired T-Test
+```{r}
+t_test_annual <- function(data, site, year){
+  #Filter data for specific site and season
+  data_filtered <- data %>%
+    filter(Site == !!site, year == !!year) %>%
+    select(ET_corr, Mean) %>%
+    na.omit()
+  #Debugging print statements
+  print(paste("Filtering for Site:", site, "Year:", year))
+  print(data_filtered)
+  #Check if there are enough data points to perform t-test
+  if (nrow(data_filtered) > 1){
+    t_test_result <- t.test(data_filtered$ET_corr, data_filtered$Mean, paired = TRUE)
+    return(data.frame(
+      Site = site,
+      Year = year,
+      p_value = t_test_result$p.value,
+      mean_AmeriFlux = mean(data_filtered$ET_corr),
+      mean_ECOSTRESS = mean(data_filtered$Mean),
+      sd_AmeriFlux = sd(data_filtered$ET_corr),
+      sd_ECOSTRESS = sd(data_filtered$Mean)
+    ))
+  } else {
+    return(data.frame(
+      Site = site,
+      Year = year,
+      p_value = NA,
+      mean_AmeriFlux = NA,
+      mean_ECOSTRESS = NA,
+      sd_AmeriFlux = NA,
+      sd_ECOSTRESS = NA
+      ))
+  }
+}
+
+# Make list of unique sites and seasons
+sites <- unique(alldat$Site)
+years <- unique(alldat$year)
+
+annual_results <- data.frame()
+
+for (site in sites) {
+  for (year in years) {
+    test_results <- t_test_annual(alldat, site, year)
+    annual_results <- bind_rows(annual_results, test_results)
+  }
+}
+
+print(annual_results)
+```
+
+
+```{r}
+afresults <- subset(annual_results, select = c("Site", "Year", "p_value", "mean_AmeriFlux", "sd_AmeriFlux"))
+ecoresults <- subset(annual_results, select = c("Site", "Year", "p_value", "mean_ECOSTRESS", "sd_ECOSTRESS"))
+
+# Add a 'source' column to each dataframe and combine them
+afresults <- afresults %>% mutate(source = "AmeriFlux")
+ecoresults <- ecoresults %>% mutate(source = "ECOSTRESS")
+
+#Rename columns for binding rows
+afresults <- afresults %>%
+  rename(Annual_ET = mean_AmeriFlux, Std = sd_AmeriFlux)
+ecoresults <- ecoresults %>%
+  rename(Annual_ET = mean_ECOSTRESS, Std = sd_ECOSTRESS)
+
+annual_data <- rbind(afresults, ecoresults)
+
+# Ensure the seasons are in the correct order
+annual_data$Year <- factor(annual_data$Year, levels = c("2019", "2020", "2021", "2022"))
+
+# Add significance column
+annual_data <- annual_data %>%
+  mutate(significant = ifelse(p_value < 0.05, "*", ""))
+
+# Ensure there are no negative values for ymin and ymax
+annual_data <- annual_data %>%
+  mutate(
+    ymin = pmax(0, Annual_ET - Std),
+    ymax = Annual_ET + Std
+  )
+
+
+# Create the bar plot for each site pair for 4 years
+# Save as 1000x800
+annual_bar <- ggplot(annual_data, aes(x = Site, y = Annual_ET, fill = source)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.8)) +
+  geom_errorbar(aes(ymin = ymin, ymax = ymax),
+                position = position_dodge(width = 0.8), width = 0.15, color = "black") +
+  geom_text(aes(label = significant, y = Annual_ET + Std), 
+            position = position_dodge(width = 0.8), vjust = 0, color = "red", size = 5) +
+  facet_wrap(~Year, scales = "free_x") +
+  labs(title = "",
+       x = "",
+       y = "ET (mm/day)",
+       fill = "") +
+  scale_fill_manual(values = c("AmeriFlux" = "darkgrey", "ECOSTRESS" = "darkgreen")) +
+  scale_y_continuous(breaks = seq(0, 8, by = 2), limits = c(0, 10)) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 12, face = "bold"),
+    legend.position = "bottom",
+    axis.text.x = element_text(angle = 30, hjust = 1, face = "bold"),
+    panel.border = element_rect(color = "black", fill = NA, size = 0.5),
+    strip.text = element_text(size = 10, face = "bold")
+  )
+
+annual_bar
+```
+Save annual bar plot:
+```{r}
+ggsave("PlotandFigures/FINALFIGURES/annual_bar.jpg", annual_bar, width = 12, height = 8)
+```
+
+
+## Annual Regression
+This code will preofrm a regression analysis for each year of ECOSTRESS data.
+```{r}
+plot_regression <- function(data, year) {
+  # Filter data by year
+  data_year <- data %>% filter(Year == !!year)
+  
+  # Perform linear regression
+  model <- lm(mean_AmeriFlux ~ mean_ECOSTRESS, data = data_year)
+  summary <- summary(model)
+  
+  # Extract summary statistics
+  r_squar <- summary$r.squared
+  rmse <- sqrt(mean(model$residuals^2)) 
+  p_val <- summary$coefficients["mean_ECOSTRESS", "Pr(>|t|)"]
+  
+  # Create plot
+  p <- ggplot(data_year, aes(x = mean_AmeriFlux, y = mean_ECOSTRESS)) +
+    geom_point() +
+    geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash") +
+    labs(title = paste(year),
+         x = "AmeriFlux ET (mm/day)",
+         y = "ECOSTRESS ET (mm/day)") +
+    annotate("rect", xmin = 6, xmax = 8, ymin = 6.5, ymax = 8, fill = "white", col = "black") +
+    annotate("text", x = 7, y = 7.25,
+             label = paste(" R² =", round(r_squar, 2),
+                           "\n", "p =", format.pval(p_val, digits = 2),
+                           "\n", "RMSE =", round(rmse, 2)),
+             hjust = 0.5, vjust = 0.5, size = 3.25, color = "black") +
+    xlim(0, 8) +
+    ylim(0, 8) +
+    theme_minimal() +
+    theme(
+      plot.title = element_text(hjust = 0.5, size = 10, face = "bold"),
+      axis.title.x = element_text(size = 10),
+      axis.title.y = element_text(size = 10),
+      panel.grid.major = element_line(color = "gray", size = 0.25),
+      panel.grid.minor = element_line(color = "gray", size = 0.25)
+    ) 
+  
+  return(p)
+}
+
+#perform linear regressions
+plot_2019 <- plot_regression(annual_results, "2019")
+plot_2020 <- plot_regression(annual_results, "2020")
+plot_2021 <- plot_regression(annual_results, "2021")
+plot_2022 <- plot_regression(annual_results, "2022")
+
+annual_grid <- grid.arrange(plot_2019, plot_2020, plot_2021, plot_2022, ncol = 2)
+
+annual_grid
+```
+
+This code will perform a linear regression for all years combined
+```{r}
+#linear regression model
+annual_model <- lm(mean_AmeriFlux ~ mean_ECOSTRESS, data = annual_results)
+annual_sum <- summary(annual_model)
+annual_sum
+
+#extract summary statistics
+r_squar <- annual_sum$r.squared
+rmse <- sqrt(mean(annual_model$residuals^2))
+p_val <- summary(annual_model)$coefficients["mean_ECOSTRESS", "Pr(>|t|)"]
+
+annual_comb <- ggplot(data = annual_results, aes(x = mean_ECOSTRESS, y = mean_AmeriFlux)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash") +
+    labs(title = "",
+       x = "ECOSTRESS (mm/day)",
+       y = "AmeriFlux (mm/day)") + 
+  xlim(0,8) +
+  ylim(0,8) +
+  annotate("rect", xmin = 6, xmax = 7.5, ymin = 7, ymax = 8, fill = "white", color = "black") +
+  annotate("text", x = 6.7, y = 7.5, 
+           label = paste(" R² =", round(r_squar, 2), 
+                         "\n", "p =", format.pval(p_val, digits = 2),
+                         "\n", "RMSE = ", round(rmse, 2)),
+           hjust = 0.5, vjust = 0.5, size = 4.5, color = "black") +
+  ylim(0,8) +
+  xlim(0,8) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    panel.grid.major = element_line(color = "grey", size = 0.25),
+    panel.grid.minor = element_line(color = "grey", size = 0.25),
+    axis.title.x = element_text(size = 12),
+    axis.title.y = element_text(size = 12)
+  )
+
+annual_comb
+```
+
+Save annual regression plots:
+```{r}
+ggsave("PlotandFigures/FINALFIGURES/annual_reg_separate.jpg", annual_grid, width = 8, height = 8)
+ggsave("PlotandFigures/FINALFIGURES/annual_reg_combined.jpg", annual_comb, width = 8, height = 8)
+```
+
+
+# OpenET Analysis
+##Timeseries
+This section of code compares ECOSTRESS data to OpenET via linear regression and timeseries.
+```{r}
+openet <- read.csv("K:/Rayni_Lewis/AmeriFlux/OpenET/OpenET_allmonthlydata.csv")
+openet$Date <- as.Date(openet$Date)
+openet$year <- format(as.Date(openet$Date), format = '%Y')
+openet$month <- format(as.Date(openet$Date), format = '%m')
+openet <- openet %>% rename(Site = Site_ID)
+
+openet <- openet %>%
+  mutate(across(
+    c(et_disalexi, et_eemetric, et_geesebal, et_ptjpl, et_ssebop, et_ensemble),
+    ~ case_when(
+      month %in% c("01", "03", "05", "07", "08", "10", "12") ~ . / 31,
+      month %in% c("04", "06", "09", "11") ~ . / 30,
+      month == "02" ~ . / 28
+    )
+  ))
+
+eco_monthly <- alldat %>%
+  group_by(Site, year, month) %>%
+  summarize(et_ECOSTRESS = mean(Mean),
+            et_AmeriFlux = mean(ET_corr))
+
+merge.dat <- merge(openet, eco_monthly, by = c('Site', 'year', 'month'))
+
+open.seasonal <- merge.dat %>%
+  group_by(Site, season) %>%
+  summarize(
+    disALEXI = mean(et_disalexi, na.rm = TRUE),
+    eeMETRIC = mean(et_eemetric, na.rm = TRUE),
+    geeSEBAL = mean(et_geesebal, na.rm = TRUE),
+    PTJPL = mean(et_ptjpl, na.rm = TRUE),
+    SSEBop = mean(et_ssebop, na.rm = TRUE),
+    Ensemble = mean(et_ensemble, na.rm = TRUE),
+    ECOSTRESS = mean(et_ECOSTRESS, na.rm = TRUE),
+    AmeriFlux = mean(et_AmeriFlux, na.rm = TRUE)
+  )
+
+open.seasonal$season <- factor(open.seasonal$season, levels = c("Winter", "Spring", "Summer", "Fall"))
+
+open.seasonal <- open.seasonal %>%
+  mutate(across(where(is.numeric), ~ round(.,4))) %>% 
+  mutate(across(where(is.numeric), ~ ifelse(. == 0, NA, .)))
+
+#Reshape to long data
+seasonal.long <- open.seasonal %>%
+  pivot_longer(cols = disALEXI:AmeriFlux, names_to = "Method", values_to = "ET_value")
+
+# Define custom colors for methods
+custom_colors <- c(
+  "AmeriFlux" = "black",
+  "ECOSTRESS" = "red3",
+  "disALEXI" = "darkgoldenrod1",  
+  "eeMETRIC" = "yellow2", 
+  "geeSEBAL" = "seagreen3",  
+  "PTJPL" = "lightblue",     
+  "SSEBop" = "mediumpurple2",    
+  "Ensemble" = "plum2"   
+)
+
+custom_shapes <- c(
+  "AmeriFlux" = 16,
+  "ECOSTRESS" = 17,
+  "disALEXI" = 6,  
+  "eeMETRIC" = 0, 
+  "geeSEBAL" = 4,  
+  "PTJPL" = 20,     
+  "SSEBop" = 23,    
+  "Ensemble" = 15   
+)
+
+openet.time <- ggplot(seasonal.long, aes(x = season, y = ET_value, color = Method, shape = Method, group = Method)) +
+  geom_line() +
+  geom_point() +
+  labs(title = "",
+       x = "Season",
+       y = "ET (mm)") +
+  facet_wrap(~ Site, scales = "fixed") +  # Fix y-axis across facets
+  coord_cartesian(ylim = c(0, 6)) +  # Set y-axis limits from 0 to 6
+  scale_color_manual(values = custom_colors) +  # Apply custom colors
+  scale_shape_manual(values = custom_shapes) +  # Apply custom shapes
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    legend.position = "bottom",
+    legend.title = element_blank(),  # Remove legend title
+    axis.text.x = element_text(angle = 45, hjust = 1, face = "bold"),
+    strip.text = element_text(size = 10, face = "bold")
+  )
+
+openet.time
+```
+Save OpenET timeseries plot
+```{r}
+ggsave("PlotandFigures/FINALFIGURES/openet_timeseries.jpg", openet.time, width = 12, height = 8)
+```
+
+##Regression
+
+Condut linear regression between all OpenET methods and AmeriFlux
+```{r}
+#Define the order of methods
+method_order <- c("AmeriFlux", "ECOSTRESS", "disALEXI", "eeMETRIC", 
+                  "geeSEBAL", "PTJPL", "SSEBop", "Ensemble")
+
+#Pivot the data and set factor levels
+seasonal.long2 <- open.seasonal %>%
+  pivot_longer(cols = disALEXI:ECOSTRESS, names_to = "method", values_to = "et_value") %>%
+  mutate(method = factor(method, levels = method_order))
+
+# Calculate R^2 for each method
+r_squared_values <- seasonal.long2 %>%
+  group_by(method) %>%
+  summarize(r_squared = summary(lm(et_value ~ AmeriFlux))$r.squared)
+
+# Add a y position for each method to avoid overlap
+r_squared_values <- r_squared_values %>%
+  mutate(y_pos = seq(max(seasonal.long2$et_value, na.rm = TRUE), 
+                     max(seasonal.long2$et_value, na.rm = TRUE) - 0.3 * (n() - 1), 
+                     length.out = n()) + 1.5)
+
+# Perform the linear regression and plot each method against ECOSTRESS
+openet.reg <- ggplot(seasonal.long2, aes(x = AmeriFlux, y = et_value, color = method, shape = method)) +  
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "",
+       x = "AmeriFlux ET (mm/day)",
+       y = "Satellite-Based ET (mm/day)") +
+  theme_linedraw() +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_color_manual(values = custom_colors) + 
+  scale_shape_manual(values = custom_shapes) +  
+  annotate("rect", xmin = 0, xmax = 2.35, ymin = 5.5, ymax = 8, color = "black", fill = "white") +
+  # Add R^2 values with a white box behind the text
+  geom_label(
+    data = r_squared_values,
+    aes(x = 0.25, y = y_pos, 
+        label = paste(method, ": R² =", round(r_squared, 2))),
+    hjust = 0, vjust = 1,
+    size = 3.5,
+    color = "black",
+    fill = "white",  
+    label.size = NA,  
+    inherit.aes = FALSE
+  ) +
+  xlim(0,8) +
+  ylim(0,8) +
+  theme_minimal() +
+  theme(
+    legend.title = element_blank(),
+    legend.position = "bottom"
+  )
+
+openet.reg
+```
+Save regression plot
+```{r}
+ggsave("PlotandFigures/FINALFIGURES/openet_regression.jpg", width = 8, height = 9)
+```
+
+
+
+
+# Adjust ECOSTRESS Values
+```{r}
+sent.dat <- read.csv("Data/Sentinel/SentIndices_120924.csv")
+
+merge.dat <- merge(afdat, sent.dat, by = c("Site", "Date"), all = TRUE)
+
+merge.dat <- merge.dat %>%
+  mutate(
+    NDVI_fill = na.approx(NDVI, na.rm = FALSE),
+    SAVI_fill = na.approx(SAVI, na.rm = FALSE),
+    NDMI_fill = na.approx(NDMI, na.rm = FALSE),
+    NDWI_fill = na.approx(NDWI, na.rm = FALSE),
+    EVI_fill = na.approx(EVI, na.rm = FALSE),
+    BSI_fill = na.approx(BSI, na.rm = FALSE),
+    NSMI_fill = na.approx(NDMI, na.rm = FALSE),
+    NDSI_fill = na.approx(NDSI, na.rm = FALSE)
+  )
+
+merge.clean <- merge.dat %>%
+  group_by(Site) %>%
+  mutate(across(where(is.numeric), ~ ifelse(. < quantile(., 0.25, na.rm = TRUE) - 1.5 * IQR(., na.rm = TRUE) | 
+                                             . > quantile(., 0.75, na.rm = TRUE) + 1.5 * IQR(., na.rm = TRUE), 
+                                             NA, .))) %>%
+  ungroup()
+
+merge.clean <- merge(merge.clean, ecodat, by = c("Site", "Date"))
+
+alldat.clean <- merge.clean %>% 
+  select('Site', 'Date', 'ET_corr', 'Mean', 'NDVI', 'NDMI', 'NDWI', 'EVI', 
+         'SAVI', 'BSI', 'NSMI', 'NDSI')
+
+alldat.clean <- na.omit(alldat.clean)
+```
+
+Conduct BIC test
+```{r}
+# Fit the global model with all predictors
+global_model <- lm(ET_corr ~ Mean + Mean * (NDVI + SAVI + NDMI + NDWI 
+                                            + EVI + BSI + NSMI + NDSI), 
+                   data = alldat.clean, na.action = na.fail)
+
+# Use dredge to fit all possible combinations of predictors and calculate BIC
+model_set <- dredge(global_model, rank = "BIC", fixed = ~ Mean)
+
+# Get the best model (with the lowest BIC)
+best_model <- get.models(model_set, 1)[[1]]
+summary(best_model)
+
+alldat.clean$ECO_corr <- predict(best_model, newdata = alldat.clean)
+```
+
+Conduct a linear regression between AmeriFlux and the adjusted ECOSTRESS values at the daily scale
+```{r}
+# Perform linear regression where ET_corr (AmeriFlux) is the predictor and Mean (ECOSTRESS) is the response
+day_model <- lm(ET_corr ~ ECO_corr, data = alldat.clean)
+(day_sum <- summary(day_model))
+
+# Extract summary statistics
+rsquar <- day_sum$r.squared
+rmse <- sqrt(mean(day_sum$residuals^2))
+pval <- day_sum$coefficients["ECO_corr", "Pr(>|t|)"]
+
+# Create the scatter plot with regression line
+# Save as 800x800
+adj.daily.plot <- ggplot(data = alldat.clean, aes(x = ECO_corr, y = ET_corr)) + 
+  geom_point(shape = 17) +
+  geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash", linewidth = 1) +
+  labs(title = "",
+       x = "Adjusted ECOSTRESS (mm/day)",
+       y = "AmeriFlux (mm/day)") +
+  xlim(0,8) +
+  ylim(0,8) +
+  theme_minimal() + 
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 15, face = "bold"),
+    panel.grid.major = element_line(color = "grey", size = 0.25),
+    panel.grid.minor = element_line(color = "grey", size = 0.25),
+    axis.title.x = element_text(size = 12),
+    axis.title.y = element_text(size = 12)
+  ) +
+  annotate("rect", xmin = 6.25, xmax = 7.8, ymin = 6.75, ymax = 8, fill = "white", color = "black") +
+  annotate("text", x = 7, y = 7.5,
+                    label = paste("\n R² =", round(rsquar, 2),
+                                  "\n p =", signif(pval, digits = 2),
+                                  "\n RMSE = ", round(rmse, 3)),
+                    hjust = 0.5, vjust = 0.5, size = 4.5, color = "black")
+
+adj.daily.plot
+```
+Save daily regression
+```{r}
+ggsave("PlotandFigures/FINALFIGURES/adjdailyreg.jpg", adj.daily.plot, width = 8, height = 8)
+```
+
+Conduct linear regression between AmeriFlux and adjusted ECOSTRESS values at the seasonal scale
+```{r}
+# Extract year and month
+alldat.clean$Year <- format(as.Date(alldat.clean$Date), "%Y")
+alldat.clean$Month <- format(as.Date(alldat.clean$Date), "%m")
+
+alldat.clean <- alldat.clean %>% filter(Year < "2023")
+
+# Define the seasons
+alldat.clean$season <- case_when(
+  alldat.clean$Month %in% c("01", "02", "03") ~ "Winter",
+  alldat.clean$Month %in% c("04", "05", "06") ~ "Spring",
+  alldat.clean$Month %in% c("07", "08", "09") ~ "Summer",
+  alldat.clean$Month %in% c("10", "11", "12") ~ "Fall"
+)
+
+# Calculate the seasonal average ET
+adj.seasonal <- alldat.clean %>%
+  group_by(Site, season) %>%
+  summarise(
+    mean_AmeriFlux = mean(ET_corr, na.rm = TRUE),
+    mean_ECOSTRESS = mean(ECO_corr, na.rm = TRUE),
+  ) %>%
+  ungroup()
+
+# Ensure the seasons are in the correct order
+adj.seasonal$season <- factor(adj.seasonal$season, levels = c("Winter", "Spring", "Summer", "Fall"))
+
+# Perform linear regression for seasonal averages
+
+adj.seas.model <- lm(mean_AmeriFlux ~ mean_ECOSTRESS, data = adj.seasonal)
+adj.seas.sum <- summary(adj.seas.model)
+adj.seas.sum
+
+# Extract summary statistics
+rsquar2 <- adj.seas.sum$r.squared
+rmse2 <- sqrt(mean(adj.seas.sum$residuals^2))
+pval2 <- adj.seas.sum$coefficients["mean_ECOSTRESS", "Pr(>|t|)"]
+
+# Create the scatter plot with regression line
+# Save as 800x800
+adj.seasonal.plot <- ggplot(data = adj.seasonal, aes(x = mean_ECOSTRESS, y = mean_AmeriFlux)) + 
+  geom_point(shape = 15) +
+  geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash", linewidth = 1) +
+  labs(title = "",
+       x = "Adjusted ECOSTRESS (mm/day)",
+       y = "AmeriFlux (mm/day)") +
+  xlim(0,8) +
+  ylim(0,8) +
+  theme_minimal() + 
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 15, face = "bold"),
+    panel.grid.major = element_line(color = "grey", size = 0.25),
+    panel.grid.minor = element_line(color = "grey", size = 0.25),
+    axis.title.x = element_text(size = 12),
+    axis.title.y = element_text(size = 12)
+  ) +
+  annotate("rect", xmin = 6.25, xmax = 7.8, ymin = 6.75, ymax = 8, fill = "white", color = "black") +
+  annotate("text", x = 7, y = 7.5,
+           label = paste("\n R² =", round(rsquar2, 2),
+                         "\n p =", signif(pval2, digits = 2),
+                         "\n RMSE = ", round(rmse2, 3)),
+           hjust = 0.5, vjust = 0.5, size = 4.55, color = "black")
+
+adj.seasonal.plot
+```
+Save seasonal regression
+```{r}
+ggsave("PlotandFigures/FINALFIGURES/adjseasonalreg.jpg", adj.seasonal.plot, width = 8, height = 8)
+```
+
+Conduct linear regression between AmeriFlux and adjusted ECOSTRESS values at the annual scale
+```{r}
+# Calculate the seasonal average ET
+adj.annual <- alldat.clean %>%
+  group_by(Site, Year) %>%
+  summarise(
+    mean_AmeriFlux = mean(ET_corr, na.rm = TRUE),
+    mean_ECOSTRESS = mean(ECO_corr, na.rm = TRUE),
+  ) %>%
+  ungroup()
+
+# Ensure the seasons are in the correct order
+adj.annual$Year <- factor(adj.annual$Year, levels = c("2019", "2020", "2021", "2022"))
+
+# Perform linear regression for seasonal averages
+
+adj.ann.model <- lm(mean_AmeriFlux ~ mean_ECOSTRESS, data = adj.annual)
+adj.ann.sum <- summary(adj.ann.model)
+adj.ann.sum
+
+# Extract summary statistics
+rsquar3 <- adj.ann.sum$r.squared
+rmse3 <- sqrt(mean(adj.ann.sum$residuals^2))
+pval3 <- adj.ann.sum$coefficients["mean_ECOSTRESS", "Pr(>|t|)"]
+
+# Create the scatter plot with regression line
+# Save as 800x800
+adj.annual.plot <- ggplot(data = adj.annual, aes(x = mean_ECOSTRESS, y = mean_AmeriFlux)) + 
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash", linewidth = 1) +
+  labs(title = "",
+       x = "Adjusted ECOSTRESS (mm/day)",
+       y = "AmeriFlux (mm/day)") +
+  xlim(0,8) +
+  ylim(0,8) +
+  theme_minimal() + 
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 15, face = "bold"),
+    panel.grid.major = element_line(color = "grey", size = 0.25),
+    panel.grid.minor = element_line(color = "grey", size = 0.25),
+    axis.title.x = element_text(size = 12),
+    axis.title.y = element_text(size = 12)
+  ) +
+  annotate("rect", xmin = 6.25, xmax = 7.8, ymin = 6.75, ymax = 8, fill = "white", color = "black") +
+  annotate("text", x = 7, y = 7.5,
+           label = paste("\n R² =", round(rsquar3, 2),
+                         "\n p =", signif(pval3, digits = 2),
+                         "\n RMSE = ", round(rmse3, 3)),
+           hjust = 0.5, vjust = 0.5, size = 4.55, color = "black")
+
+adj.annual.plot
+```
+Save seasonal regression
+```{r}
+ggsave("PlotandFigures/FINALFIGURES/adjannualreg.jpg", adj.annual.plot, width = 8, height = 8)
+```
+
+Plot daily, seasonal, and annual regressions together
+```{r}
+adj.all.plot <- grid.arrange(adj.daily.plot, adj.seasonal.plot, adj.annual.plot, ncol = 3)
+adj.all.plot
+ggsave("PlotandFigures/FINALFIGURES/alladjreg.jpg", adj.all.plot, width = 25, height = 8)
+```
+
+Conduct linear regression between AmeriFLux, adjusted ECOSTRESS and OpenET methods
+```{r}
+adj.openet <- merge(open.seasonal, adj.seasonal, by = c('Site', 'season'))
+adj.openet <- adj.openet %>% select(-'ECOSTRESS', -'AmeriFlux')
+adj.openet <- adj.openet %>% rename(ECOSTRESS = mean_ECOSTRESS, AmeriFlux = mean_AmeriFlux)
+
+# Reshape to long format
+adj.long <- adj.openet %>%
+  pivot_longer(
+    cols = disALEXI:ECOSTRESS,  # Specify the columns to pivot
+    names_to = "ET_Method",    # New column to store method names
+    values_to = "ET_Value"     # New column to store method values
+  )
+
+adj.long <- adj.long %>%
+  mutate(season = factor(season, levels = c("Winter", "Spring", "Summer", "Fall")))
+
+ggplot(adj.long, aes(x = season, y = ET_Value, color = ET_Method, shape = ET_Method, group = ET_Method)) +
+  geom_line() +
+  geom_point() +
+  labs(title = "",
+       x = "Season",
+       y = "Evapotranspiration (mm)") +
+  facet_wrap(~ Site, scales = "fixed") +  # Fix y-axis across facets
+  coord_cartesian(ylim = c(0, 6)) +  # Set y-axis limits from 0 to 6
+  scale_color_manual(values = custom_colors) +  # Apply custom colors
+  scale_shape_manual(values = custom_shapes) +  # Apply custom shapes
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    legend.position = "bottom",
+    legend.title = element_blank(),  # Remove legend title
+    axis.text.x = element_text(angle = 45, hjust = 1, face = "bold"),
+    strip.text = element_text(size = 10, face = "bold"),
+    legend.spacing.x = unit(0.5, 'cm'),
+    panel.border = element_rect(color = "black", fill = NA, size = 1),
+    panel.grid.major = element_line(color = "gray70", size = 0.2),  
+    panel.grid.minor = element_line(color = "gray70", size = 0.2)
+  )
+
+```
+
+Plot timeseries of AmeriFlux and adjusted ECOSTRESS
+```{r}
+ggplot() +
+  geom_line(data = alldat, aes(x = Date, y = ET_corr)) +
+  geom_point(data = alldat.clean, aes(x = Date, y = ECO_corr)) +
+  facet_wrap(~ Site)
+```
+
+
+
