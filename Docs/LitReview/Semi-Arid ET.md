@@ -112,7 +112,7 @@
 
 **Citation:** *Kurc SA, Small EE. 2004. Dynamics of evapotranspiration in semiarid grassland and shrubland ecosystems during the summer monsoon season, central New Mexico. Water Resources Research 40: W09305.*
 
-**DOI:** DOI:10Ð1029/2004WR003068
+**DOI:** 10Ð1029/2004WR003068
 
 **Findings:**
 
@@ -176,7 +176,7 @@
 
 **Citation:** *Ha, W., Kolb, T. E., Springer, A. E., Dore, S., O'Donnell, F. C., Martinez Morales, R., ... & Koch, G. W. (2015). Evapotranspiration comparisons between eddy covariance measurements and meteorological and remote‐sensing‐based models in disturbed ponderosa pine forests. Ecohydrology, 8(7), 1335-1350..*
 
-**DOI:**  DOI: 10.1002/eco.1586
+**DOI:** 10.1002/eco.1586
 
 **Findings:**
 
