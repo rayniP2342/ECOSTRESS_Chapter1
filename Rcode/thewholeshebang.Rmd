@@ -9,6 +9,7 @@ library(lubridate)
 library(tidyr)
 library(gridExtra)
 library(MuMIn)
+library(z)
 ```
 
 
@@ -195,10 +196,9 @@ ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/dail
 
 
 
-***Daily Regressions***
 
 ## Conduct daily regression models between ECOSTRESS and AmeriFlux
-**Daily Regressions**
+
 ### Conduct a linear regression model for all sites combined:
 ```{r}
 # Perform linear regression where ET_corr (AmeriFlux) is the predictor and Mean (ECOSTRESS) is the response
@@ -239,7 +239,7 @@ daily_reg_comb
 ```
 Save daily combined regression plot:
 ```{r}
-ggsave("PlotandFigures/FINALFIGURES/daily_reg_combined.jpg", daily_reg_comb, width = 8, height = 8)
+ggsave('C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/daily_reg_combined.jpg', daily_reg_comb, width = 8, height = 8)
 ```
 
 
@@ -285,7 +285,7 @@ multi_reg_comb
 ```
 Save daily combined regression plot:
 ```{r}
-ggsave("PlotandFigures/FINALFIGURES/daily_reg_combined.jpg", daily_reg_comb, width = 8, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/daily_reg_multi.jpg", multi_reg_comb, width = 8, height = 8)
 ```
 
 
@@ -324,7 +324,7 @@ daily_reg_grid <- grid.arrange(grobs = plot_list, ncol = 2)
 
 Save the daily regression plots for individual sites:
 ```{r}
-ggsave("PlotandFigures/FINALFIGURES/daily_reg_separate.jpg", daily_reg_grid, width = 9, height = 9)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/daily_reg_separate.jpg", daily_reg_grid, width = 9, height = 9)
 ```
 
 
@@ -366,7 +366,7 @@ nlcd_grid <- grid.arrange(grobs = plot_list, ncol = 2)
 
 Save NLCD Plot:
 ```{r}
-ggsave("PlotandFigures/FINALFIGURES/nlcd_reg.jpg", nlcd_grid, width = 8, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/nlcd_reg.jpg", nlcd_grid, width = 8, height = 8)
 ```
 
 
@@ -380,21 +380,25 @@ ggsave("PlotandFigures/FINALFIGURES/nlcd_reg.jpg", nlcd_grid, width = 8, height 
 ecodat <- read.csv("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Data/ECOSTRESS_ET.csv")
 
 # Ensure date columns are in correct format
-ecodat$Time <- as.POSIXct(ecodat$Date, format = '%H:%M:%S')
+ecodat$hour <- as.numeric(substr(ecodat$Date, 12, 13))
 ecodat$Date <- as.Date(ecodat$Date)
 
+subeco <- ecodat %>% filter(hour >= 12 & hour <= 13)
+
+subdat <- merge(afdat, subeco, by = c("Site", "Date"))
+
 # Perform linear regression where ET_corr (AmeriFlux) is the predictor and Mean (ECOSTRESS) is the response
-daily_reg <- lm(ET_corr ~ Mean, data = alldat)
-(daily_summary <- summary(daily_reg))
+subdaily_reg <- lm(ET_corr ~ Mean, data = subdat)
+(subdaily_summary <- summary(subdaily_reg))
 
 # Extract summary statistics
-rsquar <- daily_summary$r.squared
-rmse <- sqrt(mean(daily_summary$residuals^2))
-pval <- daily_summary$coefficients["Mean", "Pr(>|t|)"]
+rsquar <- subdaily_summary$r.squared
+rmse <- sqrt(mean(subdaily_summary$residuals^2))
+pval <- subdaily_summary$coefficients["Mean", "Pr(>|t|)"]
 
 # Create the scatter plot with regression line
 # Save as 800x800
-daily_reg_comb <- ggplot(data = alldat, aes(x = Mean, y = ET_corr)) + 
+subdaily_reg_comb <- ggplot(data = subdat, aes(x = Mean, y = ET_corr)) + 
   geom_point(shape = 17) +
   geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash", linewidth = 1) +
   labs(title = "",
@@ -417,9 +421,13 @@ daily_reg_comb <- ggplot(data = alldat, aes(x = Mean, y = ET_corr)) +
                          "\n RMSE = ", round(rmse, 3)),
            hjust = 0.5, vjust = 0.5, size = 4.5, color = "black")
 
-daily_reg_comb
+subdaily_reg_comb
 ```
 
+Save NLCD Plot:
+```{r}
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/subdaily_reg.jpg", subdaily_reg_comb, width = 8, height = 8)
+```
 
 
 
@@ -551,7 +559,7 @@ seasonal_bar
 ```
 Save seasonal bar chart:
 ```{r}
-ggsave("PlotandFigures/FINALFIGURES/seasonal_bar.jpg", seasonal_bar, width = 12, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/seasonal_bar.jpg", seasonal_bar, width = 12, height = 8)
 ```
 
 
@@ -649,8 +657,8 @@ seasonal_reg_comb
 ```
 Save seasonal regression plots:
 ```{r}
-ggsave("PlotandFigures/FINALFIGURES/seasonal_reg_combined.jpg", seasonal_reg_comb, width = 8, height = 8)
-ggsave("PlotandFigures/FINALFIGURES/seasonal_reg_separate.jpg", seasonal_grid, width = 8, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/seasonal_reg_combined.jpg", seasonal_reg_comb, width = 8, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/seasonal_reg_separate.jpg", seasonal_grid, width = 8, height = 8)
 ```
 
 
@@ -771,7 +779,7 @@ annual_bar
 ```
 Save annual bar plot:
 ```{r}
-ggsave("PlotandFigures/FINALFIGURES/annual_bar.jpg", annual_bar, width = 12, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/annual_bar.jpg", annual_bar, width = 12, height = 8)
 ```
 
 
@@ -871,8 +879,8 @@ annual_comb
 
 Save annual regression plots:
 ```{r}
-ggsave("PlotandFigures/FINALFIGURES/annual_reg_separate.jpg", annual_grid, width = 8, height = 8)
-ggsave("PlotandFigures/FINALFIGURES/annual_reg_combined.jpg", annual_comb, width = 8, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/annual_reg_separate.jpg", annual_grid, width = 8, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/annual_reg_combined.jpg", annual_comb, width = 8, height = 8)
 ```
 
 
@@ -882,11 +890,10 @@ ggsave("PlotandFigures/FINALFIGURES/annual_reg_combined.jpg", annual_comb, width
 ##Timeseries
 This section of code compares ECOSTRESS data to OpenET via linear regression and timeseries.
 ```{r}
-openet <- read.csv("K:/Rayni_Lewis/AmeriFlux/OpenET/OpenET_allmonthlydata.csv")
+openet <- read.csv("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Data/OpenETmonthlyET.csv")
 openet$Date <- as.Date(openet$Date)
 openet$year <- format(as.Date(openet$Date), format = '%Y')
 openet$month <- format(as.Date(openet$Date), format = '%m')
-openet <- openet %>% rename(Site = Site_ID)
 
 openet <- openet %>%
   mutate(across(
@@ -974,7 +981,7 @@ openet.time
 ```
 Save OpenET timeseries plot
 ```{r}
-ggsave("PlotandFigures/FINALFIGURES/openet_timeseries.jpg", openet.time, width = 12, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/openet_timeseries.jpg", openet.time, width = 12, height = 8)
 ```
 
 ##Regression
@@ -1037,7 +1044,7 @@ openet.reg
 ```
 Save regression plot
 ```{r}
-ggsave("PlotandFigures/FINALFIGURES/openet_regression.jpg", width = 8, height = 9)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/openet_regression.jpg", width = 8, height = 9)
 ```
 
 
@@ -1047,7 +1054,7 @@ ggsave("PlotandFigures/FINALFIGURES/openet_regression.jpg", width = 8, height = 
 
 # Adjust ECOSTRESS Values
 ```{r}
-sent.dat <- read.csv("Data/Sentinel/SentIndices_120924.csv")
+sent.dat <- read.csv("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Data/Sentinel_Indices.csv")
 
 merge.dat <- merge(afdat, sent.dat, by = c("Site", "Date"), all = TRUE)
 
@@ -1136,7 +1143,7 @@ adj.daily.plot
 ```
 Save daily regression
 ```{r}
-ggsave("PlotandFigures/FINALFIGURES/adjdailyreg.jpg", adj.daily.plot, width = 8, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/adjdailyreg.jpg", adj.daily.plot, width = 8, height = 8)
 ```
 
 Conduct linear regression between AmeriFlux and adjusted ECOSTRESS values at the seasonal scale
@@ -1207,7 +1214,7 @@ adj.seasonal.plot
 ```
 Save seasonal regression
 ```{r}
-ggsave("PlotandFigures/FINALFIGURES/adjseasonalreg.jpg", adj.seasonal.plot, width = 8, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/adjseasonalreg.jpg", adj.seasonal.plot, width = 8, height = 8)
 ```
 
 Conduct linear regression between AmeriFlux and adjusted ECOSTRESS values at the annual scale
@@ -1264,14 +1271,14 @@ adj.annual.plot
 ```
 Save seasonal regression
 ```{r}
-ggsave("PlotandFigures/FINALFIGURES/adjannualreg.jpg", adj.annual.plot, width = 8, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/adjannualreg.jpg", adj.annual.plot, width = 8, height = 8)
 ```
 
 Plot daily, seasonal, and annual regressions together
 ```{r}
 adj.all.plot <- grid.arrange(adj.daily.plot, adj.seasonal.plot, adj.annual.plot, ncol = 3)
 adj.all.plot
-ggsave("PlotandFigures/FINALFIGURES/alladjreg.jpg", adj.all.plot, width = 25, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/alladjreg.jpg", adj.all.plot, width = 25, height = 8)
 ```
 
 Conduct linear regression between AmeriFLux, adjusted ECOSTRESS and OpenET methods
@@ -1318,11 +1325,30 @@ ggplot(adj.long, aes(x = season, y = ET_Value, color = ET_Method, shape = ET_Met
 
 Plot timeseries of AmeriFlux and adjusted ECOSTRESS
 ```{r}
-ggplot() +
-  geom_line(data = alldat, aes(x = Date, y = ET_corr)) +
-  geom_point(data = alldat.clean, aes(x = Date, y = ECO_corr)) +
-  facet_wrap(~ Site)
+# Function to create timeseries plot for each site
+plot_timeseries <- function(afdat, alldat.clean, site_name) {
+  afdat %>% filter(Site == site_name) %>%
+    mutate(Date = as.Date(Date)) -> af_site_data
+  alldat.clean %>% filter(Site == site_name) %>%
+    mutate(Date = as.Date(Date)) -> eco_site_data
+  
+  ggplot() +
+    geom_line(data = af_site_data, aes(x = Date, y = ET_corr, color = "AmeriFlux"), linewidth = 1) +
+    geom_point(data = eco_site_data, aes(x = Date, y = Mean, color = "ECOSTRESS"), size = 1, shape = 17) +
+    labs(title = site_name, x = "", y = "ET (mm)") +
+    scale_color_manual(values = c("AmeriFlux" = "darkgrey", "ECOSTRESS" = "darkgreen")) +
+    theme_minimal() +
+    theme(legend.position = "none", plot.title = element_text(hjust = 0.5, size = 10)) +
+    coord_cartesian(xlim = as.Date(c("2019-01-01", "2023-12-31")), ylim = c(0, 8))
+}
+
+# Generate and save gridded plots
+sites <- unique(afdat$Site)
+plot_list <- lapply(sites, plot_timeseries, afdat = afdat, alldat.clean = alldat.clean)
+adj.timeplot <- grid.arrange(grobs = plot_list, ncol = 2)
+adj.timeplot
 ```
 
-
-
+```{r}
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/adjtimeseries.jpg", adj.timeplot, width = 8, height = 8)
+```
