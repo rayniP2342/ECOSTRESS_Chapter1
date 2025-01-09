@@ -78,8 +78,11 @@
 - Infiltration occurs over days to weeks
 - Soil water depleted by evaporation and plant uptake/transpiration
 - Small precip events = less T and more E
+- Small frequent events favor T over E
 - Additive effect of multiple events
 - Snow events act like large rain events because larger proportion of water is partitioned to plant-available water
+- T/ET decreases with total growing season precipitation
+- T/ET must be evaluated at seasonal scale rather than individual precipitation events
 
 **Additional Notes:**
 
