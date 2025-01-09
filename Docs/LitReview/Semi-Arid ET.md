@@ -198,6 +198,18 @@
 - Meteorological and vegetation conditions control ET when soil moisture is not limited (Shuttleworth, 1991)
 - More bare soil = more rapid evporation (Dugas et al, 1996)
 
+
+### Moran et al., 2009
+
+**Citation:** *M.S. Moran, R.L. Scott, T.O. Keefer, W.E. Emmerich, M. Hernandez, G.S. Nearing, G.B. Paige, M.H. Cosh, P.E. O’Neill. Partitioning evapotranspiration in semiarid grassland and shrubland ecosystems using time series of soil surface temperature, Agricultural and Forest Meteorology, Volume 149, Issue 1, 2009, Pages 59-72, ISSN 0168-1923*
+
+**DOI:** https://doi.org/10.1016/j.agrformet.2008.07.004
+
+**Findings:**
+- This study introduces a method that partitions ET in E and T
+- T/ET ratio was higher for grass dominated sites than for shrub dominated sites
+- In areas with sparse vegetation cover, such as grasslands and shrublands, soil evaporation constitutes a significant portion of total ET due to the higher exposure of bare soil
+
   
 ### Rodriguez-Iturbe, 2000
 
