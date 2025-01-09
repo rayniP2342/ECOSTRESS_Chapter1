@@ -383,7 +383,7 @@ ecodat <- read.csv("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/
 ecodat$hour <- as.numeric(substr(ecodat$Date, 12, 13))
 ecodat$Date <- as.Date(ecodat$Date)
 
-subeco <- ecodat %>% filter(hour >= 12 & hour <= 13)
+subeco <- ecodat %>% filter(hour >= 10 & hour <= 14)
 
 subdat <- merge(afdat, subeco, by = c("Site", "Date"))
 
@@ -424,9 +424,9 @@ subdaily_reg_comb <- ggplot(data = subdat, aes(x = Mean, y = ET_corr)) +
 subdaily_reg_comb
 ```
 
-Save NLCD Plot:
+Save Regression Plot for specific times:
 ```{r}
-ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/subdaily_reg.jpg", subdaily_reg_comb, width = 8, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/subdaily_reg_12to18.jpg", subdaily_reg_comb, width = 8, height = 8)
 ```
 
 
@@ -1085,6 +1085,53 @@ alldat.clean <- merge.clean %>%
 
 alldat.clean <- na.omit(alldat.clean)
 ```
+
+
+Correct ECOSTRESS just using EVI:
+```{r}
+evi_model <- lm(ET_corr ~ Mean * (EVI + BSI), data = alldat.clean)
+(evi_sum <- summary(evi_model))
+
+#extract summary statistics
+r_squar <- evi_sum$r.squared
+rmse <- sqrt(mean(evi_model$residuals^2))
+p_val <- summary(evi_model)$coefficients["Mean", "Pr(>|t|)"]
+
+alldat.clean$ECO_EVIcorr <- predict(evi_model, newdata = alldat.clean)
+
+evi_adj <- ggplot(data = alldat.clean, aes(x = ECO_EVIcorr, y = ET_corr)) +
+  geom_point(shape = 5) +
+  geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash") +
+    labs(title = "",
+       x = "ECOSTRESS (mm/day)",
+       y = "AmeriFlux (mm/day)") + 
+  xlim(0,8) +
+  ylim(0,8) +
+  annotate("rect", xmin = 6, xmax = 7.5, ymin = 7, ymax = 8, fill = "white", color = "black") +
+  annotate("text", x = 6.7, y = 7.5, 
+           label = paste(" R² =", round(r_squar, 2), 
+                         "\n", "p =", format.pval(p_val, digits = 2),
+                         "\n", "RMSE = ", round(rmse, 2)),
+           hjust = 0.5, vjust = 0.5, size = 4.5, color = "black") +
+  ylim(0,8) +
+  xlim(0,8) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    panel.grid.major = element_line(color = "grey", size = 0.25),
+    panel.grid.minor = element_line(color = "grey", size = 0.25),
+    axis.title.x = element_text(size = 12),
+    axis.title.y = element_text(size = 12)
+  )
+
+evi_adj
+
+```
+Save daily regression
+```{r}
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/adjdailyreg_EVIandBSI.jpg", evi_adj, width = 8, height = 8)
+```
+
 
 Conduct BIC test
 ```{r}
