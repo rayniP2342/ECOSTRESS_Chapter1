@@ -209,6 +209,7 @@
 - This study introduces a method that partitions ET in E and T
 - T/ET ratio was higher for grass dominated sites than for shrub dominated sites
 - In areas with sparse vegetation cover, such as grasslands and shrublands, soil evaporation constitutes a significant portion of total ET due to the higher exposure of bare soil
+- T/ET remain constanty during study period (limited time frame)
 
   
 ### Rodriguez-Iturbe, 2000
