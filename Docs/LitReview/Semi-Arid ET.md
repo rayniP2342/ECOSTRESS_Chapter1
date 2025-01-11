@@ -158,6 +158,23 @@
 - Woody plant cover reduces near-ground solar radiation (Martens et al, 2000)
 
 
+### Jia et al., 2020
+
+**Citation:** *Jia, X., Mu, Y., Zha, T., Wang, B., Qin, S. and Tian, Y., 2020. Seasonal and interannual variations in ecosystem respiration in relation to temperature, moisture, and productivity in a temperate semi-arid shrubland. Science of the Total Environment, 709, p.136210.*
+
+**DOI:** https://doi.org/10.1016/j.scitotenv.2019.136210
+
+**Findings:**
+- Eco system respiration showed seasonal patterns with higher rates during the growing season and lower rates during the dormant season
+- Seasonal pattern aligns with temperature fluctuations
+- Interannual variability of ecosystem respiration is influenced by precipitation and temperature
+- Higher precipitation lead to higher ER suggesting the importance of soil moisture on ER
+- Soil moisture is a key driver of ER (higher ER with higher soil moisture, lower ER during drought)
+
+**Additional Notes:**
+
+
+
 ### Kurc and Small, 2004
 
 **Citation:** *Kurc SA, Small EE. 2004. Dynamics of evapotranspiration in semiarid grassland and shrubland ecosystems during the summer monsoon season, central New Mexico. Water Resources Research 40: W09305.*
@@ -562,6 +579,29 @@
 - Almost all water exits via ET - 99%
 - Very little water runs off or percolates deeper than 1 m
 - Little potential for increasing water supply by reducing shrub cover
+
+
+
+### Xu et al., 2021
+
+**Citation:** *Xu, Z., Zhu, Z., Liu, S., Song, L., Wang, X., Zhou, S., Yang, X. and Xu, T., 2021. Evapotranspiration partitioning for multiple ecosystems within a dryland watershed: Seasonal variations and controlling factors. Journal of Hydrology, 598, p.126483.*
+
+**DOI:** https://doi.org/10.1016/j.jhydrol.2021.126483
+
+**Findings:**
+- T/ET ratio was 0.37 in desert ecosystem (lowest of all the sites)
+- E was greater than T in desert ecosystem
+- T/ET did not vary seasonally in desert ecosystem
+- T associated with precipitation in desert
+- Highest T rates during growing season
+- Desert ecosystem exhibited the largest interannual variation
+- T/ET ratio highly correlated with soil moisture, air temperature, and relative humidity
+- When soil moisture increase, E increased, and T/ET decreased
+- In places with sparse vegetation cover, LAI had a weaker correlation
+
+**Additional Notes:**
+
+- Soil evaporation accounts for 30%–60% of the total ET during the entire growth season in arid or semiarid areas (Eastham et al., 1999; Liu et al., 2002)
 
 
 
