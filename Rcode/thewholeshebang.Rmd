@@ -154,6 +154,9 @@ ecodat <- read.csv("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/
 ecodat$Date <- as.Date(ecodat$Date)
 afdat$Date <- as.Date(afdat$Date)
 
+# Remove days with precipitation
+afdat <- afdat %>% filter(afdat$Precip == 0)
+
 # Merge AmeriFlux and ECOSTRESS dataframes 
 alldat <- merge(afdat, ecodat, by = c("Site", "Date"))
 ```
@@ -383,7 +386,7 @@ ecodat <- read.csv("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/
 ecodat$hour <- as.numeric(substr(ecodat$Date, 12, 13))
 ecodat$Date <- as.Date(ecodat$Date)
 
-subeco <- ecodat %>% filter(hour >= 10 & hour <= 14)
+subeco <- ecodat %>% filter(hour >= 12 & hour <= 13)
 
 subdat <- merge(afdat, subeco, by = c("Site", "Date"))
 
@@ -426,7 +429,7 @@ subdaily_reg_comb
 
 Save Regression Plot for specific times:
 ```{r}
-ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/subdaily_reg_12to18.jpg", subdaily_reg_comb, width = 8, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/subdaily_reg_12to13.jpg", subdaily_reg_comb, width = 8, height = 8)
 ```
 
 
@@ -736,7 +739,7 @@ ecoresults <- ecoresults %>%
 
 annual_data <- rbind(afresults, ecoresults)
 
-# Ensure the seasons are in the correct order
+# Ensure the years are in the correct order
 annual_data$Year <- factor(annual_data$Year, levels = c("2019", "2020", "2021", "2022"))
 
 # Add significance column
@@ -1100,7 +1103,7 @@ p_val <- summary(evi_model)$coefficients["Mean", "Pr(>|t|)"]
 alldat.clean$ECO_EVIcorr <- predict(evi_model, newdata = alldat.clean)
 
 evi_adj <- ggplot(data = alldat.clean, aes(x = ECO_EVIcorr, y = ET_corr)) +
-  geom_point(shape = 5) +
+  geom_point(shape = 2) +
   geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash") +
     labs(title = "",
        x = "ECOSTRESS (mm/day)",
@@ -1164,7 +1167,7 @@ pval <- day_sum$coefficients["ECO_corr", "Pr(>|t|)"]
 # Create the scatter plot with regression line
 # Save as 800x800
 adj.daily.plot <- ggplot(data = alldat.clean, aes(x = ECO_corr, y = ET_corr)) + 
-  geom_point(shape = 17) +
+  geom_point(shape = 2) +
   geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash", linewidth = 1) +
   labs(title = "",
        x = "Adjusted ECOSTRESS (mm/day)",
@@ -1235,7 +1238,7 @@ pval2 <- adj.seas.sum$coefficients["mean_ECOSTRESS", "Pr(>|t|)"]
 # Create the scatter plot with regression line
 # Save as 800x800
 adj.seasonal.plot <- ggplot(data = adj.seasonal, aes(x = mean_ECOSTRESS, y = mean_AmeriFlux)) + 
-  geom_point(shape = 15) +
+  geom_point(shape = 0) +
   geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash", linewidth = 1) +
   labs(title = "",
        x = "Adjusted ECOSTRESS (mm/day)",
@@ -1292,7 +1295,7 @@ pval3 <- adj.ann.sum$coefficients["mean_ECOSTRESS", "Pr(>|t|)"]
 # Create the scatter plot with regression line
 # Save as 800x800
 adj.annual.plot <- ggplot(data = adj.annual, aes(x = mean_ECOSTRESS, y = mean_AmeriFlux)) + 
-  geom_point() +
+  geom_point(shape = 1) +
   geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash", linewidth = 1) +
   labs(title = "",
        x = "Adjusted ECOSTRESS (mm/day)",
@@ -1370,6 +1373,47 @@ ggplot(adj.long, aes(x = season, y = ET_Value, color = ET_Method, shape = ET_Met
 
 ```
 
+Conduct linear regression between ECOSTRESS and adjusted ECOSTRESS
+```{r}
+eco_model <- lm(ECO_corr ~ Mean, alldat.clean)
+(eco_sum <- summary(eco_model))
+
+
+# Extract summary statistics
+rsquar <- eco_sum$r.squared
+rmse <- sqrt(mean(eco_sum$residuals^2))
+pval <- eco_sum$coefficients["Mean", "Pr(>|t|)"]
+
+# Create the scatter plot with regression line
+# Save as 800x800
+eco.plot <- ggplot(data = alldat.clean, aes(x = ECO_corr, y = Mean)) + 
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash", linewidth = 1) +
+  labs(title = "",
+       x = "Adjusted ECOSTRESS (mm/day)",
+       y = "AmeriFlux (mm/day)") +
+  xlim(0,8) +
+  ylim(0,8) +
+  theme_minimal() + 
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 15, face = "bold"),
+    panel.grid.major = element_line(color = "grey", size = 0.25),
+    panel.grid.minor = element_line(color = "grey", size = 0.25),
+    axis.title.x = element_text(size = 12),
+    axis.title.y = element_text(size = 12)
+  ) +
+  annotate("rect", xmin = 6.25, xmax = 7.8, ymin = 6.75, ymax = 8, fill = "white", color = "black") +
+  annotate("text", x = 7, y = 7.5,
+           label = paste("\n R² =", round(rsquar, 2),
+                         "\n p =", signif(pval, digits = 2),
+                         "\n RMSE = ", round(rmse, 3)),
+           hjust = 0.5, vjust = 0.5, size = 4.55, color = "black")
+
+eco.plot
+```
+
+
+
 Plot timeseries of AmeriFlux and adjusted ECOSTRESS
 ```{r}
 # Function to create timeseries plot for each site
@@ -1399,3 +1443,35 @@ adj.timeplot
 ```{r}
 ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/adjtimeseries.jpg", adj.timeplot, width = 8, height = 8)
 ```
+
+
+
+#Temperature analysis
+
+```{r}
+temp.plot <- ggplot(alldat) +
+  geom_line(aes(x = Date, y = Temp)) + 
+  labs(title = "",
+       x = "Date",
+       y = "Temperature (C)") +
+  facet_wrap(~ Site) +
+  theme_minimal()
+
+temp.plot
+
+seasonal_temp <- alldat %>%
+  group_by(Site, season) %>%
+  summarize(avg_temp = mean(Temp))
+
+# Ensure the seasons are in the correct order
+seasonal_temp$season <- factor(seasonal_temp$season, levels = c("Winter", "Spring", "Summer", "Fall"))
+
+temp.plot2 <- ggplot(seasonal_temp, aes(x = Site, y = avg_temp)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.8), color = "black", fill = "orange4") +
+  facet_wrap(~ season, scales = "free_x") +
+  theme_minimal()
+
+temp.plot2
+
+```
+
