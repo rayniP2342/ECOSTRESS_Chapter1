@@ -563,6 +563,34 @@
 - In water limited systems ET is constrained by the soil's ability to supply water to the surface and plants, so it is less impacted by atmospheric demands
 
 
+
+### Wang et al., 2025
+
+**Citation:** *Wang, S., Zhu, C., Huang, Z., Li, Y., Cui, C. and Zhang, C., 2025. Primary roles of soil evaporation and vegetation in driving terrestrial evapotranspiration across global drylands. Science of The Total Environment, 958, p.178073.*
+
+**DOI:** https://doi.org/10.1016/j.scitotenv.2024.178073
+
+**Findings:**
+- ET in global drylands from 2003 to 2018 accounts for 94% of precipitation
+- ET concentrated in spring and fall
+- Soil evap accounts for 49% of total ET in drylands (primary component of ET)
+- Canopy evaporation was largest component during the summer (50%)
+- Soil evap was dominant during spring, fall, and winter (most dominant in spring)
+- Soil evap showed decreasing trend in more than half the dryland ecosystems
+- Correlation between LAI and ET, Ec, and Ei
+- Correlation between surface solar radiation and Es
+- Es showed negative correlation with LAI in most global drylands (some positive correlation in SW American)
+- LAI was most significant driver of ET changes followed by temperature and precipitation
+- Soil evap contributes the most to ET changes
+- High contributions of either Es or Ec resulted in lower contributions of the other
+- Temperature, precipitation, and net solar radiation had most influnce of Es
+- Temperature had greater impact in summer and winter
+- Net solar radiation had higher impact in fall and winter
+
+**Additional Notes:**
+
+
+
 ### Wilcox et al., 2006
 
 **Citation:** *Wilcox BP, Dowhower, S., Teague, R., Thurow, T. 2006. Long-term water balance in semiarid shrubland*
@@ -616,7 +644,7 @@
 - Strong stomatal regulation of transpiration under high evaporative demand conditions
 - Variations in stand transpiration were closely related to changes in solar radiation, air temperature, and vapor pressure deficit (VPD) on an hourly scale, with solar radiation being the primary driving force
 - Peak transpiration typically occured during the day
-- Seasonal trends howed higher tranpiration during growing season (April to October)
+- Seasonal trends showed higher transpiration during growing season (April to October)
 - A critical VPD threshold of ~2 kPa was identified, beyond which plants began to limit transpiration through stomatal regulation
 - Tranpiration was reduced under soil water deficit
 
