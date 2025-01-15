@@ -109,6 +109,25 @@
 
 
 
+### Damour et al., 2010
+
+**Citation:** Damour, G., Simonneau, T., Cochard, H. and Urban, L., 2010. An overview of models of stomatal conductance at the leaf level. Plant, cell & environment, 33(9), pp.1419-1438.
+
+**DOI:**  https://doi.org/10.1111/j.1365-3040.2010.02181.x
+
+**Findings:**
+
+- Stomatal conducdance is regulated by environmental factors like temperature
+- Higher temperatures elevate VPD, increasing the evaporative demand and often leading to stomatal closure to conserve water
+- At higher temperatures, increased transpiration rates can lead to reduced leaf water potential, triggering stomatal closure to prevent dehydration
+- Stomata are regulated in order to prevent embolism formation, the observed transpiration is expected to remain lower than the calculated threshold transpiration. This is observed on most species
+
+**Additional Notes:**
+
+- Stomatal closure controls the decrease in xylem water potential and the formation of embolism (Tyree & Sperry 1989). Jones & Sutherland (1991)
+
+
+
 ### Garcia et al., 2013
 
 **Citation:** *García, M., Sandholt, I., Ceccato, P., Ridler, M., Mougin, E., Kergoat, L., Morillas, L., Timouk, F., Fensholt, R. and Domingo, F., 2013. Actual evapotranspiration in drylands derived from in-situ and satellite data: Assessing biophysical constraints. Remote Sensing of Environment, 131, pp.103-118.*
@@ -141,6 +160,26 @@
 
 - ET is 85% of precip in ponderosa forests (Dore et al, 2012)
 
+
+### Huang et al., 2022
+
+**Citation:** *Huang, J., Kong, F., Yin, H., Middel, A., Liu, H., Zheng, X., Wen, Z. and Wang, D., 2022. Transpirational cooling and physiological responses of trees to heat. Agricultural and Forest Meteorology, 320, p.108940.*
+
+**DOI:** https://doi.org/10.1016/j.agrformet.2022.108940
+
+**Findings:**
+
+- Canopy transpiration decreased during extreme heat days
+- Increased temperatures can elevate transpiration rates but may also lead to partial stomatal closure if water availability is limited
+- High VPD often reduces stomatal conductance to prevent excessive water loss, though this limits cooling efficiency
+- Decreasing leaf water potential triggers stomatal closure to conserve water, reducing transpiration.
+- Maintaining high stomatal conducance during heat waves can increase cooling but risks water depletion, especially under drought conditions
+- Different tree species regulate stomatal conductance in different ways
+
+**Additional Notes:**
+- [Optional extra information]
+
+  
 
 ### Huxman et al., 2005
 
@@ -650,3 +689,22 @@
 
 
 
+
+### Yang et al., 2023
+
+**Citation:** *Yang, Z., Jiang, Y., Qiu, R., Gong, X., Agathokleous, E., Hu, W., & Clothier, B. (2023). Heat stress decreased transpiration but increased evapotranspiration in gerbera. Frontiers in plant science, 14, 1119076.*
+
+**DOI:** https://doi.org/10.3389/fpls.2023.1119076
+
+**Findings:**
+
+- Study was conducted on gerbera 
+- Long term heat stress effects hourly transpiration
+- Significant decrease in transpiration between 12:00 and 16:00
+- As heat stress continued, reduced transpiration was prolonged
+
+**Additional Notes:**
+- High temperature triggers water savings mechanisms in plants, which leads to partially closed stomata (Leuning, 1990; Damour et al., 2010; Medlyn et al., 2011)
+- High temperatures suppress root activity, which limited root water uptake (Nagel et al., 2009; Luo et al., 2020)
+
+ 
