@@ -170,6 +170,7 @@
 **Findings:**
 
 - Canopy transpiration decreased during extreme heat days
+- C. deodara reaches the maximum transpiration in a high-temperature environment at about 10:00 h
 - Increased temperatures can elevate transpiration rates but may also lead to partial stomatal closure if water availability is limited
 - High VPD often reduces stomatal conductance to prevent excessive water loss, though this limits cooling efficiency
 - Decreasing leaf water potential triggers stomatal closure to conserve water, reducing transpiration.
@@ -283,6 +284,21 @@
 - ET exhibits significant variability based on seasonal precip patterns and spatial differences in vegeation cover and soil properties
 - ET is integral to soil moisture balance equation
 - Accurate modeling of ET is necessary for predicting vegetation dynamics and ecosystem responses to environmental changes
+
+
+### [Author Last Name] et al., [Year]
+
+**Citation:** *Royer, P.D., Breshears, D.D., Zou, C.B., Villegas, J.C., Cobb, N.S. and Kurc, S.A., 2012. Density-dependent ecohydrological effects of pinon–juniper woody canopy cover on soil microclimate and potential soil evaporation. Rangeland Ecology & Management, 65(1), pp.11-20.*
+
+**DOI:** 10.2111/REM-D-11-00007.1
+
+**Findings:**
+
+- 
+
+**Additional Notes:**
+- [Optional extra information]
+
 
 
 ### Scott, 2010
