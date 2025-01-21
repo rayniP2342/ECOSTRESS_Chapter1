@@ -198,6 +198,29 @@
 - Woody plant cover reduces near-ground solar radiation (Martens et al, 2000)
 
 
+
+### Javadian et al., 2022
+
+**Citation:** *Javadian, M., Smith, W.K., Lee, K., Knowles, J.F., Scott, R.L., Fisher, J.B., Moore, D.J., van Leeuwen, W.J., Barron‐Gafford, G. and Behrangi, A., 2022. Canopy temperature is regulated by ecosystem structural traits and captures the ecohydrologic dynamics of a semiarid mixed conifer forest site. Journal of Geophysical Research: Biogeosciences, 127(2), p.e2021JG006617.*
+
+**DOI:**  https://doi.org/10.1029/2021JG006617
+
+**Findings:**
+
+- UAS results showed diurnal tree sap flow
+- Sap flow near minimum at 12:00 
+- Indicates low transpiration at noon (closed stomata)
+- Sap flow and transpiration peaked by 15:00
+- Explains decline in canopy temperature dispite rising air temperature
+- ECOSTRESS more variable than UAS likely because ECOSTRESS represents average community composition (different percentages of soil/canopy)
+- High rates of evaporation (not transpiration) were driving increased latent heat flux in morning
+- Peak sap flow occured 1 hour after peak latent heat flux
+
+**Additional Notes:**
+- ECOSTRESS LST data can be used to inform transpiration dynamics Xiao et al. (2021)
+
+  
+
 ### Jia et al., 2020
 
 **Citation:** *Jia, X., Mu, Y., Zha, T., Wang, B., Qin, S. and Tian, Y., 2020. Seasonal and interannual variations in ecosystem respiration in relation to temperature, moisture, and productivity in a temperate semi-arid shrubland. Science of the Total Environment, 709, p.136210.*
