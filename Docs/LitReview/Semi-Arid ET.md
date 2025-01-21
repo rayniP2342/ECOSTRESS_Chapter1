@@ -109,6 +109,25 @@
 
 
 
+### Damour et al., 2010
+
+**Citation:** Damour, G., Simonneau, T., Cochard, H. and Urban, L., 2010. An overview of models of stomatal conductance at the leaf level. Plant, cell & environment, 33(9), pp.1419-1438.
+
+**DOI:**  https://doi.org/10.1111/j.1365-3040.2010.02181.x
+
+**Findings:**
+
+- Stomatal conducdance is regulated by environmental factors like temperature
+- Higher temperatures elevate VPD, increasing the evaporative demand and often leading to stomatal closure to conserve water
+- At higher temperatures, increased transpiration rates can lead to reduced leaf water potential, triggering stomatal closure to prevent dehydration
+- Stomata are regulated in order to prevent embolism formation, the observed transpiration is expected to remain lower than the calculated threshold transpiration. This is observed on most species
+
+**Additional Notes:**
+
+- Stomatal closure controls the decrease in xylem water potential and the formation of embolism (Tyree & Sperry 1989). Jones & Sutherland (1991)
+
+
+
 ### Garcia et al., 2013
 
 **Citation:** *García, M., Sandholt, I., Ceccato, P., Ridler, M., Mougin, E., Kergoat, L., Morillas, L., Timouk, F., Fensholt, R. and Domingo, F., 2013. Actual evapotranspiration in drylands derived from in-situ and satellite data: Assessing biophysical constraints. Remote Sensing of Environment, 131, pp.103-118.*
@@ -142,6 +161,27 @@
 - ET is 85% of precip in ponderosa forests (Dore et al, 2012)
 
 
+### Huang et al., 2022
+
+**Citation:** *Huang, J., Kong, F., Yin, H., Middel, A., Liu, H., Zheng, X., Wen, Z. and Wang, D., 2022. Transpirational cooling and physiological responses of trees to heat. Agricultural and Forest Meteorology, 320, p.108940.*
+
+**DOI:** https://doi.org/10.1016/j.agrformet.2022.108940
+
+**Findings:**
+
+- Canopy transpiration decreased during extreme heat days
+- C. deodara reaches the maximum transpiration in a high-temperature environment at about 10:00 h
+- Increased temperatures can elevate transpiration rates but may also lead to partial stomatal closure if water availability is limited
+- High VPD often reduces stomatal conductance to prevent excessive water loss, though this limits cooling efficiency
+- Decreasing leaf water potential triggers stomatal closure to conserve water, reducing transpiration.
+- Maintaining high stomatal conducance during heat waves can increase cooling but risks water depletion, especially under drought conditions
+- Different tree species regulate stomatal conductance in different ways
+
+**Additional Notes:**
+- [Optional extra information]
+
+  
+
 ### Huxman et al., 2005
 
 **Citation:** *Huxman TE, Wilcox BP, Breshears DD, Scott RL, Snyder KA,Small EE, Hultine K, Pockman WT, Jackson RB. 2005. Ecohydrological implications of woody plant encroachment. Ecology 86: 308–319*
@@ -157,6 +197,29 @@
 -- Leads to changes in streamflow
 - Woody plant cover reduces near-ground solar radiation (Martens et al, 2000)
 
+
+
+### Javadian et al., 2022
+
+**Citation:** *Javadian, M., Smith, W.K., Lee, K., Knowles, J.F., Scott, R.L., Fisher, J.B., Moore, D.J., van Leeuwen, W.J., Barron‐Gafford, G. and Behrangi, A., 2022. Canopy temperature is regulated by ecosystem structural traits and captures the ecohydrologic dynamics of a semiarid mixed conifer forest site. Journal of Geophysical Research: Biogeosciences, 127(2), p.e2021JG006617.*
+
+**DOI:**  https://doi.org/10.1029/2021JG006617
+
+**Findings:**
+
+- UAS results showed diurnal tree sap flow
+- Sap flow near minimum at 12:00 
+- Indicates low transpiration at noon (closed stomata)
+- Sap flow and transpiration peaked by 15:00
+- Explains decline in canopy temperature dispite rising air temperature
+- ECOSTRESS more variable than UAS likely because ECOSTRESS represents average community composition (different percentages of soil/canopy)
+- High rates of evaporation (not transpiration) were driving increased latent heat flux in morning
+- Peak sap flow occured 1 hour after peak latent heat flux
+
+**Additional Notes:**
+- ECOSTRESS LST data can be used to inform transpiration dynamics Xiao et al. (2021)
+
+  
 
 ### Jia et al., 2020
 
@@ -244,6 +307,21 @@
 - ET exhibits significant variability based on seasonal precip patterns and spatial differences in vegeation cover and soil properties
 - ET is integral to soil moisture balance equation
 - Accurate modeling of ET is necessary for predicting vegetation dynamics and ecosystem responses to environmental changes
+
+
+### [Author Last Name] et al., [Year]
+
+**Citation:** *Royer, P.D., Breshears, D.D., Zou, C.B., Villegas, J.C., Cobb, N.S. and Kurc, S.A., 2012. Density-dependent ecohydrological effects of pinon–juniper woody canopy cover on soil microclimate and potential soil evaporation. Rangeland Ecology & Management, 65(1), pp.11-20.*
+
+**DOI:** 10.2111/REM-D-11-00007.1
+
+**Findings:**
+
+- 
+
+**Additional Notes:**
+- [Optional extra information]
+
 
 
 ### Scott, 2010
@@ -563,6 +641,34 @@
 - In water limited systems ET is constrained by the soil's ability to supply water to the surface and plants, so it is less impacted by atmospheric demands
 
 
+
+### Wang et al., 2025
+
+**Citation:** *Wang, S., Zhu, C., Huang, Z., Li, Y., Cui, C. and Zhang, C., 2025. Primary roles of soil evaporation and vegetation in driving terrestrial evapotranspiration across global drylands. Science of The Total Environment, 958, p.178073.*
+
+**DOI:** https://doi.org/10.1016/j.scitotenv.2024.178073
+
+**Findings:**
+- ET in global drylands from 2003 to 2018 accounts for 94% of precipitation
+- ET concentrated in spring and fall
+- Soil evap accounts for 49% of total ET in drylands (primary component of ET)
+- Canopy evaporation was largest component during the summer (50%)
+- Soil evap was dominant during spring, fall, and winter (most dominant in spring)
+- Soil evap showed decreasing trend in more than half the dryland ecosystems
+- Correlation between LAI and ET, Ec, and Ei
+- Correlation between surface solar radiation and Es
+- Es showed negative correlation with LAI in most global drylands (some positive correlation in SW American)
+- LAI was most significant driver of ET changes followed by temperature and precipitation
+- Soil evap contributes the most to ET changes
+- High contributions of either Es or Ec resulted in lower contributions of the other
+- Temperature, precipitation, and net solar radiation had most influnce of Es
+- Temperature had greater impact in summer and winter
+- Net solar radiation had higher impact in fall and winter
+
+**Additional Notes:**
+
+
+
 ### Wilcox et al., 2006
 
 **Citation:** *Wilcox BP, Dowhower, S., Teague, R., Thurow, T. 2006. Long-term water balance in semiarid shrubland*
@@ -616,9 +722,28 @@
 - Strong stomatal regulation of transpiration under high evaporative demand conditions
 - Variations in stand transpiration were closely related to changes in solar radiation, air temperature, and vapor pressure deficit (VPD) on an hourly scale, with solar radiation being the primary driving force
 - Peak transpiration typically occured during the day
-- Seasonal trends howed higher tranpiration during growing season (April to October)
+- Seasonal trends showed higher transpiration during growing season (April to October)
 - A critical VPD threshold of ~2 kPa was identified, beyond which plants began to limit transpiration through stomatal regulation
 - Tranpiration was reduced under soil water deficit
 
 
 
+
+### Yang et al., 2023
+
+**Citation:** *Yang, Z., Jiang, Y., Qiu, R., Gong, X., Agathokleous, E., Hu, W., & Clothier, B. (2023). Heat stress decreased transpiration but increased evapotranspiration in gerbera. Frontiers in plant science, 14, 1119076.*
+
+**DOI:** https://doi.org/10.3389/fpls.2023.1119076
+
+**Findings:**
+
+- Study was conducted on gerbera 
+- Long term heat stress effects hourly transpiration
+- Significant decrease in transpiration between 12:00 and 16:00
+- As heat stress continued, reduced transpiration was prolonged
+
+**Additional Notes:**
+- High temperature triggers water savings mechanisms in plants, which leads to partially closed stomata (Leuning, 1990; Damour et al., 2010; Medlyn et al., 2011)
+- High temperatures suppress root activity, which limited root water uptake (Nagel et al., 2009; Luo et al., 2020)
+
+ 
