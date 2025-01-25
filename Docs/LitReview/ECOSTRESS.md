@@ -129,3 +129,16 @@ This study quantifies the uncertainty associated with the disALEXI ET product. I
 
 - The ECOSTRESS LST product demonstrated a high level of accuracy when compared to in situ measurements
 - With proper calibration and validation, the ECOSTRESS LST data could provide reliable temperature readings across diverse land cover types
+
+
+### Wen et al., 2022
+
+**Citation:** *Wen, J., Fisher, J.B., Parazoo, N.C., Hu, L., Litvak, M.E. and Sun, Y., 2022. Resolve the clear‐sky continuous diurnal cycle of high‐resolution ECOSTRESS evapotranspiration and land surface temperature. Water Resources Research, 58(9), p.e2022WR032227.*
+
+**DOI:**  https://doi.org/10.1029/2022WR032227
+
+**Findings:** 
+- Daily measurements derived from scaled instantaneous  with solar radiation which assume linear scaling
+- Other biotic and abiotic processes (like stomatal closure) are not considered
+
+**Additional Notes:**
