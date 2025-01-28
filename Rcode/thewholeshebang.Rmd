@@ -9,7 +9,7 @@ library(lubridate)
 library(tidyr)
 library(gridExtra)
 library(MuMIn)
-library(z)
+library(zoo)
 ```
 
 
@@ -156,6 +156,7 @@ afdat$Date <- as.Date(afdat$Date)
 
 # Remove days with precipitation
 afdat <- afdat %>% filter(afdat$Precip == 0)
+#ecodat <- ecodat %>% filter(ecodat$Mean != 0.01)
 
 # Merge AmeriFlux and ECOSTRESS dataframes 
 alldat <- merge(afdat, ecodat, by = c("Site", "Date"))
@@ -425,11 +426,42 @@ subdaily_reg_comb <- ggplot(data = subdat, aes(x = Mean, y = ET_corr)) +
            hjust = 0.5, vjust = 0.5, size = 4.5, color = "black")
 
 subdaily_reg_comb
+
+
+
+# Function to perform linear regression and create a plot for each site
+plot_regression <- function(data, site_name) {
+  site_data <- data %>% filter(Site == site_name)
+  model <- lm(ET_corr ~ Mean, data = site_data)
+  r_squared <- summary(model)$r.squared
+  p_value <- coef(summary(model))["Mean", "Pr(>|t|)"]
+  rmse <- sqrt(mean(model$residuals^2))
+  
+  ggplot(site_data, aes(x = Mean, y = ET_corr)) +
+    geom_point(shape = 17) +
+    geom_smooth(method = "lm", se = FALSE, col = "red4", linetype = "longdash", linewidth = 0.75) +
+    labs(title = site_name, x = "ECOSTRESS ET (mm/day)", y = "AmeriFlux ET (mm/day)") +
+    annotate('rect', xmin = 5.65, xmax = 7.75, ymin = 5.5, ymax = 8, color = 'black', fill = 'white') +
+    annotate("text", x = 6.7, y = 6.7,
+             label = sprintf("R² = %.2f\np = %.2g\nRMSE = %.2f", r_squared, p_value, rmse),
+             hjust = 0.5, vjust = 0.5, size = 3.5, color = "black") +
+    coord_cartesian(xlim = c(0, 8), ylim = c(0, 8)) +
+    theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5, size = 10, face = "bold"))
+}
+
+# Create regression plots for all sites
+sites <- unique(subdat$Site)
+plot_list <- lapply(sites, plot_regression, data = subdat)
+
+# Arrange and save the grid of plots
+subdaily_reg_grid <- grid.arrange(grobs = plot_list, ncol = 2)
 ```
 
 Save Regression Plot for specific times:
 ```{r}
 ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/subdaily_reg_12to13.jpg", subdaily_reg_comb, width = 8, height = 8)
+ggsave("C:/Users/rayni/OneDrive/Documents/GitHub/ECOSTRESS_Chapter1/Figures/subdaily_reg_grid.jpg", subdaily_reg_grid, width = 8, height = 8)
 ```
 
 
