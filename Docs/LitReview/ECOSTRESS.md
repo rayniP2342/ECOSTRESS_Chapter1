@@ -131,6 +131,7 @@ This study quantifies the uncertainty associated with the disALEXI ET product. I
 - With proper calibration and validation, the ECOSTRESS LST data could provide reliable temperature readings across diverse land cover types
 
 
+
 ### Wen et al., 2022
 
 **Citation:** *Wen, J., Fisher, J.B., Parazoo, N.C., Hu, L., Litvak, M.E. and Sun, Y., 2022. Resolve the clear‐sky continuous diurnal cycle of high‐resolution ECOSTRESS evapotranspiration and land surface temperature. Water Resources Research, 58(9), p.e2022WR032227.*
@@ -142,3 +143,50 @@ This study quantifies the uncertainty associated with the disALEXI ET product. I
 - Other biotic and abiotic processes (like stomatal closure) are not considered
 
 **Additional Notes:**
+
+
+
+### Velpuri et al., 2013
+
+**Citation:** *Velpuri, N.M., Senay, G.B., Singh, R.K., Bohms, S. and Verdin, J.P., 2013. A comprehensive evaluation of two MODIS evapotranspiration products over the conterminous United States: Using point and gridded FLUXNET and water balance ET. Remote Sensing of Environment, 139, pp.35-49.*
+
+**DOI:** https://doi.org/10.1016/j.rse.2013.07.013
+
+**Findings:** 
+- Uncertainty up to 50% at point scale
+- Uncertainty up to 25% at basin scale
+- Both datasets were accurate
+- Accuracy varies depending on landcover type and climate zone
+- Under/over estimate depending on site conditions
+...
+**Additional Notes:**
+
+
+
+### Tang et al., 2015
+
+**Citation:** *Tang, R., Shao, K., Li, Z.L., Wu, H., Tang, B.H., Zhou, G. and Zhang, L., 2015. Multiscale validation of the 8-day MOD16 evapotranspiration product using flux data collected in China. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 8(4), pp.1478-1486.*
+
+**DOI:** 10.1109/JSTARS.2015.2420105
+
+**Findings:**
+- MOD16 reproduces temporal patterns
+- Underestimate at high levels of ET and overestimate at low levels of ET
+- Underestimate irrigated conditions
+- Larger area has better agreement than smaller area extracted
+- Agreement between sites is not consitent
+  
+
+**Additional Notes:**
+
+
+### Volk et al., 2024
+
+**Citation:** *Volk, J.M., Huntington, J.L., Melton, F.S., Allen, R., Anderson, M., Fisher, J.B., Kilic, A., Ruhoff, A., Senay, G.B., Minor, B. and Morton, C., 2024. Assessing the accuracy of OpenET satellite-based evapotranspiration data to support water resource and land management applications. Nature Water, 2(2), pp.193-205.*
+
+**DOI:** https://doi.org/10.1038/s44221-023-00181-7
+
+**Findings:** 
+- Slight underestimation of ET in croplands
+- High variability and lower accuracy at shrublands and forested sites
+- Natural settings perform worse than agriultural ones
