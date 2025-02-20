@@ -70,4 +70,42 @@ Template
 - Mexican Highlands higher elevation than Sonora Desert
 - Transition zone has undergone more deformation than Basin and Range
 - Southwest, southeast, and northwest recieve less than 12 inches of precip annually
-- Highlands recieve 16-32 inches of precip annually 
+- Highlands recieve 16-32 inches of precip annually
+
+
+
+### Schwinning et al, 2008
+
+**Citation:** *Schwinning, S., Belnap, J., Bowling, D. R., & Ehleringer, J. R. (2008). Sensitivity of the Colorado Plateau to Change: Climate, Ecosystems, and Society. Ecology and Society, 13(2).*
+
+**DOI:** http://www.jstor.org/stable/26268003
+
+**Findings:**
+
+-CLimate classified as semi-arid
+Total annual precip approx 250 mm (drier regions 130 mm)
+- Summer precip in the form of monsoon
+- Winter precip in the form of large frontal systems
+- Vegetation aptterns follow climatic drivers
+- Summer and winter precip highly variable from year to year (linked to ENSO cycle)
+- Low evaporative demand during winter
+- Subalpine regions = Engelmann spruce and subapline fir
+- With decreasing elevation = mixed conifer, douglas fir, white fir, bue spruce, and ponderosa pine
+- Between 2100 and 1600 m = pinyon/juniper woodlands
+- Lower elevations = desert scrub, evergreen or winter-deciduous shrubs and perennial grassses, sagebrush,
+- All plants respond to winter precip, but responses to summer precip vary
+- Deep rooted species least responsive to summer rain
+- Grasses and shrubs use most summer rain
+
+
+### Foos, 1999
+
+**Citation:** *A. Foos. (1999). GEOLOGY OF THE COLORADO PLATEAU.*
+
+**DOI:** https://www.semanticscholar.org/paper/43daa7037ed91a3ac023a3bb9a6ada03aaf61e52
+
+**Findings:**
+
+- COPlat is semi-arid with sparse vegetation, low humidity and limited precipitation
+- Higher elevations recieve more precip, especially in the form of winter snow
+- 
