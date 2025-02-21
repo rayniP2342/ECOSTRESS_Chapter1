@@ -96,6 +96,8 @@ This study quantifies the uncertainty associated with the disALEXI ET product. I
 - Used imaged between the hours of 9 am and 5 pm (constrains on image aquisition time)
 - ECOSTRESS only slightly improve ET measurements, but significanlty improved at specific sites when it was able to capture peak growth stage
 - Early morning image aquisition produced 'excessively' uniform ET maps
+- Semi-arid regions experience rapid changes in soil moisture and vegetation cover
+- ECOSTRESS does not have shortwave infrared bands, which are essential for deriving certain surface properties (albedo and LAI) that are important inputs for surface energy balance models
 
 
 ### Hu et al, 2023
@@ -129,6 +131,8 @@ This study quantifies the uncertainty associated with the disALEXI ET product. I
 
 - The ECOSTRESS LST product demonstrated a high level of accuracy when compared to in situ measurements
 - With proper calibration and validation, the ECOSTRESS LST data could provide reliable temperature readings across diverse land cover types
+- The products had consistent performace across diverse environments (including arid regions)
+- Variations in surface emissivity (especially in hetergeneous landscapes) can introduce uncertainties in LST retrievals 
 
 
 
@@ -190,3 +194,7 @@ This study quantifies the uncertainty associated with the disALEXI ET product. I
 - Slight underestimation of ET in croplands
 - High variability and lower accuracy at shrublands and forested sites
 - Natural settings perform worse than agriultural ones
+
+
+
+
