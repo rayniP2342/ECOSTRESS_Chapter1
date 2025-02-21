@@ -29,7 +29,6 @@ Template
 **Findings:**
 
 - Evenly spaced parallel mountain ranges and intervening desert basins
-- 
 
 
 
@@ -82,8 +81,8 @@ Template
 
 **Findings:**
 
--CLimate classified as semi-arid
-Total annual precip approx 250 mm (drier regions 130 mm)
+- Climate classified as semi-arid
+- Total annual precip approx 250 mm (drier regions 130 mm)
 - Summer precip in the form of monsoon
 - Winter precip in the form of large frontal systems
 - Vegetation aptterns follow climatic drivers
@@ -108,4 +107,23 @@ Total annual precip approx 250 mm (drier regions 130 mm)
 
 - COPlat is semi-arid with sparse vegetation, low humidity and limited precipitation
 - Higher elevations recieve more precip, especially in the form of winter snow
-- 
+
+
+
+### Spence, 2001
+
+**Citation:** *Spence, J.R., 2001. Climate of the central Colorado Plateau, Utah and Arizona: characterization and recent trends. In Proceedings of the Fifth Biennial Conference on Research on the Colorado Plateau Flagstaff, Arizona. FRESC Report Series USGSFRESC/COPL/2001/24, US Geological Survey,[Flagstaff, Ariz (pp. 187-203).*
+
+**DOI:** 
+
+**Findings:**
+
+- Elevation averages 1500-1800 m (mountains are higher)
+- Average rainfall is < 200 mm
+- Hot summers and extensive periods of frost in winter
+- Vegetation below 1500 m = shurbland and grassland
+- Vegetation about 1500 m = pinyon, juniper
+- Vegetation above 2300 m = ponderosa pine
+- Vegetation above 2700 m = mixed conifer, douglas fir, white fir, aspen, subapline fir, engelmann spruce
+- As elevation increases, precip increases and PET decreases 
+
