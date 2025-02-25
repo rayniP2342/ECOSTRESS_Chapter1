@@ -197,4 +197,18 @@ This study quantifies the uncertainty associated with the disALEXI ET product. I
 
 
 
+### Shi and Hu, 2021 
+
+**Citation:** *Jing Shi & Chuanmin Hu. (2021). Evaluation of ECOSTRESS Thermal Data over South Florida Estuaries. In Sensors (Basel, Switzerland).*
+
+**DOI:** https://www.mdpi.com/1424-8220/21/13/4341
+
+**Findings:**
+
+- ECOSTRESS SST is negatively biased (bias is higher at night)
+- Monthly temperature also shows negative bias
+- Negative bias varies seasonally - autumn and winter showing lower biases than spring and summer
+-  Damage to detectors in TIR bands 1 and 5 and SWIR bands during pre-launch test results in teh loss of 8 rows of data per 128 rows in cross-track direction
+-  Higher spatial anisotropy in ECOSTRESS SST due to striping noise
+-  As long as bias is systematic and ot random, it will not impact the assessment of thermal animalies
 
