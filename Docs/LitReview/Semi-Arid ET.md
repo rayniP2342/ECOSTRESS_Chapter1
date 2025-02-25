@@ -128,6 +128,23 @@
 
 
 
+### Du et al., 2019
+
+**Citation:** *Du, T., Wang, L., Yuan, G., Sun, X., & Wang, S. (2019). Effects of Distinguishing Vegetation Types on the Estimates of Remotely Sensed Evapotranspiration in Arid Regions. Remote Sensing, 11(23), 2856.*
+
+**DOI:** https://doi.org/10.3390/rs11232856
+
+**Findings:**
+
+- Arid ecosystems have diverse vegetation types and spatial heterogeneity, posing a challenge for ET estimation
+- Remotely sensed data may fail to account for these vegetation variations
+- Implementing vegetation type distictions reduces error in ET estimates
+- It is important to classify vegetation due to vegetation-specific traits (root depth, canop structure, etc)
+- Spatial and temporal trends closely follow vegetation growth patterns, improving understanding of water use dynamics in arid regions
+  
+
+
+
 ### Garcia et al., 2013
 
 **Citation:** *García, M., Sandholt, I., Ceccato, P., Ridler, M., Mougin, E., Kergoat, L., Morillas, L., Timouk, F., Fensholt, R. and Domingo, F., 2013. Actual evapotranspiration in drylands derived from in-situ and satellite data: Assessing biophysical constraints. Remote Sensing of Environment, 131, pp.103-118.*
@@ -317,11 +334,6 @@
 
 **Findings:**
 
-- 
-
-**Additional Notes:**
-- [Optional extra information]
-
 
 
 ### Scott, 2010
@@ -376,26 +388,6 @@
 - Little potential for increasing water supply by reducing shrub cover
 
 
-# Semi-Arid Evapotranspiration
-
-**Template**
-```markdown
-### [Author Last Name] et al., [Year]
-
-**Citation:** *[Full Citation]*
-
-**DOI:** [Link to DOI or URL]
-
-**Findings:**
-
-- [Point 1]
-- [Point 2]
-- [Point 3]
-
-**Additional Notes:**
-- [Optional extra information]
-```
-## Papers
 
 ### Brandes and Wilcox, 2000
 
