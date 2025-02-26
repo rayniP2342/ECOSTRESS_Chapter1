@@ -194,6 +194,7 @@ This study quantifies the uncertainty associated with the disALEXI ET product. I
 - Slight underestimation of ET in croplands
 - High variability and lower accuracy at shrublands and forested sites
 - Natural settings perform worse than agriultural ones
+- Errors decreased when data were aggregated over longer periods
 
 
 
@@ -212,3 +213,30 @@ This study quantifies the uncertainty associated with the disALEXI ET product. I
 -  Higher spatial anisotropy in ECOSTRESS SST due to striping noise
 -  As long as bias is systematic and ot random, it will not impact the assessment of thermal animalies
 
+
+
+### Mirralles et al, 2011
+
+**Citation:** *DG Miralles, TRH Holmes, & RAM De Jeu. (2011). Global land-surface evaporation estimated from satellite-based observations.* 
+
+**DOI:** https://hess.copernicus.org/articles/15/453/2011/
+
+**Findings:**
+
+- Estimated annual evpotranspiration totals correlation well with ground measurements
+- Daily time series performed well (R^2 = 0.83)
+- Monthly time series performed better (R^2 = 0.90)
+- Accuracy of ET estimates increased when data is aggregated to monthly or annual time scales
+
+
+
+### Luisa et al, 2023
+
+**Citation:** *Nara Luísa Reis de Andrade, Luciana Sandwiches, P. Zeilhofer, J.N.S. Ribeiro, Gutieres Camatta Barbino, & Carlo Ralph DeMusis. (2023). Different spatial and temporal arrangements for validating the latent heat flux obtained using the MOD16 product in a forest in the Western Amazon. In International Journal of Hydrology.*
+
+**DOI:** https://www.semanticscholar.org/paper/f62edfe50193383564b59aa72d853fbbed3804f9
+
+**Findings:**
+
+- Annual averages closely matched eddy covariance data
+- Product struggled to capture short term variations, especially at month and seasonal scales
