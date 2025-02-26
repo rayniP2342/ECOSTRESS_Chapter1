@@ -127,3 +127,17 @@ Template
 - Vegetation above 2700 m = mixed conifer, douglas fir, white fir, aspen, subapline fir, engelmann spruce
 - As elevation increases, precip increases and PET decreases 
 
+
+
+### Ffolliot., 1999
+
+**CItation:** *Ffolliott, Peter F. 1999. Chapter 1: Central Arizona Highlands. In: Baker, Jr., Malchus B., compiler. History of watershed research in the Central Arizona Highlands. Gen. Tech. Rep. RMRS-GTR-29. Fort Collins, CO: U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station. p. 1-6.*
+
+**DOI:**
+
+**Findings:**
+
+- distinct biogeographic, climate, and physiographic province
+- Similar cyclic precipitation pattern
+- Veg types = mixed conifer, ponderosa pine, mountain grasslands, pinyon-juniper woodlands, and chaparral shrublands
+- 12 to 45 inches of rain annually
