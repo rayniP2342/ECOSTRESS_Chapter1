@@ -45,6 +45,22 @@
 - Depth and persistence of soil water repellency layers post-wildfire are influenced by fire severity and soil characteristics
 
 
+### Collar et al., 2022
+
+**Citation:** *Collar, N. M., Saxe, S., Ebel, B. A., Boden, K. S., Rust, A. J., & Hogue, T. S. (2022). Linking fire-induced evapotranspiration shifts to streamflow magnitude and timing in the western United States. Journal of Hydrology, 612.*
+
+**DOI:** https://doi.org/10.1016/j.jhydrol.2022.128242
+
+**Findings:**
+
+- Significant fire-induced ETa reductions were only distinguishable in basin-scale monthly datasets when > 73% of the basin burned
+- The effect of wildfire disturbance on streamflow magnitude was seasonably variable
+- Streamflow was modified in basins with little as 6% burned drainage areas, however shifts were only persistent beyond the fifth post-fire year when > 3/4 of the basin was burned
+- Surplus water from ETa reduction was sufficient to account for boosted fire-induced streamflow
+- Impacts to streamflow magnitude were better detected at a seasonal scale rather than an annual scale
+- Some watershed saw increase in baseflow during wettest months, while other experienced an increase in baseflow during the dry months 
+
+
 ### Moussoulis et al, 2015
 
 **Citation:** *Moussoulis, E., Mallinis, G., Koutsias, N. and Zacharias, I., 2015. Modelling surface runoff to evaluate the effects of wildfires in multiple semi‐arid, shrubland‐dominated catchments. Hydrological Processes, 29(20), pp.4427-4441.*
