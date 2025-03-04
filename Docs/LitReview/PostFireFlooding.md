@@ -1,1 +1,100 @@
+# Post Wildfire Flooding
 
+```
+### [Author Last Name] et al., [Year]
+
+**Citation:** *[Full Citation]*
+
+**DOI:** [Link to DOI or URL]
+
+**Findings:**
+
+- [Point 1]
+- [Point 2]
+- [Point 3]
+
+**Additional Notes:**
+- [Optional extra information]
+```
+
+
+### Beatty et al., 2013
+
+**Citation:** *Beatty, S.M. and Smith, J.E., 2013. Dynamic soil water repellency and infiltration in post-wildfire soils. Geoderma, 192, pp.160-172.*
+
+**DOI:** https://doi.org/10.1016/j.geoderma.2012.08.012
+
+**Findings:** 
+
+- Post wildfire soils exhibit increased water repellency, leading to reduced infiltration rates
+- Repellency is influenced by soil moisture content and temperature
+- Soils that are uniformly hydrophobic experienced longer delays in infiltration
+
+
+### Chen et al, 2020
+
+**Citation:** *Chen, J., McGuire, K.J. and Stewart, R.D., 2020. Effect of soil water‐repellent layer depth on post‐wildfire hydrological processes. Hydrological Processes, 34(2), pp.270-283.*
+
+**DOI:**  https://doi.org/10.1002/hyp.13583
+
+**Findings:**
+
+- Soil water content generally lower in unburned soils compared to burned soils, especially immediately after fires
+- Negative correlation between soil water content and water repellency  (increased repellency reduced soil moisture retention)
+- Surface water repellency decreased relative infiltration rates
+- Depth and persistence of soil water repellency layers post-wildfire are influenced by fire severity and soil characteristics
+
+
+### Moussoulis et al, 2015
+
+**Citation:** *Moussoulis, E., Mallinis, G., Koutsias, N. and Zacharias, I., 2015. Modelling surface runoff to evaluate the effects of wildfires in multiple semi‐arid, shrubland‐dominated catchments. Hydrological Processes, 29(20), pp.4427-4441.*
+
+**DOI:** https://doi.org/10.1002/hyp.10509
+
+**Findings:**
+
+- Wildfires significantly increase surface runoff in burned catchments
+- Increase in surface runoff attributed to loss of vegetation and changes in soil properties which reduce infiltration and enhance runoff
+- Extent of runoff increase varied among catchements
+- Catchments with denser pre-fire vegetation and steeper slopes exhibit more pronounced increase in runoff post-fire
+- Heightened runoff potential persisten for several years post-fire
+- Increase in runoff may lead to decrease in groundwater recharge and downstream flooding
+
+
+### Poon and Kinoshita, 2018
+
+**Citation:** *Poon, P.K. and Kinoshita, A.M., 2018. Spatial and temporal evapotranspiration trends after wildfire in semi-arid landscapes. Journal of hydrology, 559, pp.71-83.*
+
+**DOI:** https://doi.org/10.1016/j.jhydrol.2018.02.023
+
+**Findings:**
+
+- Post fire annual ET decreased and varies by burn severity
+- ET rates gradually increased over decade following wildfire
+- Areas with higher burn severity exhibited slower ET recovery
+
+
+### Schenk et al, 2023
+
+**Citation:** *Schenk, E.R., Loverich, J. and Haden, A., 2023, May. Modeling post-wildfire flood dynamics to determine urban stormwater infrastructure needs: Flagstaff Arizona case study. In Proceedings of the SEDHYD Conference Proceedings, St. Louis, MO, USA (pp. 8-12).*
+
+**DOI:** 
+
+**Findings:**
+
+- Post wildfire condition significantly elevated flood risks in urban areas, necessitating proactive planning and infrustructure improvements
+- Existing stormwater systems were insufficient to handle increased runoff and sediment transport following wildfires
+- Proactive measures are essential to mitigate heightened flood risks following wildfires
+
+
+### Van der Sant et al, 2018
+
+**Citation:** *RE Van der Sant, P Nyman, & PJ Noske. (2018). Quantifying relations between surface runoff and aridity after wildfire.*
+
+**DOI:** https://onlinelibrary.wiley.com/doi/abs/10.1002/esp.4370
+
+**Findings:**
+
+- Strong correlation between aridity and post-wildfire runoff ratios
+- Soil water repellency was more pronounced at drier sites (reduced infiltration and increases runoff)
+- Drier regions more susceptible to increased surface runoff after wildfires
