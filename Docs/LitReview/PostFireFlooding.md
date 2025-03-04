@@ -18,6 +18,8 @@
 ```
 
 
+## Reduced Infiltration
+
 ### Beatty et al., 2013
 
 **Citation:** *Beatty, S.M. and Smith, J.E., 2013. Dynamic soil water repellency and infiltration in post-wildfire soils. Geoderma, 192, pp.160-172.*
@@ -45,6 +47,22 @@
 - Depth and persistence of soil water repellency layers post-wildfire are influenced by fire severity and soil characteristics
 
 
+
+### Van der Sant et al, 2018
+
+**Citation:** *RE Van der Sant, P Nyman, & PJ Noske. (2018). Quantifying relations between surface runoff and aridity after wildfire.*
+
+**DOI:** https://onlinelibrary.wiley.com/doi/abs/10.1002/esp.4370
+
+**Findings:**
+
+- Strong correlation between aridity and post-wildfire runoff ratios
+- Soil water repellency was more pronounced at drier sites (reduced infiltration and increases runoff)
+- Drier regions more susceptible to increased surface runoff after wildfires
+
+
+## Streamflow Response
+
 ### Collar et al., 2022
 
 **Citation:** *Collar, N. M., Saxe, S., Ebel, B. A., Boden, K. S., Rust, A. J., & Hogue, T. S. (2022). Linking fire-induced evapotranspiration shifts to streamflow magnitude and timing in the western United States. Journal of Hydrology, 612.*
@@ -58,10 +76,10 @@
 - Streamflow was modified in basins with little as 6% burned drainage areas, however shifts were only persistent beyond the fifth post-fire year when > 3/4 of the basin was burned
 - Surplus water from ETa reduction was sufficient to account for boosted fire-induced streamflow
 - Impacts to streamflow magnitude were better detected at a seasonal scale rather than an annual scale
-- Some watershed saw increase in baseflow during wettest months, while other experienced an increase in baseflow during the dry months 
+- Some watershed saw increase in baseflow during wettest months, while other experienced an increase in baseflow during the dry months
 
 
-### Moussoulis et al, 2015
+ ### Moussoulis et al, 2015
 
 **Citation:** *Moussoulis, E., Mallinis, G., Koutsias, N. and Zacharias, I., 2015. Modelling surface runoff to evaluate the effects of wildfires in multiple semi‐arid, shrubland‐dominated catchments. Hydrological Processes, 29(20), pp.4427-4441.*
 
@@ -77,19 +95,6 @@
 - Increase in runoff may lead to decrease in groundwater recharge and downstream flooding
 
 
-### Poon and Kinoshita, 2018
-
-**Citation:** *Poon, P.K. and Kinoshita, A.M., 2018. Spatial and temporal evapotranspiration trends after wildfire in semi-arid landscapes. Journal of hydrology, 559, pp.71-83.*
-
-**DOI:** https://doi.org/10.1016/j.jhydrol.2018.02.023
-
-**Findings:**
-
-- Post fire annual ET decreased and varies by burn severity
-- ET rates gradually increased over decade following wildfire
-- Areas with higher burn severity exhibited slower ET recovery
-
-
 ### Schenk et al, 2023
 
 **Citation:** *Schenk, E.R., Loverich, J. and Haden, A., 2023, May. Modeling post-wildfire flood dynamics to determine urban stormwater infrastructure needs: Flagstaff Arizona case study. In Proceedings of the SEDHYD Conference Proceedings, St. Louis, MO, USA (pp. 8-12).*
@@ -102,15 +107,17 @@
 - Existing stormwater systems were insufficient to handle increased runoff and sediment transport following wildfires
 - Proactive measures are essential to mitigate heightened flood risks following wildfires
 
+## ET Response
 
-### Van der Sant et al, 2018
 
-**Citation:** *RE Van der Sant, P Nyman, & PJ Noske. (2018). Quantifying relations between surface runoff and aridity after wildfire.*
+### Poon and Kinoshita, 2018
 
-**DOI:** https://onlinelibrary.wiley.com/doi/abs/10.1002/esp.4370
+**Citation:** *Poon, P.K. and Kinoshita, A.M., 2018. Spatial and temporal evapotranspiration trends after wildfire in semi-arid landscapes. Journal of hydrology, 559, pp.71-83.*
+
+**DOI:** https://doi.org/10.1016/j.jhydrol.2018.02.023
 
 **Findings:**
 
-- Strong correlation between aridity and post-wildfire runoff ratios
-- Soil water repellency was more pronounced at drier sites (reduced infiltration and increases runoff)
-- Drier regions more susceptible to increased surface runoff after wildfires
+- Post fire annual ET decreased and varies by burn severity
+- ET rates gradually increased over decade following wildfire
+- Areas with higher burn severity exhibited slower ET recovery
