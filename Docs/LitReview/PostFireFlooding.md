@@ -78,6 +78,23 @@
 - Impacts to streamflow magnitude were better detected at a seasonal scale rather than an annual scale
 - Some watershed saw increase in baseflow during wettest months, while other experienced an increase in baseflow during the dry months
 
+  
+### Hallema et al, 2017
+
+**Citation:** *D. Hallema, G. Sun, K. Bladon, S. Norman, P. Caldwell, Yongqiang Liu, & S. McNulty. (2017). Regional patterns of postwildfire streamflow response in the Western United States: The importance of scale‐specific connectivity. In Hydrological Processes.*
+
+**DOI:** https://www.semanticscholar.org/paper/11617652faeb7f405e724083de1cfb2082618ad3
+
+**Findings:**
+
+- Wildfires can significantly impact streamflow by altering infiltration, ET, snowmelt, and hillslope runoff pathways
+- Unburned areas within watershed can mitigate increased streamflow
+- Semi-arid climates experienced more pronounced increase in peak flows and annual water yields compared to highland regions (due to differences in climate, vegetation, and soil characteristics)
+- Fire-induced changes in hydraulic connectivity play a crucial role in determining the magnitude of streamflow responses
+- Increased connectivity can lead to more rapid and effecient delivery of water to streams, amplifying peak flows
+- Post fire conditions lead to soil surface sealing and water repellency (reduce infiltration, enhance runoff)
+
+
 
  ### Moussoulis et al, 2015
 
