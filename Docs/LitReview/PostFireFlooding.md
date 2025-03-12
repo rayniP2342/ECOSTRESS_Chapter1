@@ -61,6 +61,8 @@
 - Drier regions more susceptible to increased surface runoff after wildfires
 
 
+
+
 ## Streamflow Response
 
 ### Collar et al., 2022
@@ -124,6 +126,9 @@
 - Existing stormwater systems were insufficient to handle increased runoff and sediment transport following wildfires
 - Proactive measures are essential to mitigate heightened flood risks following wildfires
 
+
+
+
 ## ET Response
 
 
@@ -138,3 +143,7 @@
 - Post fire annual ET decreased and varies by burn severity
 - ET rates gradually increased over decade following wildfire
 - Areas with higher burn severity exhibited slower ET recovery
+
+
+
+## Groundwater Recharge Response
