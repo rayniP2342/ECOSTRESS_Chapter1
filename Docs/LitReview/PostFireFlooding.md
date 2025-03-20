@@ -147,3 +147,58 @@
 
 
 ## Groundwater Recharge Response
+
+
+## Sediment Response
+
+### Schenk et al., 2025
+
+**Citation:** *Schenk, E. R., Wood, A., Haden, A., Baca, G., Fleishman, J., and Loverich, J.: Post-wildfire sediment source and transport modeling, empirical observations, and applied mitigation: an Arizona, USA, case study, Nat. Hazards Earth Syst. Sci., 25, 727–745, 2025*
+
+**DOI:** https://doi.org/10.5194/nhess-25-727-2025
+
+**Findings:**
+
+- Museum fire caused significant floods and sedimentation that entered the city (Porter et al, 2021, Schenk et al, 2023, Sankey et al, 2024)
+- Many channel are gullyied post-wildfire, function as sediment source rather than sink
+- Majority of sediment transported to city was during the first flood event
+- Model predicted higher hillslope erosion in steeper, burned areas of watershed
+- High hillslope erosion predicted
+- Exacerbates headcutting, fan degradation, channel migration, and bank erosion
+- Alluvial fans did not function well to aggradte and attenuate sediment
+- Flooding events demonstrated high sediment supply from burned area
+- Hillslope gullying is most prevalent form of erosion in Arizona post0wildfire environments
+- Drastic increases in channel and hillslope sedimen yields post-wildfire
+- Drought condition contribute to degredation of channel
+- Continued erosion and rilling hinder seed establishment
+
+**Additional Notes:**
+
+- Potential for damamging devris flow sand sediment sourcing, transport, and aggredation (Moody et al, 2013; Smith et al 2011)
+- Sediment hazard is most damaging due to physical impacts (Moody et al, 2013, Neary et al 2013, Shakesby, 2011)
+- Wildfires enhance runoff by order of magnitue of 1-2 (Leao and Tecle, 2005; Quisenberry 2009)
+
+
+### Sankey et al., 2024
+
+**Citation:** *Sankey, T. T., Tango, L., Tatum, J., and Sankey, J. B.: Forest fire, thinning, and flood in wildland-urban interface: UAV and lidar-based estimate of natural disaster impacts, Landscape Ecol., 39, 58, https://doi.org/10.1007/s10980-024-01811-5, 2024*
+
+**DOI:** https://doi.org/10.1007/s10980-024-01811-5
+
+**Findings:** 
+
+- Bare ground tripled over 4 year period
+- Erosion and deposition occurred in the channel but topographic changes were net depositional
+- Extreme rainfall events carried sediment downstream into City of Flagstaff and caused geomorhpic changes
+- Thinning helped reduce future catastrophic fire risk
+- Severe damamges caused by sediment-laden floodings
+- Impacts of floods can overwhelm current infrustructure 
+
+**Additional Notes:** 
+
+- WUI are growing into adjacent forested areas putting more people and forests at risk of fire (Radeloff et al 2018)
+- Size and frequency of fires are increasing globally due to climate change (Hawbbaker and Zhu 2012)
+
+
+
+
