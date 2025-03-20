@@ -198,7 +198,36 @@
 
 - WUI are growing into adjacent forested areas putting more people and forests at risk of fire (Radeloff et al 2018)
 - Size and frequency of fires are increasing globally due to climate change (Hawbbaker and Zhu 2012)
+- Burned landscapes are associated with subsequent rainfall-driven erosion and flood events (Shakesby and Doerr, 2006)
+- Burned soils become water-repellent which cause large runoff and soil erosion events (Neary et al, 2003; Cannon et al, 2008)
 
 
 
+### Moody et al, 2013
 
+**Citation:** *Moody, J. A., Shakesby, R. A., Robichaud, P. R., Cannon, S. H., and Martin, D. A.: Current research issues related to post-wildfire runoff and erosion processes. Earth-Science Reviews, 122, 10–37, https://doi.org/10.1016/j.earscirev.2013.03.004, 2013.*
+
+**DOI:** https://doi.org/10.1016/j.earscirev.2013.03.004
+
+**Findings:**
+
+- Wildfires siginifcantly elevate sediment yields due to removal of vegetation and alteration of soil properties leading to heightened erosion rates
+- Peak discharge and sediment flux are closely associated with short duration, high intensity rainfall events
+- Post-fire landscapes are particularly susceptible to various erosion processes
+- Debris flows are a common consequence of post-wildfire conditions
+- Debris flows pose a significant hazard
+- 
+
+
+### Neary et al., 2012
+
+**Citation:** *Neary, D. G., Koestner, K. A., Youberg, A., and Koestner, P. E. (2012). Post-fire rill and gully formation, Schultz Fire 2010 Arizona, USA. Geoderma 191, 97–104.*
+
+**DOI:** 10.1016/j.geoderma.2012.01.016
+
+**Findings:**
+
+- Significant rill and gully formation occured in burned areas, highlighting the susceptibility of the landscape to erosion
+- Post-fire rainfall events played crucial role in initiating erosional features
+- Rills and gullies altered the hydrological response of the watershed (increasing runoff rates, sediment transport)
+- Loss of protective vegetation and orgcanic matter led to decreased soil cohesion
