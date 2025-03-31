@@ -142,6 +142,20 @@
 
 
 
+### Di et al, 2023
+
+**Citation:** *Di, C., Wang, T., Han, Q., Mai, M., Wang, L. and Chen, X., 2023. Complexity and predictability of daily actual evapotranspiration across climate regimes. Water Resources Research, 59(4), p.e2022WR032811.*
+
+**DOI:** https://doi.org/10.1029/2022WR032811
+
+**Findings:**
+
+- Daily ET exhibites chaotic behavior
+- Daily ET was more complex at sub-humid and seim-arid sites rather than humid and arid sights
+- Environmental controls on daily ETa complexity varied with climatic and land surface conditions
+
+
+
 ### Du et al., 2019
 
 **Citation:** *Du, T., Wang, L., Yuan, G., Sun, X., & Wang, S. (2019). Effects of Distinguishing Vegetation Types on the Estimates of Remotely Sensed Evapotranspiration in Arid Regions. Remote Sensing, 11(23), 2856.*
@@ -157,6 +171,16 @@
 - Spatial and temporal trends closely follow vegetation growth patterns, improving understanding of water use dynamics in arid regions
   
 
+
+### Farah et al, 2004
+
+**Citation:**
+
+**DOI:**
+
+**Findings:**
+
+- 
 
 
 ### Garcia et al., 2013
