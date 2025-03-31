@@ -521,4 +521,32 @@
 - High temperature triggers water savings mechanisms in plants, which leads to partially closed stomata (Leuning, 1990; Damour et al., 2010; Medlyn et al., 2011)
 - High temperatures suppress root activity, which limited root water uptake (Nagel et al., 2009; Luo et al., 2020)
 
+
+
+ ### Yi et al, 2024
+
+ **Citation:** *Yi, K., Senay, G.B., Fisher, J.B., Wang, L., Suvočarev, K., Chu, H., Moore, G.W., Novick, K.A., Barnes, M.L., Keenan, T.F. and Mallick, K., 2024. Challenges and future directions in quantifying terrestrial evapotranspiration. Water Resources Research, 60(10), p.e2024WR037622.*
+
+ **DOI:**  https://doi.org/10.1029/2024WR037622
+
+ **Findings:**
+
+- The main challenge in ET science is reconciling spatial data with point data from various sources across heterogeneous areas
+- Each of the three general approaches to ET science (in situ measurements, partitioning, remote sensing) has strengths and weaknesses
+- Communication and translation across these disciplines are key to closing the gaps
+- Eddy covariance towers valuable for measuring long term ET
+- Insufficient spatial coverage is a limitation to in situ measurements
+- Other challenges to in situ measurements include resource limitation, site accessibility, and complex terrain
+- Energy balance closure is another issue for eddy covariance towers
+- Satellite based remote sensing provides extensive and consistent global spatial coverage of ET
+- Spatial resolution of input data affect the level of detail of gridded ET products
+
+
+
+**Additional Notes:**
+
+- Different approaches to adjusting energy balance closure leads to significant uncertainties in daily ET (Bambach et al, 2022)
+- Lack of in situ data makes ground truthing RS data difficult (Farella et al, 2022)
+- Validation of RS ET against in situ data is limited (Stoy et al, 2019)
+- RS is effective at monitoring spatial variation in ET but not so great at monitoring short term variations due to revist periods (Fisher et al, 2020; Gentine et al, 2007)
  
