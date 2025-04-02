@@ -174,13 +174,16 @@
 
 ### Farah et al, 2004
 
-**Citation:**
+**Citation:** *Farah, H.O., Bastiaanssen, W.G.M. and Feddes, R.A., 2004. Evaluation of the temporal variability of the evaporative fraction in a tropical watershed. International Journal of Applied Earth Observation and Geoinformation, 5(2), pp.129-140.*
 
-**DOI:**
+**DOI:** https://doi.org/10.1016/j.jag.2004.01.003
 
 **Findings:**
 
-- 
+- Midday EF was better correlated with daily EF than morning hours
+- EF was generally more stable during midday
+- This midday stability allows EF to be used reliably in remote sensing applications that only capture single daily overpasses, such as MODIS or Landsat
+- Stability of EF during midday is more true in energy-limited environments
 
 
 ### Garcia et al., 2013
@@ -332,6 +335,20 @@
 - ET effects the amount of precip partitioned into runoff and recharge (Philips, 1994; Laio et al, 2001)
 - Meteorological and vegetation conditions control ET when soil moisture is not limited (Shuttleworth, 1991)
 - More bare soil = more rapid evporation (Dugas et al, 1996)
+
+
+
+### Lhomme and Elguero, 1999
+
+**Citation:** *Lhomme, J.P. and Elguero, E., 1999. Examination of evaporative fraction diurnal behaviour using a soil-vegetation model coupled with a mixed-layer model. Hydrology and Earth System Sciences, 3(2), pp.259-270.*
+
+**DOI:** https://doi.org/10.5194/hess-3-259-1999
+
+**Findings:**
+
+- Under fair weather conditions, the EF typically exhibits a concave-up shape throughout the day.
+- During midday, around solar noon, EF appears relatively constant but is generally lower than the daytime mean value.
+- A decrease in soil water availability leads to a reduction in EF, indicating that drier soils limit the proportion of energy partitioned into latent heat flux
 
 
 
