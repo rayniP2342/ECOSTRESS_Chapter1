@@ -240,3 +240,28 @@ This study quantifies the uncertainty associated with the disALEXI ET product. I
 
 - Annual averages closely matched eddy covariance data
 - Product struggled to capture short term variations, especially at month and seasonal scales
+
+
+### Rashid and Tian, 2024
+
+**Citation:** *Rashid, T. and Tian, D., 2024. Improved 30‐m evapotranspiration estimates over 145 eddy covariance sites in the contiguous United States: The role of ECOSTRESS, harmonized Landsat Sentinel‐2 imagery, climate reanalysis, and deep neural network postprocessing. Water Resources Research, 60(4), p.e2023WR036313.*
+
+**DOI:**  https://doi.org/10.1029/2023WR036313
+
+**Findings:**
+
+- Higher spatial resolution spectral index inputs improves ET estimates
+- 30 m ECOSTRESS outperformed 70 m ECOSTRESS
+- HLS based ECOSTRESS matched better with observed ET compared to MODIS based ECOSTRESS (R = 0.91 vs 0.78)
+- ERA5-Land climate reanalysis also greatly improved model performance (higher temporal res)
+- ECOET30m_PTJPL errors were strongly associated with outgoing longwave and incoming shortwave radiation inputs
+- Larger ET estimated typically have higher ET biases
+- RH and NDVI are most important features
+
+
+**Additional Notes:**
+
+- PT-JPL daily ET overestimated in most regions (Liang et al, 2022; Liu et al, 2021)
+- MODIS cannot account for the spatial variation of land surface characteristic at fine scale, which can result in erroneous NDVI and thus ET (Nouri et al, 2020)
+- PT-JPL is sensitive to changes in vegetation indices (Fisher, 2018; Talsma et al, 2018)
+- 
