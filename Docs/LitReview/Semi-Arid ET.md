@@ -8,7 +8,7 @@
 
 **DOI:** [Link to DOI or URL]
 
-**Findings:**
+**Findings:** 
 
 - [Point 1]
 - [Point 2]
