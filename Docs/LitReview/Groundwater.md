@@ -185,3 +185,19 @@
 - MAR supports environmental sustainability by maintaining base flows in rivers, preventing land subsidence, and mitigating saltwater intrusion in coastal aquifers
 - Italy as case study
 - Paper underscores the potential of MAR as a multifaceted tool for sustainable groundwater management, emphasizing the need for integrated approaches that consider technical, environmental, and social dimensions
+
+
+## Maliva, 2014
+
+**Citation:** *Maliva, R.G., 2014. Economics of managed aquifer recharge. Water, 6(5), pp.1257-1279.*
+
+**DOI:** https://doi.org/10.3390/w6051257
+
+**Findings:**
+
+- Various methods for valuing benefits of MAR
+- Benefits of MAR systems encompass increased water availability, improved water quality, reduced pumping costs, prevention of land subsidence, and maintenance of environmental flows
+- The economic viability of MAR projects is influenced by factors such as the intended use of the water (e.g., potable supply vs. irrigation), local hydrogeologic conditions, and the costs of construction and operation
+- Projects intended for high-value uses like potable water supply are more likely to be economically feasible
+- In developing countries, despite the potential economic benefits of MAR, limited financial resources often necessitate external support for project implementation
+- 
