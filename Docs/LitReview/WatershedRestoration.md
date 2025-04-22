@@ -201,3 +201,16 @@
 - Amount of water stored in dams is small but sufficient to decelerlate the flow enough to induce deposition
 - Sediment retention rate was over 50% during first three years after construction
 
+
+### Wilson and Norman, 2023
+
+**Citation:** *Wilson, N.R. and Norman, L.M., 2023. Five year analyses of vegetation response to restoration using rock detention structures in southeastern Arizona, United States. Environmental Management, 71(5), pp.921-939.*
+
+**DOI:** https://doi.org/10.1007/s00267-022-01762-0
+
+**Findings:**
+
+- Non degraded site showed no difference in vegetation following RDS installation
+- Moderately degraded site showed significant difference in vegetation (mostly invasive species)
+- Severely degraded site showed slight increase in vegetation frequency (mostly native wetland species)
+- RDS can aid in the recovery of native wetland vegetation in heavily degraded areas
