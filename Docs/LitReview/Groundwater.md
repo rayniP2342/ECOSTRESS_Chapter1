@@ -121,4 +121,34 @@
 
 **Additional Notes:**
 
+
+## Taylor et al, 2012
+
+**Citation:** *Taylor, R.G., Scanlon, B., Döll, P., Rodell, M., Van Beek, R., Wada, Y., Longuevergne, L., Leblanc, M., Famiglietti, J.S., Edmunds, M. and Konikow, L., 2013. Ground water and climate change. Nature climate change, 3(4), pp.322-329.*
+
+**DOI:** https://doi.org/10.1038/nclimate1744
+
+**Findings:**
+
+- Climate change influences groundwater systems
+- Recharge in arid and semi-arid regions in less than 5 mm/yr
+- Current recharge rates responsible for small fraction of total GW storage
+- Recharge in semi-arid environments is restricted to extreme rainfall
+- Land use change exerts a stronger influences on hydrology than climate change
+- Irrigration has depleted GW storage in several semi-arid environments
+- GW is important to water security especially in rural communities
+- Sustainability of GW requires aquifer management (Gleeson et al, 2011)
+
+## Conway, 2016
+
+**Citation:** *Conway, B.D., 2016. Land subsidence and earth fissures in south-central and southern Arizona, USA. Hydrogeology Journal, 24(3), p.649.*
+
+**DOI:** 10.1007/s10040-015-1329-z
+
+**Findings:**
+
+- Groundwater declines have exceeded 150 m
+- Subsidence will continue to be a threat as long as GW demands exceed natural recharge
+- GW pymping exceeded natural recharge for more than half a century
+- GW used to offset reduced surface water supplies
 - 
