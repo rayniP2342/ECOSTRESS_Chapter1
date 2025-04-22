@@ -151,4 +151,22 @@
 - Subsidence will continue to be a threat as long as GW demands exceed natural recharge
 - GW pymping exceeded natural recharge for more than half a century
 - GW used to offset reduced surface water supplies
-- 
+
+
+## Tadych et al, 2024
+
+**Citation:** *Tadych, D.E., Ford, M., Colby, B.G. and Condon, L.E., 2024. Historical patterns of well drilling and groundwater depth in Arizona considering groundwater regulation and surface water access. JAWRA Journal of the American Water Resources Association, 60(6), pp.1193-1208.*
+
+**DOI:** https://doi.org/10.1111/1752-1688.13234
+
+**Findings:**
+
+- Arizona has experiences GW declines in recent decades
+- Widespread GW depletion happening in regulated and non-regulated areas
+- Number of wells has increased, especially deep wells
+- AMA experience less GW decline
+- Regulation alone not enough to stop GW depletion
+- Managed recharge from surface water imports plays a more significant role in groundwater recovery than reduced pumping due to regulation
+- GW recovery is highly localized and primarily driven by MAR efforts
+- Regulation is not a stand alone solution
+- Underscores the need for comprehensive water management strategies that combine regulation with proactive recharge initiatives
