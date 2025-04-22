@@ -170,3 +170,18 @@
 - GW recovery is highly localized and primarily driven by MAR efforts
 - Regulation is not a stand alone solution
 - Underscores the need for comprehensive water management strategies that combine regulation with proactive recharge initiatives
+
+
+## Sufyan et al, 2024
+
+**Citation:** *Sufyan, M., Martelli, G., Teatini, P., Cherubini, C. and Goi, D., 2024. Managed Aquifer Recharge for Sustainable Groundwater Management: New Developments, Challenges, and Future Prospects. Water, 16(22), pp.1-28.*
+
+**DOI:** https://doi.org/10.3390/w16223216
+
+**Findings:**
+
+- MAR aims to restore groundwater levels by recharging aquifers during periods of surplus water availability
+- MAR can enhance groundwater quality by filtering recharged water through soil and aquifer materials, reducing contaminants like nitrogen, phosphorus, organic substances, heavy metals, bacteria, and radioactive molecules
+- MAR supports environmental sustainability by maintaining base flows in rivers, preventing land subsidence, and mitigating saltwater intrusion in coastal aquifers
+- Italy as case study
+- Paper underscores the potential of MAR as a multifaceted tool for sustainable groundwater management, emphasizing the need for integrated approaches that consider technical, environmental, and social dimensions
