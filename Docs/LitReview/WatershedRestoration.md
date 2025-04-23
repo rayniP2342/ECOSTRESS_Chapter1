@@ -214,3 +214,49 @@
 - Moderately degraded site showed significant difference in vegetation (mostly invasive species)
 - Severely degraded site showed slight increase in vegetation frequency (mostly native wetland species)
 - RDS can aid in the recovery of native wetland vegetation in heavily degraded areas
+
+
+### Nichols and Polyakov, 2019
+
+**Citation:** *Nichols, M.H. and Polyakov, V.O., 2019. The impacts of porous rock check dams on a semiarid alluvial fan. Science of the Total Environment, 664, pp.576-582.*
+
+**DOI:** 10.1016/j.scitotenv.2019.01.429
+
+**Findings:** 
+
+- Precipitation patterns changed at both sites post restoration but changes were not consistent at both sites not statistically significant
+- Impact of check dams on runoff response is site specific
+- One watershed showed reduction in sediment concentration but the other did not
+- Check dams can be effective in trapping sediment but efficiency depends on watershed characteristics and sediment supply
+- Check dams promoted sediment deposition upstream of structures
+- Where backfilling of dams was almost complete, formation of new flow paths and channel avulsion occurred
+- Areas of sediment accumulation saw vegetation establishment
+- Check dams can facilitate localized ecological restoration
+- Watershed outlet measurements may not represent internal watershed response
+- Check dams may create new concentrated flow paths and incision on alluvial fans
+- Watershed physical characteristics and geomorphic setting should explicitly be considered in site selection
+
+
+### Castillo et al, 2007
+
+**Citation:** *Castillo, V.M., Mosch, W.M., García, C.C., Barberá, G.G., Cano, J.N. and López-Bermúdez, F., 2007. Effectiveness and geomorphological impacts of check dams for soil erosion control in a semiarid Mediterranean catchment: El Cárcavo (Murcia, Spain). Catena, 70(3), pp.416-427.*
+
+**DOI:** https://doi.org/10.1016/j.catena.2006.11.009
+
+**Findings:**
+
+- 29 of the 36 dams were completely filled
+- Accumulation of sediments upstream of dam lead to decrease in longitudinal gradient of channels
+- Dams cause downstread erosion due to "clear water" effects
+- Amount of sediment stored by dam was higher than the amount eroded downstream
+- Channel aggradation upstream
+- Amount of sediment stored behind the check dams was small compared to the amount of material available for erosion in channel banks and slopes
+- Channel capacity decreased which may favor lateral erosion or overflows
+
+**Additional Notes:**
+
+- Probability of a check dam being filled increases as drainage area increases (Castillo et al, 2002)
+
+
+
+
