@@ -231,3 +231,17 @@
 - Post-fire rainfall events played crucial role in initiating erosional features
 - Rills and gullies altered the hydrological response of the watershed (increasing runoff rates, sediment transport)
 - Loss of protective vegetation and orgcanic matter led to decreased soil cohesion
+
+
+## Malmon et al, 2007
+
+**Citation:** *Malmon, D.V., Reneau, S.L., Katzman, D., Lavine, A. and Lyman, J., 2007. Suspended sediment transport in an ephemeral stream following wildfire. Journal of Geophysical Research: Earth Surface, 112(F2).*
+
+**DOI:**  https://doi.org/10.1029/2005JF000459
+
+**Findings:**
+
+- Suspended sediment concentrations increased by two orders of magnitude following wildfire
+- Proportation of fine particles rose post fire
+- Sediment availability rather than flow strength primarily controls SSC in ephemeral streams
+
