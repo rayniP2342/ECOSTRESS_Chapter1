@@ -11,3 +11,13 @@
 ## Alvarez et al 2011
 
 *Alvarez, L.J., Epstein, H.E., Li, J. and Okin, G.S., 2011. Spatial patterns of grasses and shrubs in an arid grassland environment. Ecosphere, 2(9), pp.1-30.*
+
+
+## Bull, 1997
+
+*Bull, W.B., 1997. Discontinuous ephemeral streams. Geomorphology, 19(3-4), pp.227-276.*
+
+- Ephemeral stream are more sensitive to climatic and anthropogrenic disturbances than perennial streams especially in semiaird regions
+- Due to high sediment supply from hillslopes during infrequent high magnitude storms
+- Also due to lack of baseflow
+- Lack of stable vegetation increases vulnerability to erosion and sediment transport
