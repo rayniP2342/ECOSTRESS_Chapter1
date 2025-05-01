@@ -68,6 +68,23 @@ This study compares ECOSTRESS products disALEXI (Two Source Energy Balance model
 - Kohli et at 2020 foudnsite specific differences in ET product partly being to spatial heterogeniety near the site
 
 
+### Fisher et al, 2020
+
+**Citation:** *Fisher, J.B., Lee, B., Purdy, A.J., Halverson, G.H., Dohlen, M.B., Cawse‐Nicholson, K., Wang, A., Anderson, R.G., Aragon, B., Arain, M.A. and Baldocchi, D.D., 2020. ECOSTRESS: NASA's next generation mission to measure evapotranspiration from the international space station. Water Resources Research, 56(4), p.e2019WR026058.*
+
+**DOI:**  https://doi.org/10.1029/2019WR026058
+
+**Findings:**
+- PT-JPL showed strong correlation (R^2 = 0.88 for 82 sites)
+- Over representation of temperate sites
+- RMSE was lower in Bwk and Csa-Csb climate zones
+- Bias was larger in Bsh climate zone
+- Results were worse at the instantaneous level (better for daily/weekly/monthly scale)
+- Importance of using quality flags
+- ECOSTRESS is sharper when tied to Landsat than to MODIS
+
+
+
 
 ### Nicholson et al., 2020
 
