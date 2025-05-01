@@ -264,4 +264,36 @@ This study quantifies the uncertainty associated with the disALEXI ET product. I
 - PT-JPL daily ET overestimated in most regions (Liang et al, 2022; Liu et al, 2021)
 - MODIS cannot account for the spatial variation of land surface characteristic at fine scale, which can result in erroneous NDVI and thus ET (Nouri et al, 2020)
 - PT-JPL is sensitive to changes in vegetation indices (Fisher, 2018; Talsma et al, 2018)
-- 
+
+
+
+### Liu et al, 2021
+
+**Citation:** *Liu, N., Oishi, A. C., Miniat, C. F., & Bolstad, P. (2021). An evaluation of ECOSTRESS products of a temperate montane humid forest in a complex terrain environment. Remote Sensing of Environment, 265, 112662.*
+
+**DOI:** https://doi.org/10.1016/J.RSE.2021.112662
+
+**Findings:**
+
+- ECOSTRESS overestimated ET in temperate montane humid forest
+- Poor correlation with flux towers (R^2 = 0.43)
+- Coarse scale meterological inputs contribute to uncertainties of ECOSTRESS ET (local climate data improved the R^2)
+- Poor performance of ECOSTRESS ET due to climate inputs
+- ECOSTRESS LST had strong correlation with air temp
+- ECOSTRESS captured topographic gradients
+
+
+
+### Wu et al, 2022
+
+**Citation:** *Wu, J., Feng, Y., Liang, L., He, X. and Zeng, Z., 2022. Assessing evapotranspiration observed from ECOSTRESS using flux measurements in agroecosystems. Agricultural Water Management, 269, p.107706.*
+
+**DOI:** https://doi.org/10.1016/j.agwat.2022.107706
+
+**Findings:**
+
+- PT_JPL effectively captured dinurnal ET pattersn
+- PT-JPL overestimated ET during morning hours
+- PT-JPL overestimated ET during the summer
+- disALEXI outperformed PT-JPL
+- Both PT-JPL and disALEXI captured seasonal variability
