@@ -68,6 +68,23 @@ This study compares ECOSTRESS products disALEXI (Two Source Energy Balance model
 - Kohli et at 2020 foudnsite specific differences in ET product partly being to spatial heterogeniety near the site
 
 
+### Fisher et al, 2020
+
+**Citation:** *Fisher, J.B., Lee, B., Purdy, A.J., Halverson, G.H., Dohlen, M.B., Cawse‐Nicholson, K., Wang, A., Anderson, R.G., Aragon, B., Arain, M.A. and Baldocchi, D.D., 2020. ECOSTRESS: NASA's next generation mission to measure evapotranspiration from the international space station. Water Resources Research, 56(4), p.e2019WR026058.*
+
+**DOI:**  https://doi.org/10.1029/2019WR026058
+
+**Findings:**
+- PT-JPL showed strong correlation (R^2 = 0.88 for 82 sites)
+- Over representation of temperate sites
+- RMSE was lower in Bwk and Csa-Csb climate zones
+- Bias was larger in Bsh climate zone
+- Results were worse at the instantaneous level (better for daily/weekly/monthly scale)
+- Importance of using quality flags
+- ECOSTRESS is sharper when tied to Landsat than to MODIS
+
+
+
 
 ### Nicholson et al., 2020
 
@@ -96,6 +113,8 @@ This study quantifies the uncertainty associated with the disALEXI ET product. I
 - Used imaged between the hours of 9 am and 5 pm (constrains on image aquisition time)
 - ECOSTRESS only slightly improve ET measurements, but significanlty improved at specific sites when it was able to capture peak growth stage
 - Early morning image aquisition produced 'excessively' uniform ET maps
+- Semi-arid regions experience rapid changes in soil moisture and vegetation cover
+- ECOSTRESS does not have shortwave infrared bands, which are essential for deriving certain surface properties (albedo and LAI) that are important inputs for surface energy balance models
 
 
 ### Hu et al, 2023
@@ -129,6 +148,8 @@ This study quantifies the uncertainty associated with the disALEXI ET product. I
 
 - The ECOSTRESS LST product demonstrated a high level of accuracy when compared to in situ measurements
 - With proper calibration and validation, the ECOSTRESS LST data could provide reliable temperature readings across diverse land cover types
+- The products had consistent performace across diverse environments (including arid regions)
+- Variations in surface emissivity (especially in hetergeneous landscapes) can introduce uncertainties in LST retrievals 
 
 
 
@@ -190,3 +211,106 @@ This study quantifies the uncertainty associated with the disALEXI ET product. I
 - Slight underestimation of ET in croplands
 - High variability and lower accuracy at shrublands and forested sites
 - Natural settings perform worse than agriultural ones
+- Errors decreased when data were aggregated over longer periods
+
+
+
+### Shi and Hu, 2021 
+
+**Citation:** *Jing Shi & Chuanmin Hu. (2021). Evaluation of ECOSTRESS Thermal Data over South Florida Estuaries. In Sensors (Basel, Switzerland).*
+
+**DOI:** https://www.mdpi.com/1424-8220/21/13/4341
+
+**Findings:**
+
+- ECOSTRESS SST is negatively biased (bias is higher at night)
+- Monthly temperature also shows negative bias
+- Negative bias varies seasonally - autumn and winter showing lower biases than spring and summer
+-  Damage to detectors in TIR bands 1 and 5 and SWIR bands during pre-launch test results in teh loss of 8 rows of data per 128 rows in cross-track direction
+-  Higher spatial anisotropy in ECOSTRESS SST due to striping noise
+-  As long as bias is systematic and ot random, it will not impact the assessment of thermal animalies
+
+
+
+### Mirralles et al, 2011
+
+**Citation:** *DG Miralles, TRH Holmes, & RAM De Jeu. (2011). Global land-surface evaporation estimated from satellite-based observations.* 
+
+**DOI:** https://hess.copernicus.org/articles/15/453/2011/
+
+**Findings:**
+
+- Estimated annual evpotranspiration totals correlation well with ground measurements
+- Daily time series performed well (R^2 = 0.83)
+- Monthly time series performed better (R^2 = 0.90)
+- Accuracy of ET estimates increased when data is aggregated to monthly or annual time scales
+
+
+
+### Luisa et al, 2023
+
+**Citation:** *Nara Luísa Reis de Andrade, Luciana Sandwiches, P. Zeilhofer, J.N.S. Ribeiro, Gutieres Camatta Barbino, & Carlo Ralph DeMusis. (2023). Different spatial and temporal arrangements for validating the latent heat flux obtained using the MOD16 product in a forest in the Western Amazon. In International Journal of Hydrology.*
+
+**DOI:** https://www.semanticscholar.org/paper/f62edfe50193383564b59aa72d853fbbed3804f9
+
+**Findings:**
+
+- Annual averages closely matched eddy covariance data
+- Product struggled to capture short term variations, especially at month and seasonal scales
+
+
+### Rashid and Tian, 2024
+
+**Citation:** *Rashid, T. and Tian, D., 2024. Improved 30‐m evapotranspiration estimates over 145 eddy covariance sites in the contiguous United States: The role of ECOSTRESS, harmonized Landsat Sentinel‐2 imagery, climate reanalysis, and deep neural network postprocessing. Water Resources Research, 60(4), p.e2023WR036313.*
+
+**DOI:**  https://doi.org/10.1029/2023WR036313
+
+**Findings:**
+
+- Higher spatial resolution spectral index inputs improves ET estimates
+- 30 m ECOSTRESS outperformed 70 m ECOSTRESS
+- HLS based ECOSTRESS matched better with observed ET compared to MODIS based ECOSTRESS (R = 0.91 vs 0.78)
+- ERA5-Land climate reanalysis also greatly improved model performance (higher temporal res)
+- ECOET30m_PTJPL errors were strongly associated with outgoing longwave and incoming shortwave radiation inputs
+- Larger ET estimated typically have higher ET biases
+- RH and NDVI are most important features
+
+
+**Additional Notes:**
+
+- PT-JPL daily ET overestimated in most regions (Liang et al, 2022; Liu et al, 2021)
+- MODIS cannot account for the spatial variation of land surface characteristic at fine scale, which can result in erroneous NDVI and thus ET (Nouri et al, 2020)
+- PT-JPL is sensitive to changes in vegetation indices (Fisher, 2018; Talsma et al, 2018)
+
+
+
+### Liu et al, 2021
+
+**Citation:** *Liu, N., Oishi, A. C., Miniat, C. F., & Bolstad, P. (2021). An evaluation of ECOSTRESS products of a temperate montane humid forest in a complex terrain environment. Remote Sensing of Environment, 265, 112662.*
+
+**DOI:** https://doi.org/10.1016/J.RSE.2021.112662
+
+**Findings:**
+
+- ECOSTRESS overestimated ET in temperate montane humid forest
+- Poor correlation with flux towers (R^2 = 0.43)
+- Coarse scale meterological inputs contribute to uncertainties of ECOSTRESS ET (local climate data improved the R^2)
+- Poor performance of ECOSTRESS ET due to climate inputs
+- ECOSTRESS LST had strong correlation with air temp
+- ECOSTRESS captured topographic gradients
+
+
+
+### Wu et al, 2022
+
+**Citation:** *Wu, J., Feng, Y., Liang, L., He, X. and Zeng, Z., 2022. Assessing evapotranspiration observed from ECOSTRESS using flux measurements in agroecosystems. Agricultural Water Management, 269, p.107706.*
+
+**DOI:** https://doi.org/10.1016/j.agwat.2022.107706
+
+**Findings:**
+
+- PT_JPL effectively captured dinurnal ET pattersn
+- PT-JPL overestimated ET during morning hours
+- PT-JPL overestimated ET during the summer
+- disALEXI outperformed PT-JPL
+- Both PT-JPL and disALEXI captured seasonal variability
